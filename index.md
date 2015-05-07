@@ -9,6 +9,14 @@ Paragraph of introductory material.
 > A short paragraph describing what learners need to know
 > before tackling this lesson.
 
+> ## Getting ready {.getready}
+>
+> Download [this file](https://github.com/swcarpentry/lesson-example/archive/gh-pages.zip)
+> and unzip it.
+>
+> The lessons considered that your current directory is
+> `/path/to/gh-pages/`.
+
 ## Topics
 
 1.  [Topic Title One](01-one.html)
