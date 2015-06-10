@@ -433,11 +433,6 @@ structure is:
     title: Lesson Title
     subtitle: Instructor's Guide
     ---
-    ## Legend
-
-    One or more paragraphs laying out the lesson's legend (i.e., the story
-    behind its running example).
-
     ## Overall
 
     * Point
