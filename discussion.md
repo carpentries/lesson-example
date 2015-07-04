@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Lesson Title
 subtitle: Discussion
 ---
 *   First point of general discussion.

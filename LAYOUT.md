@@ -16,14 +16,14 @@ submodules or clever tricks with symbolic links).
     ~~~
 
 2.  Other files in the root directory: the source of the lesson's web
-    pages (and possibly auxiliary files like IPython Notebooks and R
+    pages (and possibly auxiliary files like Jupyter Notebooks and R
     Markdown files).
 
 3.  `code/`, `data/`, and `fig/`: sub-directories containing sample
     code, data files, and figures.  See "Code, Data, and Figures"
     below.
 
-4.  `css/`, `img/`, `js/`, and `deck.js/`: style sheets, artwork, and
+4.  `css/`, `img/`, and `js/`: style sheets, artwork, and
     Javascript used in the lesson's web site.  See "Support Files"
     below.
 
@@ -31,6 +31,10 @@ submodules or clever tricks with symbolic links).
     "Support Files" below.
 
 6. `tools/`: tools for managing lessons. See "Tools" below.
+
+7. `_config.yml`: a Jekyll configuration file.
+   Authors should leave most of the settings alone,
+   but will need to change the lesson title.
 
 # Code, Data, and Figures
 
@@ -50,7 +54,7 @@ plots, and diagrams used in the lessons must go in a `fig/` directory.
     data file (since the program's working directory will be the root
     directory, not the `data` directory).
 
-2.  IPython Notebooks and R Markdown files, which are both code and
+2.  Jupyter Notebooks and R Markdown files, which are both code and
     the source for web pages, should go in the root directory.  These
     will not be checked by our validation tool, or indexed by other
     tools we plan to build.
@@ -79,8 +83,8 @@ naming conventions, but the files they contain are for Pandoc.
 The `tools/` directory contains tools to help create and maintain
 lessons:
 
-*   `tools/check`: make sure that everything is formatted properly, and
-    print error messages identifying problems if it's not.
+*   `tools/check.py`: make sure that everything is formatted properly,
+    and print error messages identifying problems if it's not.
 
 # Pages
 
@@ -112,11 +116,8 @@ The root directory holds the content of the lesson, and must contain:
     This file should be edited to replace references to `lesson-template`
     with references to your lesson's repository.
 
-Note: the lesson's title is repeated in several files.  We could
-put this in the Makefile, and insert it into pages when compiling, but
-then authors would have to edit the Makefile (which we want to avoid).
-We could also put it in some sort of configuration file, but they're
-not a standard part of Pandoc, so we're avoiding them as well.
+Our [the design document](DESIGN.html) explains why we use blockquotes
+and put styles in curly braces after blocks.
 
 ## Home Page
 
@@ -124,13 +125,13 @@ not a standard part of Pandoc, so we're avoiding them as well.
 
     ---
     layout: lesson
-    title: Lesson Title
     ---
     Paragraph(s) of introductory material.
 
-    > ## Prerequisites {.prereq}
+    > ## Prerequisites
     >
     > What learners need to know before tackling this lesson.
+    {: .prereq}
 
     ## Topics
 
@@ -161,53 +162,58 @@ Each topic page must be structured as follows:
 
     ---
     layout: page
-    title: Lesson Title
     subtitle: Topic Title
     minutes: 10
     ---
-    > ## Learning Objectives {.objectives}
+    > ## Learning Objectives
     >
     > * Learning objective 1
     > * Learning objective 2
+    {: .objectives}
 
     Paragraphs of text
     --- possibly including [definitions](reference.html#definitions) ---
     mixed with:
 
-    ~~~ {.python}
+    ~~~
     some code:
         to be displayed
     ~~~
+    {: .python}
 
     and:
 
-    ~~~ {.output}
+    ~~~
     output
     from
     program
     ~~~
+    {: .output}
 
     and:
 
-    ~~~ {.error}
+    ~~~
     error reports from programs (if any)
     ~~~
+    {: .error}
 
     and possibly including some of these:
 
-    > ## Callout Box {.callout}
+    > ## Callout Box
     >
     > An aside of some kind.
+    {: .callout}
 
     and one or more of these at the end:
 
-    > ## Challenge Title {.challenge}
+    > ## Challenge Title
     >
     > Description of a single challenge,
     > separated from the title by a blank line.
     > There may be several challenges;
     > they should all come at the end of the file,
     > and each should have a short, meaningful title.
+    {: .challenge}
 
 **Notes:**
 
@@ -228,33 +234,38 @@ Each topic page must be structured as follows:
 5.  When laying out source code, use `{.lang}` as a style on the
     opening `~~~` line.  For Unix Shell commands use:
 
-        ~~~ {.bash}
+        ~~~
         $ some-command
         ~~~
+        {: .bash}
 
     For MATLAB use:
 
-        ~~~ {.matlab}
+        ~~~
         some code
         ~~~
+        {: .matlab}
 
     For R use:
 
-        ~~~ {.r}
+        ~~~
         some code
         ~~~
+        {: .r}
 
     For Python use:
 
-        ~~~ {.python}
+        ~~~
         some code
         ~~~
+        {: .python}
 
     For SQL use:
 
-        ~~~ {.sql}
+        ~~~
         some code
         ~~~
+        {: .sql}
 
 ## Writing Lessons with R Markdown
 
@@ -271,8 +282,6 @@ generate the Markdown and html versions by running the command `make
 preview`. This first runs the `knit` command from the [knitr][]
 package to convert to Markdown, and then pandoc to convert to html.
 
-[knitr]: http://yihui.name/knitr/
-
 To ensure that the generated Markdown files follow the lesson template
 guidelines, `source` the R file
 [tools/chunk-options.R](tools/chunk-options.R). This file contains
@@ -282,7 +291,6 @@ other knitr options. Thus a lesson should look like the following:
 
     ---
     layout: page
-    title: Lesson Title
     subtitle: Topic Title
     minutes: 10
     ---
@@ -292,10 +300,11 @@ other knitr options. Thus a lesson should look like the following:
     opts_chunk$set(fig.path = "fig/topic-title-")
     ```
 
-    > ## Learning Objectives {.objectives}
+    > ## Learning Objectives
     >
     > * Learning objective 1
     > * Learning objective 2
+    {: .objectives}
 
     Paragraphs of text
     --- possibly including [definitions](reference.html#definitions) ---
@@ -333,8 +342,8 @@ random number generation is outside the scope of the lesson,
 
 ## Reference Guide
 
-The reference guide in `reference.md` is a cheat sheet for learners to print, doodle on,
-and take away.  Its format is deliberately unconstrained for now,
+The reference guide in `reference.md` is a cheat sheet for learners to print,
+doodle on, and take away.  Its format is deliberately unconstrained for now,
 since we'll need to see a few before we can decide how they ought to
 be laid out (or whether they need to be laid out the same way at all).
 
@@ -343,7 +352,6 @@ a definition list:
 
     ---
     layout: page
-    title: Lesson Title
     subtitle: Reference
     ---
     ...commands and examples...
@@ -365,7 +373,6 @@ content is otherwise unconstrained:
 
     ---
     layout: page
-    title: Lesson Title
     subtitle: Discussion
     ---
     ## Something That May Be Useful
@@ -391,7 +398,6 @@ structure is:
 
     ---
     layout: page
-    title: Lesson Title
     subtitle: Instructor's Guide
     ---
     ## Overall
@@ -437,4 +443,19 @@ structure is:
     not go in the challenge itself, since they can increase learners'
     stress levels.)
 
+## Configuration File
+
+`_config.yml` contains settings for Jekyll.
+Most of these should be left as they are,
+but the following values must be changed:
+
+*   `title`: the lesson's title.
+
+*   `lesson_repo`: the URL of the lesson's GitHub repository,
+    such as `https://github.com/swcarpentry/lesson-example`.
+
+*   `lesson_site`: the URL of the lesson's generated website,
+    such as `http://swcarpentry.github.io/lesson-example'.
+
+[knitr]: http://yihui.name/knitr/
 [swc-lesson-example]: https://github.com/swcarpentry/lesson-example

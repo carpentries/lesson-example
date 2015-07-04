@@ -1,18 +1,19 @@
 ---
 layout: page
-title: Lesson Title
 ---
 Paragraph of introductory material.
 
-> ## Prerequisites {.prereq}
+> ## Prerequisites
 >
 > A short paragraph describing what learners need to know
 > before tackling this lesson.
+{: .prereq}
 
-> ## Getting ready {.getready}
+> ## Getting Ready
 >
 > A short paragraph describing
 > what learners need to do before tackling this lesson.
+{: .getready}
 
 ## Topics
 
