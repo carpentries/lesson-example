@@ -18,12 +18,7 @@ consectetur. Donec ut libero sed arcu vehicula ultricies a non
 tortor. Lorem ipsum dolor sit amet, consectetur adipiscing
 elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed,
 adipiscing id dolor. Pellentesque auctor nisi id magna consequat
-sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt
-feugiat nisl imperdiet. Ut convallis libero in urna ultrices
-accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at
-malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis
-parturient montes, nascetur ridiculus mus. In rutrum accumsan
-ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
+sagittis.
 
 Paragraphs of text
 --- possibly including [key word 1](reference.html#key-word-1) ---
@@ -50,6 +45,17 @@ and possibly including:
 > ## Callout Box
 >
 > An aside of some kind.
+>
+> There may be several paragraphs.
+>
+> *   Or a
+> *   bullet list
+>
+> And more text.
+>
+> ~~~
+> and some code
+> ~~~
 {: .callout}
 
 or an image from the `figs` directory:
