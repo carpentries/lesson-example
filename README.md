@@ -79,40 +79,37 @@ lesson is `data-cleanup`.
     [Background and Design](DESIGN.md),
     and the [FAQ](FAQ.md).
 
-11. Build the HTML pages for your lesson:
+11. (Optional) Preview the HTML pages for your lesson:
 
     ~~~
     $ make preview
     ~~~
 
-    This step requires you to have installed Pandoc (described below).
-    It is *not* optional: you *must* build the web pages for your
-    lesson yourself and push them to GitHub, rather than relying on
-    GitHub to build them for you.
+    This step requires you to have installed Jekyll (described below).
+    You don't strictly need to do this,
+    since you can push pages to the `gh-pages` branch of your repository
+    and see the rendered HTML in your GitHub website.
+    However,
+    most people prefer to preview locally before pushing.
 
-12. Commit your changes *and the HTML pages in the root directory of
-    your lesson repository* and push to the `gh-pages` branch of your
-    repository:
+12. Commit your changes *but not the HTML pages in the `_site` directory*
+    and push to the `gh-pages` branch of your repository:
 
     ~~~
     $ cd data-cleanup
-    $ git add changed-file.md changed-file.html
+    $ git add changed-file.md
     $ git commit -m "Explanatory message"
     $ git push origin gh-pages
     ~~~
+
+    Note that the `.gitignore` file in this directory
+    excludes the `_site` directory by default.
 
 13. [Tell us](#getting-and-giving-help) where your lesson is so that we can add it to
     [the Software Carpentry lessons page][swc-lessons-page].
 
 **Note:** SSH cloning (rather than the HTTPS cloning used above)
 will also work for those who have set up SSH keys with GitHub.
-
-**Note:** Once a lesson has been created, please submit changes
-for review as pull requests that contain *only the modified Markdown files*,
-and *not* the re-generated HTML.  This simplifies review considerably,
-since each change appears only once.  Once the change has been approved,
-the lesson maintainer(s) will merge the pull request, re-generate the HTML
-locally, and push that to GitHub.
 
 **Note:**
 some people have had intermittent errors during the import process,
@@ -123,27 +120,24 @@ please [get in touch](#getting-and-giving-help).
 
 ## Dependencies
 
-Because people may choose to use the IPython Notebook, R Markdown, or
-some other format for parts of their lessons, and because Jekyll (the
-tool GitHub uses to build HTML pages) only supports an impoverished
-form of Markdown, we require lesson authors to build the HTML pages
-for their lessons on their machines with Pandoc and commit those to
-the `gh-pages` branch of their lesson website.  To do this:
+If you are using the Jupyter Notebook, R Markdown, or some other format
+for parts of your lessons, you must generate Markdown that conforms to our template
+and commit it to the `gh-pages` branch of your repository.  To do this:
 
-1. [Install Pandoc](http://www.pandoc.org/installing)
+1. [Install Jekyll](https://help.github.com/articles/using-jekyll-with-pages/)
 
-2. All Python packages required for lesson creation and validation can
+2. All Python packages required for lesson creation and validation can 
    be installed using:
-
+   
     ~~~
     $ pip install -r requirements.txt
     ~~~
-
-3. To convert Markdown files into HTML pages in the root directory, go
-   into the root directory of your lesson and run:
+        
+3. To convert Markdown files into HTML pages in the `_site` directory,
+   go into the root directory of your lesson and run:
 
    ~~~
-   $ make preview
+   $ make site
    ~~~
 
    You can run `make` on its own to get a list of other things it will
@@ -180,10 +174,10 @@ etc.
 We hope that putting the core files in a repository of their own
 will avoid this problem.
 
-(Note that from Fall 2014 to Spring 2015 we tried using two branches in a single repository,
+Note that from Fall 2014 to Spring 2015 we tried using two branches in a single repository,
 one for the core files and one for the example.
-Many contributors [found it confusing](https://github.com/swcarpentry/lesson-template/issues/118);
-we hope that separate repositories will be easier to keep straight.)
+Many contributors [found that confusing](https://github.com/swcarpentry/lesson-template/issues/118);
+separate repositories have proven to be easier to manage.
 
 ## Lesson Structure
 
