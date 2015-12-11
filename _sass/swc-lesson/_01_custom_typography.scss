@@ -27,19 +27,19 @@ a,
 a:link {}
 
 a:visited {
-        border-bottom: $grey-2;
+    border-bottom: $grey-2;
 }
 
 a:hover {
-        color: darken( $ci-1, 10% );
+    color: darken( $ci-1, 10% );
 }
 
 a:focus {
-        color: lighten( $ci-1, 20% );
+    color: lighten( $ci-1, 20% );
 }
 
 a:active {
-        color: darken( $ci-1, 20% );
+    color: darken( $ci-1, 20% );
 }
 
 
@@ -53,21 +53,26 @@ p {
     -ms-hyphens: auto;
     hyphens: auto;
 }
+
 p a,
 article a {
+    text-decoration: none;
     font-weight: bold;
     border-bottom: 1px dotted;
 }
+
 p a:hover,
 article a:hover {
     border-bottom: 2px solid;
 }
+
 p a.button,
 .button,
 .button:hover {
     border: 0;
     color: #fff;
 }
+
 p.button a {
     border: 0;
     color: #fff;
@@ -110,6 +115,7 @@ h5 {
 ------------------------------------------------------------------- */
 
 img { border-radius: $global-radius;}
+
     img.alignleft,
     img.left        { float: left; margin:5px 15px 5px 0; }
     img.alignright,
@@ -145,7 +151,6 @@ figcaption a:hover,
     padding-right: 10px;
     text-align: right;
 }
-
 
 
 /* Tables
@@ -232,13 +237,7 @@ article dl dd {
 /* Quotes
 ------------------------------------------------------------------- */
 
-/*blockquote {
-    font-style: italic;
-    position: relative;
-    border: none;
-    margin: 0 30px 30px 30px;
-    color: #4b4b4d
-}*/
+
 
 
 cite {
@@ -292,11 +291,11 @@ mark {
 
 @font-face {
   font-family: 'iconfont';
-  src: url('../../fonts/iconfont.eot'); /* IE9 Compat Modes */
-  src: url('../../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../../fonts/iconfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../../fonts/iconfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../../fonts/iconfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  src: url('../fonts/iconfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/iconfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/iconfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/iconfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 .iconfont       { font-family: iconfont; }
