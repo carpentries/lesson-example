@@ -12,6 +12,9 @@ sitemap:
 @import "swc-lesson/functions.scss";
 @import "swc-lesson/settings_global.scss";
 
+/* +++++++++++++++++ Glyphicons from twitter bootstrap +++++++++++++++++ */
+$icon-font-path: "{{site.baseurl}}/assets/fonts/glyphicon-fonts/" !default;
+
 @import "foundation-components/global";
 //@import "foundation-components/accordion";
 @import "foundation-components/alert-boxes";
@@ -52,9 +55,8 @@ sitemap:
 @import "foundation-components/type";
 @import "foundation-components/visibility";
 
-@import "swc-lesson/06_typography.scss";
-@import "swc-lesson/07_layout.scss";
-@import "foundation-components/grid";
-@import "swc-lesson/09_elements.scss";
+@import "swc-lesson/01_custom_typography.scss";
+@import "swc-lesson/02_custom_layout.scss";
+@import "swc-lesson/03_custom_elements.scss";
 
-@import "swc-lesson/11_syntax-highlighting.scss";
+@import "swc-lesson/syntax-highlighting.scss";
