@@ -1,5 +1,4 @@
 ---
-layout: page
 subtitle: Discussion
 ---
 *   First point of general discussion.

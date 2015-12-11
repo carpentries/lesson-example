@@ -1,5 +1,4 @@
 ---
-layout: page
 ---
 Paragraph of introductory material.
 

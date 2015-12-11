@@ -1,5 +1,4 @@
 ---
-layout: page
 subtitle: Licenses
 ---
 ## Instructional Material
