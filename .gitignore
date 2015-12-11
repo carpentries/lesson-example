@@ -9,3 +9,7 @@ CONDUCT.html
 _site
 .DS_Store
 Gemfile.lock
+
+assets
+_sass
+.sass-cache
