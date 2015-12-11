@@ -1,0 +1,81 @@
+# Your web site url. eg: http://mysite.com
+# NO trailing slash
+url: "http://swctasks.github.io"
+# Your web site relative path from domain. eg: /folder
+# NO trailing slash
+baseurl: "/lesson-example"
+
+#############################################
+# Assets configuration
+#############################################
+
+# extensionless url allows to automatically switch
+# to current page protocol (http or https)
+# to avoid mixed content problems
+# distant-assets-url: "//swcarpentry.github.io/styles/"
+
+# repository url
+# NO TRAILING SLASH
+distantAssetsUrl: "//swctasks.github.io"
+
+# path : "/styles"
+# NO TRAILING SLASH
+# Leave empty if assets are at the root of the domain
+distantAssetsPath: "/styles/assets"
+
+#############################################
+# External domain
+#############################################
+# This is used to build links to parent domain mainly in footer links
+ParentDomainUrl: "http://dev.software-carpentry.org"
+
+
+footerDescription: "Software Carpentry is volunteer non-profit organization dedicated to teaching basic computing skills to researchers."
+
+#--------------------------------------------------------------------------------
+# Settings for Jekyll - should not need to be modified.
+#--------------------------------------------------------------------------------
+markdown        : kramdown
+kramdown        :
+  entity_output : as_input # &mdash; is output as &mdash;
+  smart_quotes  : [39, 39, 34, 34] # decimal for left/right single/double quotes
+exclude         : [tools]
+
+#############################################
+# Social medias - used in footer
+#############################################
+socialmedia:
+  - name: GitHub
+    url: http://github.com/swcarpentry
+    class: icon-github
+    title: Source
+
+  - name: Twitter
+    url: http://twitter.com/swcarpentry
+    class: icon-twitter
+    title: "Software Carpentry on Twitter"
+
+  - name: YouTube
+    url: https://www.youtube.com/user/softwarecarpentry
+    class: icon-youtube
+    title: "Software Carpentry Videos"
+
+#############################################
+# Services - used in footer
+#############################################
+services:
+  - name: "Contact"
+    url: "/contact/"
+    title: "Contact"
+
+  - name: "RSS"
+    url: "/feed.xml"
+    title: "Subscribe to RSS Feed"
+
+  - name: "sitemap.xml"
+    url: "/sitemap.xml"
+    title: "Sitemap for Google Webmaster Tools"
+
+  - name: "License"
+    url: "/license/"
+    title: "License"
