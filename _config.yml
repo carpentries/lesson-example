@@ -87,3 +87,14 @@ kramdown        :
   entity_output : as_input # &mdash; is output as &mdash;
   smart_quotes  : [39, 39, 34, 34] # decimal for left/right single/double quotes
 exclude         : [tools]
+
+
+# making all pages to have "layout: default"
+# can be overriden on per page basis
+# by setting "layout: other" in the front matter of the page
+defaults:
+  -
+    scope:
+      type: "pages"
+    values:
+      layout: default
