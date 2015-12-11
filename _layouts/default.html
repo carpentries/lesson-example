@@ -3,18 +3,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-{% include new/head.html %}
+{% include head.html %}
 </head>
 <body id="top-of-page" class="lesson">
-{% include new/header.html %}
+{% include header.html %}
   <div class="row">
     <div class="medium-12 columns">
         <h1><a href="{{ site.baseurl}}/">{{ site.lessonTitle }}</a></h1>
-
       {{ content }}
     </div>
   </div>
-{% include new/footer.html %}
+{% include footer.html %}
 {% include javascript.html %}
 </body>
 </html>
