@@ -238,7 +238,7 @@ p.imgpar img {
 
 /* ++++++++++++++++++++++ blockquotes ++++++++++++++++++++++ */
 
-$bk-radius: 13px;
+$bk-radius: 6px;
 
 @mixin bkSetup($color, $glyph) {
 
@@ -308,10 +308,8 @@ blockquote {
 
   pre {
       display: block;
-      padding: 9.5px;
-      margin: 0px 0px 10px;
-      font-size: 13px;
-      line-height: 1.42857;
+      padding: 10px;
+      margin: 0px 10px 10px;
       color: #333;
       word-break: break-all;
       word-wrap: break-word;
