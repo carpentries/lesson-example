@@ -1,0 +1,20 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+{% include new/head.html %}
+</head>
+<body id="top-of-page">
+{% include new/header.html %}
+  <div class="row">
+    <div class="medium-12 columns">
+        <h1><a href="{{ site.baseurl}}/">{{ site.lessonTitle }}</a></h1>
+
+      {{ content }}
+    </div>
+  </div>
+{% include new/footer.html %}
+{% include javascript.html %}
+</body>
+</html>
