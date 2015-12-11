@@ -13,7 +13,7 @@ sitemap:
 @import "swc-lesson/settings_global.scss";
 
 /* +++++++++++++++++ Glyphicons from twitter bootstrap +++++++++++++++++ */
-$icon-font-path: "{{site.baseurl}}/assets/fonts/glyphicon-fonts/" !default;
+$icon-font-path: "../fonts/glyphicon-fonts/" !default;
 
 @import "foundation-components/global";
 //@import "foundation-components/accordion";
