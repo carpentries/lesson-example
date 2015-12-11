@@ -18,9 +18,6 @@ build :
 install :
 	bundle install
 
-## build    : install missing Ruby gems using bundle. Legacy
-preview :
- 	bundle install
 #-------------------------------------------------------------------------------
 
 ## clean      : clean up junk files.
