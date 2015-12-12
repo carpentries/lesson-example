@@ -36,6 +36,10 @@ or an image from the `figs` directory:
 
 ![this is the image's title](fig/example.svg "this is the image's alt text")
 
+You can use LaTeX to type mathematical expressions.
+E.g. the solution for $a x^2 + b x + c = 0$ is
+$$x = \frac{-b \pm \sqrt{b^2 - 4 a c}}{2 a}$$
+
 > ## Challenge Title {.challenge}
 >
 > Description of a single challenge.
