@@ -1,6 +1,7 @@
 # Your web site url. eg: http://mysite.com
 # NO trailing slash
 url: "http://swctasks.github.io"
+
 # Your web site relative path from domain. eg: /folder
 # NO trailing slash
 baseurl: "/lesson-example"
@@ -8,30 +9,9 @@ baseurl: "/lesson-example"
 # Your lesson title diplayed in you pages
 lessonTitle: Lesson title
 
-###############################################################################
-###############################################################################
-# Settings for Jekyll - should not need to be modified.
-###############################################################################
-###############################################################################
-
-
 #############################################
 # Assets configuration
 #############################################
-
-# extensionless url allows to automatically switch
-# to current page protocol (http or https)
-# to avoid mixed content problems
-# distant-assets-url: "//swcarpentry.github.io/styles/"
-
-# repository url
-# NO TRAILING SLASH
-distantAssetsUrl: "//swctasks.github.io"
-
-# path : "/styles"
-# NO TRAILING SLASH
-# Leave empty if assets are at the root of the domain
-distantAssetsPath: "/styles/assets"
 
 #############################################
 # External domain
@@ -40,6 +20,8 @@ distantAssetsPath: "/styles/assets"
 ParentDomainUrl: "http://dev.software-carpentry.org"
 
 footerDescription: "Software Carpentry is volunteer non-profit organization dedicated to teaching basic computing skills to researchers."
+
+masthead_slogan: "Software Carpentry – Teaching Lab Skills for Scientific Computing"
 
 #############################################
 # Social medias - used in footer
