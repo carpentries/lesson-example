@@ -4,7 +4,7 @@ url: "http://gvwilson.github.io"
 
 # Your web site relative path from domain. eg: /folder
 # NO trailing slash
-baseurl: "/lesson-example"
+baseurl: "/swctasks-lesson-example"
 
 # Your lesson title diplayed in you pages
 lessonTitle: Lesson title
