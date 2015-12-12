@@ -1,5 +1,3 @@
-PY=python3
-
 all : commands
 
 ## commands   : show all commands.
@@ -17,10 +15,6 @@ build :
 ## install    : install missing Ruby gems using bundle.
 install :
 	bundle install
-
-## offline    : run a local server FOR OFFLINE USE with fallback assets
-offline :
-	bundle exec jekyll serve --config _config.yml,_config_dev.yml,_config_offline.yml
 
 #-------------------------------------------------------------------------------
 
