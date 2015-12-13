@@ -21,7 +21,7 @@ project_type: "swc"
 # E.g., http://yourname.github.io
 domain: "http://gvwilson.github.io"
 
-# Base URL below the domain.
+# Base URL below the domain (no trailing slash).
 # This will usually be the lesson slug with a leading slash.
 baseurl: "/swctasks-lesson-example"
 
@@ -48,20 +48,3 @@ exclude         : [tools]
 
 # Logo image (white with transparent background to stand out on blue background)
 logo: "swc-logo-white.svg"
-
-services:
-  - name: "Contact"
-    url: "/contact/"
-    title: "Contact"
-
-  - name: "RSS"
-    url: "/feed.xml"
-    title: "Subscribe to RSS Feed"
-
-  - name: "sitemap.xml"
-    url: "/sitemap.xml"
-    title: "Sitemap for Google Webmaster Tools"
-
-  - name: "License"
-    url: "/license/"
-    title: "License"
