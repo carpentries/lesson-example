@@ -19,12 +19,10 @@ socialmedia :
       url: http://github.com/swcarpentry
       class: icon-github
       title: Source
-
     - name: Twitter
       url: http://twitter.com/swcarpentry
       class: icon-twitter
       title: "Software Carpentry on Twitter"
-
     - name: YouTube
       url: https://www.youtube.com/user/softwarecarpentry
       class: icon-youtube

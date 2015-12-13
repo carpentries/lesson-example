@@ -1,3 +1,5 @@
+{% if site.project_type == 'dc %}{% capture project %}{{ site.data.dc }}{% endcapture %}{% endif %}
+{% if site.project_type == 'swc' %}{% capture project %}{{ site.data.swc }}{% endcapture %}{% endif %}
   <meta charset="utf-8" />
   <title>Software Carpentry: {{ page.venue }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
