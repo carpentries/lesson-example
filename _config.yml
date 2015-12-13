@@ -22,14 +22,14 @@ project_type: "swc"
 domain: "http://gvwilson.github.io"
 
 # Base URL below the domain.
-# This will usually be the workshop slug with a leading slash.
+# This will usually be the lesson slug with a leading slash.
 baseurl: "/swctasks-lesson-example"
+
+# Lessons's GitHub repository.
+lesson_repo   : "http://github.com/swcarpentry/lesson-template"
 
 # The lesson's title.
 lesson_title: "Lesson Title"
-
-# Workshops's GitHub repository.
-workshop_repo   : "http://github.com/swcarpentry/workshop-template"
 
 #--------------------------------------------------------------------------------
 # Settings for Jekyll - should not need to be modified.
