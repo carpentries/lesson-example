@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: lesson
 ---
 Paragraph of introductory material.
 

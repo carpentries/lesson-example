@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: lesson
 subtitle: Instructor's Guide
 ---
 ## Overall

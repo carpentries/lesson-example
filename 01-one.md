@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: lesson
 subtitle: Topic Title One
 minutes: 10
 ---

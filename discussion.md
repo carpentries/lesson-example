@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: lesson
 subtitle: Discussion
 ---
 *   First point of general discussion.

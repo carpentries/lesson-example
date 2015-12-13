@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: lesson
 subtitle: Licenses
 ---
 ## Instructional Material
