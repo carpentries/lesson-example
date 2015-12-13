@@ -1,9 +1,9 @@
-{% if site.project_type == 'dc %}{% capture project %}{{ site.data.dc }}{% endcapture %}{% endif %}
-{% if site.project_type == 'swc' %}{% capture project %}{{ site.data.swc }}{% endcapture %}{% endif %}
+{% if site.project_type == 'dc %}{% assign project = site.data.dc %}{% endif %}
+{% if site.project_type == 'swc' %}{% assign project = site.data.swc %}{% endif %}
   <meta charset="utf-8" />
   <title>Software Carpentry: {{ page.venue }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="{{ site.parent_domain }}/favicon.ico"><!-- must remain in your root directory -->
+  <link rel="shortcut icon" href="{{ project.parent_domain }}/favicon.ico"><!-- must remain in your root directory -->
 
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/swc-lesson.css" />
 

@@ -46,10 +46,6 @@ exclude         : [tools]
 # FIXME: move this to a _data file.
 #-------------------------------------------------------------------------------
 
-parent_domain : "http://gvwilson.github.io/swctasks-website"
-
-footer_description : "Software Carpentry is volunteer non-profit organization dedicated to teaching basic computing skills to researchers."
-
 # Logo image (white with transparent background to stand out on blue background)
 logo: "swc-logo-white.svg"
 
