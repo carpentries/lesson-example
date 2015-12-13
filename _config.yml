@@ -1,50 +1,59 @@
-# Your web site url. eg: http://mysite.com
-# NO trailing slash
-url: "http://gvwilson.github.io"
+#===============================================================================
+# Configuration file for this site.
+#
+# https://help.github.com/articles/repository-metadata-on-github-pages/ explains
+# the GitHub-specific variables available to Jekyll.
+#===============================================================================
 
-# Your web site relative path from domain. eg: /folder
-# NO trailing slash
+#--------------------------------------------------------------------------------
+# Values for this lesson - EDIT THIS SECTION.
+#
+# Note that there is some redundancy here, but since YAML variables can't
+# use the values of other YAML variables, we've left it as is.
+#-------------------------------------------------------------------------------
+
+# Website domain (no trailing slash).
+# E.g., http://yourname.github.io
+domain: "http://gvwilson.github.io"
+
+# Base URL below the domain.
+# This will usually be the workshop slug with a leading slash.
 baseurl: "/swctasks-lesson-example"
 
-# Your lesson title diplayed in you pages
-lessonTitle: Lesson title
+# The lesson's title.
+lesson_title: "Lesson Title"
 
-#############################################
-# Assets configuration
-#############################################
+# Workshops's GitHub repository.
+workshop_repo   : "http://github.com/swcarpentry/workshop-template"
 
-#############################################
+#-------------------------------------------------------------------------------
 # External domain
-#############################################
-# This is used to build links to parent domain mainly in footer links
-ParentDomainUrl: "http://dev.software-carpentry.org"
+#-------------------------------------------------------------------------------
 
-footerDescription: "Software Carpentry is volunteer non-profit organization dedicated to teaching basic computing skills to researchers."
+# Used to build links to the parent domain.
+parent_domain: "http://gvwilson.github.io/swctasks-website"
 
-masthead_slogan: "Software Carpentry – Teaching Lab Skills for Scientific Computing"
+# Describing this project in the footer.
+footer_description: "Software Carpentry is volunteer non-profit organization dedicated to teaching basic computing skills to researchers."
 
-#############################################
-# Social medias - used in footer
-#############################################
-socialmedia:
-  - name: GitHub
-    url: http://github.com/swcarpentry
-    class: icon-github
-    title: Source
+#--------------------------------------------------------------------------------
+# Settings for Jekyll - should not need to be modified.
+# (Need to be here rather than in a _data file to satisfy Jekyll.)
+#--------------------------------------------------------------------------------
 
-  - name: Twitter
-    url: http://twitter.com/swcarpentry
-    class: icon-twitter
-    title: "Software Carpentry on Twitter"
+markdown        : kramdown
+kramdown        :
+  entity_output : as_input # &mdash; is output as &mdash;
+  smart_quotes  : [39, 39, 34, 34] # decimal for left/right single/double quotes
+exclude         : [tools]
 
-  - name: YouTube
-    url: https://www.youtube.com/user/softwarecarpentry
-    class: icon-youtube
-    title: "Software Carpentry Videos"
+#-------------------------------------------------------------------------------
+# FIXME: move this to a _data file.
+#-------------------------------------------------------------------------------
 
-#############################################
-# Services - used in footer
-#############################################
+# Logo image (white with transparent background to stand out on blue background)
+logo: "swc-logo-white.svg"
+
 services:
   - name: "Contact"
     url: "/contact/"
@@ -61,26 +70,3 @@ services:
   - name: "License"
     url: "/license/"
     title: "License"
-
-#############################################
-# Jekyll specific
-#############################################
-kramdown        :
-  entity_output : as_input # &mdash; is output as &mdash;
-  smart_quotes  : [39, 39, 34, 34] # decimal for left/right single/double quotes
-exclude         : [tools]
-
-
-# making all pages to have "layout: default"
-# can be overriden on per page basis
-# by setting "layout: other" in the front matter of the page
-defaults:
-  -
-    scope:
-      type: "pages"
-    values:
-      layout: default
-
-
-# Logo image (white with transparent background to stand out on blue background)
-logo: "swc-logo-white.svg"

@@ -1,4 +1,5 @@
 ---
+layout: workshop
 subtitle: Instructor's Guide
 ---
 ## Overall

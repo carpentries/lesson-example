@@ -1,4 +1,5 @@
 ---
+layout: workshop
 subtitle: Topic Title One
 minutes: 10
 ---

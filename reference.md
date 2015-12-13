@@ -1,4 +1,5 @@
 ---
+layout: workshop
 subtitle: Reference
 ---
 ## [Topic Title One](01-one.html)
