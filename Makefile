@@ -23,4 +23,5 @@ clean :
 	rm -rf _site
 	rm -rf .sass-cache
 	find . -name '*~' -exec rm {} \;
+	find . -name '*.pyc' -exec rm {} \;
 	find . -name .DS_Store -exec rm {} \;
