@@ -5,11 +5,10 @@ sitemap:
 ---
 @charset "utf-8";
 
-@import "lesson/normalize.scss"; // always first
+@import "foundation-components/normalize.scss"; // always first
+@import "foundation-components/functions.scss";
 
 @import "lesson/settings_colors.scss";
-
-@import "lesson/functions.scss";
 @import "lesson/settings_global.scss";
 
 /* +++++++++++++++++ Glyphicons from twitter bootstrap +++++++++++++++++ */
@@ -54,9 +53,8 @@ $icon-font-path: "../fonts/glyphicon-fonts/" !default;
 @import "foundation-components/top-bar";
 @import "foundation-components/type";
 @import "foundation-components/visibility";
+@import "foundation-components/syntax-highlighting.scss";
 
 @import "lesson/01_custom_typography.scss";
 @import "lesson/02_custom_layout.scss";
 @import "lesson/03_custom_elements.scss";
-
-@import "lesson/syntax-highlighting.scss";
