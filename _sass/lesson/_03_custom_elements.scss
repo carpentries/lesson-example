@@ -289,7 +289,7 @@ blockquote {
     }
 
     p, ul, ol {
-      padding: 15px;
+      padding: 10px 15px;
       margin-bottom: 0px;
     }
     ul, ol { margin-left: 1em; }
@@ -312,7 +312,7 @@ blockquote {
   pre {
       display: block;
       padding: 10px;
-      margin: 0px 0px 10px;
+      margin: 0px 10px 10px;
       font-size: 13px;
       line-height: 1.42857;
       color: #333;
@@ -326,10 +326,6 @@ blockquote {
   code{
     background: transparent;
     color: inherit;
-  }
-
-  blockquote {
-      pre { margin: 0px 10px 10px; }
   }
 
   .python{ color:ForestGreen; }
