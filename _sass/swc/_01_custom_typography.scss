@@ -10,6 +10,7 @@ Check typography variables › _3_typography_settings.scss
 - Tables
 - Code
 - Quotes
+- **** lessons blockquotes  and  code highlight
 - Typography for Articles
 - Smaller Fontsize for Bigteaser on small devices
 - Additional typographical elements
@@ -18,7 +19,8 @@ Check typography variables › _3_typography_settings.scss
 
 */
 
-
+/* +++++++++++++++++ Foundation icons +++++++++++++++++ */
+$icon-font-path: "../fonts/" !default;
 
 /* Links
 ------------------------------------------------------------------- */
@@ -83,6 +85,13 @@ p.button a {
 
 /* Headlines
 ------------------------------------------------------------------- */
+$font-size-h1:      2.441em;
+$font-size-h2:      1.953em;
+$font-size-h3:      1.563em;
+$font-size-h4:      1.25em;
+$font-size-h5:      1.152em;
+$font-size-small:   0.8em;
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $header-font-family;
@@ -91,21 +100,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+    font-size: $font-size-h1;
     margin-top: 0;
 }
 h2 {
+    font-size: $font-size-h2;
     margin: 1.563em 0 0 0;
 }
     .blog-index h2 {
         margin-top: 0;
     }
 h3 {
+    font-size: $font-size-h3;
     margin: 1.152em 0 0 0;
 }
 h4 {
+    font-size: $font-size-h4;
     margin: 1.152em 0 0 0;
 }
 h5 {
+    font-size: $font-size-h5;
     margin: 1em 0 0 0;
 }
 
@@ -156,6 +170,12 @@ figcaption a:hover,
 /* Tables
 ------------------------------------------------------------------- */
 
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
 td {
     vertical-align: top;
 }
@@ -182,13 +202,185 @@ code {
     line-height: 1.5;
 }
 
+.workshop{
+  code {
+    padding: 2px 4px;
+    font-size: 90%;
+    background-color: #F9F2F4;
+    border-radius: 4px;
+    border: none;
+    font-family: "Courier New",monospace;
+  }
+}
+
+/* Quotes
+------------------------------------------------------------------- */
+
+blockquote {
+    font-style: italic;
+    position: relative;
+    border: none;
+    margin: 0 30px 30px 30px;
+    color: #4b4b4d
+}
+
+    blockquote p {font-style: italic; color: $grey-10; }
+
+    blockquote:before {
+        display:block;
+        content:"\00BB";
+        font-size:80px;
+        position:absolute;
+        left:-25px;
+        top:-40px;
+        color:#4b4b4d
+    }
+    blockquote:after {
+        display:block;
+        content:"\00AB";
+        font-size:80px;
+        position:absolute;
+        right:-10px;
+        bottom:-40px;
+        color:#4b4b4d;
+    }
+    blockquote cite:before {
+        content:"\2014 \0020"
+    }
+    blockquote cite a,blockquote cite a:visited {
+        color: #555
+    }
+
+
+/* +++++++++++ lessons blockquotes  and  code highlight +++++++++++++++ */
+$bk-radius: 13px;
+
+@mixin bkSetup($color, $glyph) {
+
+  $gradientcolor1: scale-color($color, $lightness: 70%);
+  $gradientcolor2: scale-color($color, $lightness: 80%);
+
+  border-color: $color;
+
+  h2{
+    background: linear-gradient(to bottom, $gradientcolor1, $gradientcolor2);
+    border-color: $color;
+    color: darken( $color, 20% );
+  }
+  h2:before {
+    content:$glyph ;
+  }
+
+}
+
+.lesson{
+  blockquote {
+      margin: 10px;
+      padding: 0px;
+      font-weight: 500;
+      line-height: 1.1;
+      border: 1px solid transparent;
+      border-radius: $bk-radius;
+
+    &::before {
+        display:block;
+        content:"";
+    }
+    &::after {
+        display:block;
+        content:"";
+    }
+
+    h2{
+        margin: 0px;
+        padding: 10px 15px;
+        display: inline-block;
+        width: 100%;
+        border-radius: $bk-radius $bk-radius 0 0;
+        border-bottom:1px solid $swc-blue;
+        font-size: 1.4em;
+    }
+
+    h2:before {
+      font-family: 'Glyphicons Halflings';
+      float: left;
+      padding-right:10px;
+      position: relative;
+      top: 1px;
+      display: inline-block;
+      font-family: 'Glyphicons Halflings';
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    p, ul, ol {
+      padding: 10px 15px;
+      margin-bottom: 0px;
+    }
+    ul, ol { margin-left: 1em; }
+    cite { font-style: italic; }
+
+    @include bkSetup($swc-blue, "\e233");
+  }
+
+  .prereq{ @include bkSetup(#D4C30B, "\e233"); }
+  .getready{ @include bkSetup(#D4C30B, "\e067"); }
+  .callout{ @include bkSetup(#31708f, "\e146"); }
+  .challenge{ @include bkSetup(#3c763d, "\270f"); }
+  .objectives{ @include bkSetup(#D4C30B, "\e124"); }
+  .testimonial{ @include bkSetup(#D4C30B, "\e067"); }
+
+  pre {
+      display: block;
+      padding: 10px;
+      margin: 0px 10px 10px;
+      font-size: 13px;
+      line-height: 1.42857;
+      color: #333;
+      word-break: break-all;
+      word-wrap: break-word;
+      background-color: #F5F5F5;
+      border: 1px solid #CCC;
+      border-radius: 4px;
+  }
+
+  code{
+    background: transparent;
+    color: inherit;
+  }
+
+  .python{ color:ForestGreen; }
+  /* Code sample */
+  .sourceCode, pre.input { color: ForestGreen; }
+  .output { color: MediumBlue; }
+  .error { color: Red; }
+  .comment { color: purple; }
+  /* Error messages. */
+  .err { color: darkred; font-style: italic; }
+  /* Things to fix. */
+  .fixme {
+      text-decoration: underline;
+      color: darkred;
+      background-color: lightgray;
+  }
+  /* Highlighted changes in code. */
+  .highlight { background-color: mistyrose; }
+  /* Manual input. */
+  .in { color: darkgreen; }
+  /* Program output. */
+  .out { color: darkblue; font-style: italic; }
+
+}
+
 
 
 /* Lists
 ------------------------------------------------------------------- */
 
 ul, ol {
-    margin-left: 3em;
+    margin-left: 20px;
     padding: 0;
 }
 li {
@@ -238,8 +430,6 @@ article dl dd {
 ------------------------------------------------------------------- */
 
 
-
-
 cite {
     padding-top: 15px;
 }
@@ -285,17 +475,50 @@ mark {
 }
 
 
+
+/* Additional typographical elements
+------------------------------------------------------------------- */
+
+.sans           { font-family: $font-family-sans-serif; }
+.serif          { font-family: $font-family-serif; }
+
+
+/* Footnotes
+------------------------------------------------------------------- */
+
+.footnotes:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 60px;
+    margin-top: -10px;
+    border-bottom: 1px solid $grey-2;
+}
+.footnotes {
+    margin-top: 60px;
+}
+.footnotes ol {
+    font-size: $font-size-small;
+}
+.footnotes p {
+    font-size: inherit;
+    margin-bottom: 0;
+}
+
+
+
+
 /* Icon Font
    See the icon-set/preview in /assets/fonts/iconfont-preview.html
 ------------------------------------------------------------------- */
 
 @font-face {
   font-family: 'iconfont';
-  src: url('../fonts/iconfont.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/iconfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../fonts/iconfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/iconfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  src: url('#{$icon-font-path}iconfont.eot'); /* IE9 Compat Modes */
+  src: url('#{$icon-font-path}iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$icon-font-path}iconfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('#{$icon-font-path}iconfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('#{$icon-font-path}iconfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 .iconfont       { font-family: iconfont; }
