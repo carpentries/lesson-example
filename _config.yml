@@ -26,7 +26,7 @@ domain: "http://gvwilson.github.io"
 baseurl: "/swctasks-lesson-example"
 
 # Lessons's GitHub repository.
-lesson_repo   : "http://github.com/swcarpentry/lesson-template"
+github_repo   : "http://github.com/swcarpentry/lesson-template"
 
 # The lesson's title.
 lesson_title: "Lesson Title"
