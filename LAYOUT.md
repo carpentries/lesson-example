@@ -124,7 +124,6 @@ and put styles in curly braces after blocks.
 `index.md` must be structured as follows:
 
     ---
-    layout: lesson
     ---
     Paragraph(s) of introductory material.
 
@@ -161,7 +160,6 @@ and put styles in curly braces after blocks.
 Each topic page must be structured as follows:
 
     ---
-    layout: page
     subtitle: Topic Title
     minutes: 10
     ---
@@ -290,7 +288,6 @@ generated figures to `fig/` instead of `figure/`, and specify a few
 other knitr options. Thus a lesson should look like the following:
 
     ---
-    layout: page
     subtitle: Topic Title
     minutes: 10
     ---
@@ -351,7 +348,6 @@ The last section of the reference guide must be a glossary laid out as
 a definition list:
 
     ---
-    layout: page
     subtitle: Reference
     ---
     ...commands and examples...
@@ -372,7 +368,6 @@ get to, and so on.  Sections must use level-2 headings, but the
 content is otherwise unconstrained:
 
     ---
-    layout: page
     subtitle: Discussion
     ---
     ## Something That May Be Useful
@@ -397,7 +392,6 @@ keep material for instructors in a separate document called
 structure is:
 
     ---
-    layout: page
     subtitle: Instructor's Guide
     ---
     ## Overall

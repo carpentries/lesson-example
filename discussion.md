@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: lesson
 subtitle: Discussion
 ---
 *   First point of general discussion.

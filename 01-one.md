@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: lesson
 subtitle: Topic Title One
 minutes: 10
 ---
