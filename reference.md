@@ -1,6 +1,5 @@
 ---
-layout: page
-title: Lesson Title
+layout: lesson
 subtitle: Reference
 ---
 ## [Topic Title One](01-one.html)

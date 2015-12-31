@@ -27,20 +27,18 @@ this template is organized the way it is:
     and isn't tied to any specific language (the ReStructured Text
     format popular in the Python world, for example, is a complete
     unknown to R programmers).  If authors want to use something else
-    to author their lessons (e.g., IPython Notebooks), it's up to them
+    to author their lessons (e.g., Jupyter Notebooks), it's up to them
     to generate and commit Markdown formatted according to the rules
     below.
 
     **Note:** we do *not* prescribe what tools instructors should use
-    when actually teaching.  The IPython Notebook, Python IDEs like
+    when actually teaching.  The Jupyter Notebook, Python IDEs like
     Spyder, and the GOCLI (Good Ol' Command Line Interpreter) are all
     equally welcome up on stage --- all we specify is the format of
     the lesson notes.
 
-5.  We use Pandoc to process pages instead of Jekyll (GitHub's default
-    conversion tool) because Pandoc supports a much richer dialect of
-    Markdown than Jekyll.  Like Jekyll, Pandoc looks for a header at
-    the top of each page formatted like this:
+5.  GitHub uses Jekyll to turn Markdown into HTML.  Jekyll looks for
+    a header at the top of each page formatted like this:
 
     ~~~
     ---
@@ -54,34 +52,37 @@ this template is organized the way it is:
     formatting this.  Lesson authors will usually not have to worry
     about this.
 
-6.  Using Pandoc instead of Jekyll means that we have to compile our
-    Markdown into HTML on our own machines and commit it to the
-    `gh-pages` branch of the lesson's GitHub repository.
+    Jekyll also takes values from a `_config.yml` configuration file
+    and inserts them into the page.  Lesson authors will also not
+    have to worry about this in most cases, provided they update the
+    `title`, `lesson_repo`, and `lesson_site` variables in `_config.yml`.
 
-    It's considered bad practice to put computer-generated files under
-    version control, but the HTML pages put into the lesson's root
-    directory by Pandoc *must* be committed to version control in
-    order for the lesson to be displayed properly on GitHub.
-
-    It's also considered bad practice to put generated files in the
-    same directory as source files.  We do it because some authors may
-    use auxiliary source files such as R Markdown and IPython Notebook
-    files which are executable, and contain paths to things like
-    images and data files.  If we put our source files in a
-    sub-directory, those paths won't work (or conversely, if we put
-    our generated files in a different directory, the paths won't work
-    there).
-
-7.  In order to display properly, our generated HTML pages need artwork,
+6.  In order to display properly, our generated HTML pages need artwork,
     CSS style files, and a few bits of Javascript.  We could load these
     from the web e.g. from a content delivery network (CDN), but that
     would make offline authoring difficult.  Instead, each lesson's
     repository is self-contained and has a copy of all these third party
     resources, and a way of updating them (and only them) on demand.
 
-One final note: we try not to put HTML inside Markdown because it's
+## Why All the Blockquotes?
+
+We try not to put HTML inside Markdown because it's
 ugly to read and write, and error-prone to process. Instead, we put
 things that ought to be in `<div>` blocks, like the learning
 objectives and challenge exercises, in blockquotes indented with `>`,
-and do a bit of post-processing to attach the right CSS classes to
-these blocks.
+then attach a style to the blockquote like this:
+
+    > ## Title
+    >
+    > body
+    {: .style}
+
+Note that:
+
+*   The curly-braced style declaration is *not* prefaced with `>`.
+
+*   The title isn't explicitly styled;
+    instead,
+    our CSS defines what an `h2` inside a `blockquote` should look like.
+
+*   We style code blocks the same way for consistency's sake.

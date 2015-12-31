@@ -1,6 +1,5 @@
 ---
-layout: page
-title: Lesson Title
+layout: lesson
 subtitle: Instructor's Guide
 ---
 ## Overall
