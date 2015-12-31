@@ -13,7 +13,7 @@ You also agree to abide by our
 
 ## Getting Started
 
-1.  Please see [the README](README.html#getting-and-giving-help)
+1.  Please see [the README][getting-giving-help]
     for advice on getting and giving help.
 
 2.  We use GitHub flow to manage changes,
@@ -23,10 +23,10 @@ You also agree to abide by our
 3.  For our lessons,
     you should branch from and submit pull requests against the `gh-pages` branch.
 
-4.  When editing lesson pages, you need only commit changes to the Markdown source files.
+4.  When editing lesson pages, only commit changes to the Markdown source files.
 
 5.  If you're looking for things to work on,
-    please see [the list of issues for this repository][issues]
+    please see [the list of issues for this repository][lesson-example-issues]
     or for [the template][lesson-template-issues],
     or have a look at [our actual lessons][swc-lessons].
     Comments on issues and reviews of pull requests are equally welcome.
@@ -35,12 +35,12 @@ You also agree to abide by our
 
 1.  This lesson is based on the template found at
     [https://github.com/swcarpentry/lesson-template](https://github.com/swcarpentry/lesson-template).
-    That repository has instructions on formatting and previewing lessons.
 
 2.  For a list of helpful commands run `make` in this directory.
 
 [conduct]: CONDUCT.md
-[issues]: https://github.com/swcarpentry/lesson-example/issues
+[getting-giving-help]: https://github.com/swcarpentry/lesson-example/#getting-and-giving-help
+[lesson-example-issues]: https://github.com/swcarpentry/lesson-example/issues
 [lesson-template-issues]: https://github.com/swcarpentry/lesson-template/issues
 [license]: LICENSE.md
 [pro-git-chapter]: http://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project
