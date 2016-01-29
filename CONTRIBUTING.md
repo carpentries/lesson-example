@@ -31,6 +31,14 @@ You also agree to abide by our
     or have a look at [our actual lessons][swc-lessons].
     Comments on issues and reviews of pull requests are equally welcome.
 
+6.  If you want to submit a change that *doesn't* address an open
+    issue with this repository, please review our list of [frequently
+    argued issues][fai] (FAI) to avoid rehashing past discussions.  If
+    your change is not covered by an FAI entry, go ahead and submit
+    it.  If your change is covered by an FAI entry but the the reasons
+    for resolving the FAI seem incomplete, please submit a pull
+    request explaining why and adjusting the FAI entry.
+
 ## Other Resources
 
 1.  This lesson is based on the template found at
@@ -40,6 +48,7 @@ You also agree to abide by our
 2.  For a list of helpful commands run `make` in this directory.
 
 [conduct]: CONDUCT.md
+[fai]: instructors.md#frequently-argued-issues
 [issues]: https://github.com/swcarpentry/lesson-example/issues
 [lesson-template-issues]: https://github.com/swcarpentry/lesson-template/issues
 [license]: LICENSE.md
