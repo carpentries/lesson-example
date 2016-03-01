@@ -152,11 +152,6 @@ not a standard part of Pandoc, so we're avoiding them as well.
     supplement the former with the latter once we have more experience
     with this lesson format and know what we actually want to do.
 
-2.  Software installation and configuration instructions *aren't* in
-    the lesson, since they may be shared with other lessons. They will
-    be stored centrally on the Software Carpentry web site and linked
-    from the lessons that need them.
-
 ## Topics
 
 Each topic page must be structured as follows:
