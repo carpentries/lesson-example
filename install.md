@@ -9,8 +9,7 @@ for this lesson.
 
 ## Tool 1
 
-,,, some information about this tool ...
-
+... some information about this tool ...
 
 ### Windows
 ### Mac OS X
@@ -18,7 +17,7 @@ for this lesson.
 
 ## Tool 2
 
-,,, some information about this tool ...
+... some information about this tool ...
 
 ### Windows
 ### Mac OS X
