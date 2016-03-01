@@ -99,18 +99,21 @@ The root directory holds the content of the lesson, and must contain:
     this lesson, and is about the filesystem. (Note that we use hyphens
     rather than underscores in filenames.) See "Topics" below.
 
-4.  `reference.md`: a cheat sheet summarizing key terms and commands,
+4.  `install.md`: instructions for installing the software tools used
+    by learners for this lesson.
+
+5.  `reference.md`: a cheat sheet summarizing key terms and commands,
     syntax, etc., that can be printed and given to learners. See
     "Reference Guide" below.
 
-5.  `discussion.md`: notes about more advanced ideas that would
+6.  `discussion.md`: notes about more advanced ideas that would
     distract from the main lesson, and pointers to where to go next.
     See "Discussion Page" below.
 
-6.  `instructors.md`: the instructor's guide for the lesson. See
+7.  `instructors.md`: the instructor's guide for the lesson. See
     "Instructor's Guide" below.
 
-7.  `CONTRIBUTING.md`: instructions for people who want to contribute.
+8.  `CONTRIBUTING.md`: instructions for people who want to contribute.
     This file should be edited to replace references to `lesson-template`
     with references to your lesson's repository.
 
