@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Lesson Title
-subtitle: Install instructions
+subtitle: Installation instructions
 ---
 
 * A brief overview of the software required

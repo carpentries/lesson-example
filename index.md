@@ -21,7 +21,7 @@ Paragraph of introductory material.
 
 ## Other Resources
 
-*   [Install instructions](install.html)
+*   [Installation instructions](install.html)
 *   [Reference](reference.html)
 *   [Discussion](discussion.html)
 *   [Instructor's Guide](instructors.html)
