@@ -13,6 +13,11 @@ Paragraph of introductory material.
 >
 > A short paragraph describing
 > what learners need to do before tackling this lesson.
+> Importantly, you must link to the
+> setup instructions provided in `install.md`
+> and/or on the [workshop template][swc-workshop-template-rendered]
+> page.
+
 
 ## Topics
 
@@ -25,3 +30,5 @@ Paragraph of introductory material.
 *   [Reference](reference.html)
 *   [Discussion](discussion.html)
 *   [Instructor's Guide](instructors.html)
+
+[swc-workshop-template-rendered]: http://swcarpentry.github.io/workshop-template/index.html

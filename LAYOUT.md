@@ -99,8 +99,12 @@ The root directory holds the content of the lesson, and must contain:
     this lesson, and is about the filesystem. (Note that we use hyphens
     rather than underscores in filenames.) See "Topics" below.
 
-4.  `install.md`: instructions for installing the software tools used
-    by learners for this lesson.
+4.  `install.md`: instructions for installing the software tools
+    used by learners for this lesson.
+    Setup instructions for tools used by the core lessons are
+    already available at the
+    [workshop template][swc-workshop-template-rendered] page.
+    Setup instructions for any other tools must be provided in `install.md`.
 
 5.  `reference.md`: a cheat sheet summarizing key terms and commands,
     syntax, etc., that can be printed and given to learners. See
@@ -439,3 +443,4 @@ structure is:
 
 [swc-lesson-example]: https://github.com/swcarpentry/lesson-example
 [swc-lesson-template]: https://github.com/swcarpentry/lesson-template
+[swc-workshop-template-rendered]: http://swcarpentry.github.io/workshop-template/index.html
