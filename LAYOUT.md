@@ -101,10 +101,12 @@ The root directory holds the content of the lesson, and must contain:
 
 4.  `install.md`: instructions for installing the software tools
     used by learners for this lesson.
-    Setup instructions for tools used by the core lessons are
-    already available at the
-    [workshop template][swc-workshop-template-rendered] page.
-    Setup instructions for any other tools must be provided in `install.md`.
+    Setup instructions for tools used by the core lessons should be
+    [posted to the workshop-template repository][swc-workshop-template-pulls],
+    which provides a central location for documenting common tools.
+    Setup instructions for other tools
+    must be provided in `install.md`,
+    which scales better as the number of lessons grow.
 
 5.  `reference.md`: a cheat sheet summarizing key terms and commands,
     syntax, etc., that can be printed and given to learners. See
@@ -443,4 +445,4 @@ structure is:
 
 [swc-lesson-example]: https://github.com/swcarpentry/lesson-example
 [swc-lesson-template]: https://github.com/swcarpentry/lesson-template
-[swc-workshop-template-rendered]: http://swcarpentry.github.io/workshop-template/index.html
+[swc-workshop-template-pulls]: https://github.com/swcarpentry/workshop-template/pulls 
