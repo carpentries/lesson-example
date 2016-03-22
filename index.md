@@ -38,5 +38,5 @@ Paragraph of introductory material.
 *   [Discussion](discussion.html)
 *   [Instructor's Guide](instructors.html)
 
-[swc-workshop-template]: http://swcarpentry.github.io/workshop-template/index.html
+[swc-workshop-template]: https://swcarpentry.github.io/workshop-template/index.html
 [swc-workshop-template-pulls]: https://github.com/swcarpentry/workshop-template/pulls

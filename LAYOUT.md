@@ -445,4 +445,4 @@ structure is:
 
 [swc-lesson-example]: https://github.com/swcarpentry/lesson-example
 [swc-lesson-template]: https://github.com/swcarpentry/lesson-template
-[swc-workshop-template-pulls]: https://github.com/swcarpentry/workshop-template/pulls 
+[swc-workshop-template-pulls]: https://github.com/swcarpentry/workshop-template/pulls
