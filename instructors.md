@@ -23,3 +23,15 @@ subtitle: Instructor's Guide
 ## [Topic Title Two](02-two.html)
 
 *   Et cetera.
+
+## Frequently Argued Issues
+
+There have never been any FAIs with the approach taken by this
+repository!
+
+### Lesson template
+
+Difficult decisions about the [lesson template][lesson-template] are
+recorded in the [background and design document](DESIGN.md).
+
+[lesson-template]: https://github.com/swcarpentry/lesson-template
