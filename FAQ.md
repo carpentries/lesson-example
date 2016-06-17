@@ -94,3 +94,28 @@ Please add notes about problems and solutions below.
     then whenever a figure is moved, added, or removed,
     the auto-generated names of the image files produced by `.ipynb`-to-`.md` conversion will change.
     This confuses version control.
+
+* Single column tables in `.md` appear as `<p>...</p>` in `.html`:
+
+    For example:
+
+    ~~~
+    |ident|
+    |-----|
+    |619  |
+    |622  |
+    |844  |
+    ~~~
+
+    is rendered as:
+
+    ~~~
+    <p>|ident| |—–| |619 | |622 | |844 |</p>
+    ~~~
+
+    This was an [issue](https://github.com/jgm/pandoc/issues/1218#issuecomment-40558621)
+    that was [closed](https://github.com/jgm/pandoc/issues/1218#event-117002739) on
+    2014-05-01 and included in 
+    [Pandoc v1.12.4 (cut 2014-05-07)](https://github.com/jgm/pandoc/releases/tag/1.12.4).
+    Updating to this, or a more recent version of Pandoc will handle single-column
+    tables correctly.
