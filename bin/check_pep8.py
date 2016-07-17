@@ -20,7 +20,10 @@ import sys
 
 def comment_line(line):
     """Comment a line."""
-    return "# " + line
+    if line:
+        return "# " + line
+    else:
+        return "#"
 
 
 def md2py(fpath_md):
