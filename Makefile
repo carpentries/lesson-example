@@ -87,6 +87,16 @@ lesson-check :
 unittest :
 	python bin/test_lesson_check.py
 
+.PHONY : pep8-check
+## pep8-check     : check Markdown files for PEP8 compliance.
+pep8-check:
+	@python bin/check_pep8.py $(MARKDOWN_SRC)
+
+.PHONY : pep8-check-test
+## pep8-check-test : test PEP8 check functions
+pep8-check-test:
+	@nosetests -v bin/check_pep8.py
+
 ## lesson-files   : show expected names of generated files for debugging.
 lesson-files :
 	@echo 'RMD_SRC:' ${RMD_SRC}
