@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page_root
 title: "Contributor Code of Conduct"
 permalink: /conduct/
 ---
