@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2016-07-19 12:36:05 +0200">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="search-domain" value="/swc-releases/2016.06/lesson-example">
+    <link rel="stylesheet" type="text/css" href="/swc-releases/2016.06/lesson-example/assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/swc-releases/2016.06/lesson-example/assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="/swc-releases/2016.06/lesson-example/assets/css/lesson.css" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon-swc.ico" />
+    
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+    <title>Lesson Title: Maintenance</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      
+      <a href="https://software-carpentry.org" class="pull-left">
+        <img class="navbar-logo" src="/swc-releases/2016.06/lesson-example/assets/img/swc-icon-blue.svg" alt="Software Carpentry logo" />
+      </a>
+      
+
+      
+      <a class="navbar-brand" href="/swc-releases/2016.06/lesson-example/">Home</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+	
+        <li><a href="/swc-releases/2016.06/lesson-example/conduct/">Code of Conduct</a></li>
+
+	
+        
+        <li><a href="/swc-releases/2016.06/lesson-example/setup/">Setup</a></li>
+        <li><a href="/swc-releases/2016.06/lesson-example/reference/">Reference</a></li>
+        <li class="dropdown">
+          <a href="/swc-releases/2016.06/lesson-example/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="/swc-releases/2016.06/lesson-example/01-design/">Lesson Design</a></li>
+            
+            <li><a href="/swc-releases/2016.06/lesson-example/02-tooling/">GitHub, Markdown, and Jekyll</a></li>
+            
+            <li><a href="/swc-releases/2016.06/lesson-example/03-organization/">Lesson Organization</a></li>
+            
+            <li><a href="/swc-releases/2016.06/lesson-example/04-formatting/">Formatting</a></li>
+            
+            <li><a href="/swc-releases/2016.06/lesson-example/05-checking/">Checking and Previewing</a></li>
+            
+            <li><a href="/swc-releases/2016.06/lesson-example/06-rmarkdown-example/">Using RMarkdown</a></li>
+            
+            <li><a href="/swc-releases/2016.06/lesson-example/07-maintenance/">Maintenance</a></li>
+            
+            <li><a href="/swc-releases/2016.06/lesson-example/08-coffee/">Coffee Break</a></li>
+            
+          </ul>
+        </li>
+	
+
+	
+	
+        <li class="dropdown">
+          <a href="/swc-releases/2016.06/lesson-example/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="/swc-releases/2016.06/lesson-example/about/">About</a></li>
+            
+            <li><a href="/swc-releases/2016.06/lesson-example/discuss/">Discussion</a></li>
+            
+            <li><a href="/swc-releases/2016.06/lesson-example/figures/">Figures</a></li>
+            
+            <li><a href="/swc-releases/2016.06/lesson-example/guide/">Instructors' Guide</a></li>
+            
+          </ul>
+        </li>
+	
+
+	
+        <li><a href="/swc-releases/2016.06/lesson-example/license/">License</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
+        <div class="form-group">
+          <input type="text" id="google-search" placeholder="Search...">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<div class="row">
+  <div class="col-md-1">
+    <h3>
+      
+      <a href="/swc-releases/2016.06/lesson-example/06-rmarkdown-example/"><span class="glyphicon glyphicon-menu-left"></span></a>
+      
+    </h3>
+  </div>
+  <div class="col-md-10">
+    <h3 class="maintitle"><a href="/swc-releases/2016.06/lesson-example/">Lesson Title</a></h3>
+    <h1 class="maintitle">Maintenance</h1>
+  </div>
+  <div class="col-md-1">
+    <h3>
+      
+      <a href="/swc-releases/2016.06/lesson-example/08-coffee/"><span class="glyphicon glyphicon-menu-right"></span></a>
+      
+    </h3>
+  </div>
+</div>
+
+
+<blockquote class="objectives">
+  <h2>Overview</h2>
+
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Teaching:</strong> 5 min
+      </br>
+      <strong>Exercises:</strong> 0 min
+    </div>
+    <div class="col-md-9">
+      <strong>Questions</strong>
+      <ul>
+	
+	<li><p>What do lesson maintainers do?</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+      <strong>Objectives</strong>
+      <ul>
+	
+	<li><p>Explain the rights and responsibilities of lesson maintainers.</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+  
+</blockquote>
+
+<p>This episode describes the processes used to maintain our lessons.</p>
+
+<h2 id="maintainers">Maintainers</h2>
+
+<p>Each Software or Data Carpentry lesson has one or two maintainers,
+who are responsible for making sure issues and change requests are looked at,
+and who have final say over what is included in the lesson.
+Together,
+they also decide on changes to the lesson templates,
+release procedure,
+and other mechanical aspects of lesson production.
+They are <em>not</em> responsible for writing lesson content or deciding what lessons ought to exist:
+the former comes from the community,
+and the latter from the Executive Directors and Steering Committees of Software and Data Carpentry.</p>
+
+<p>The process for selecting and onboarding a new maintainer is:</p>
+
+<ul>
+  <li>Outgoing maintainer emails the discussion list to announce the opportunity
+    <ul>
+      <li>Application information includes name, github username, statement of intent.</li>
+      <li>Deadline for applications, projected timeline for selection.</li>
+      <li>Name/email of contact for application process (typically outgoing maintainer).</li>
+    </ul>
+  </li>
+  <li>Applications accumulate over a week or two.</li>
+  <li>Outgoing maintainer and their co-maintainer review applications and choose new maintainer.</li>
+  <li>The new maintainer is informed, and other applicants are thanked via email.</li>
+  <li>To onboard the new maintainer:
+    <ul>
+      <li>Add new maintainer to the maintainers’ list.</li>
+      <li>Email the maintainers to announce the change.</li>
+      <li>Request push/merge access for new maintainer from the Software or Data Carpentry executive director.</li>
+      <li>Write a blog post introducing new maintainer.</li>
+      <li>Optional: call between outgoing/incoming maintainer to discuss state of the repository, transition strategy, etc.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="release-process-and-schedule">Release Process and Schedule</h2>
+
+<p>We have decided to use a <strong>6-month release cycle</strong> for releases, which
+will be named by the year and month they happen, e.g., <code class="highlighter-rouge">2016.05</code>.</p>
+
+<ol>
+  <li>Each lesson lives in the <code class="highlighter-rouge">gh-pages</code> branch of its own repository.</li>
+  <li>When a release has to be made,
+ the <em>lesson maintainer</em> (or maintainers) create a branch named after the release, e.g., <code class="highlighter-rouge">2016.05</code>.</li>
+  <li>A <em>release maintainer</em> generates HTML pages for that release and add them to the branch.</li>
+  <li>If there isn’t already a directory for that release in the <code class="highlighter-rouge">swc-release</code> repository,
+the release maintainer creates one
+and adds an <code class="highlighter-rouge">index.html</code> page to it.</li>
+  <li>The release maintainer adds a submodule to the release directory of <code class="highlighter-rouge">swc-release</code>
+that points to the newly-created release branch of the lesson.</li>
+</ol>
+
+<blockquote class="keypoints">
+  <h2>Key Points</h2>
+  <ul>
+    
+    <li><p>Each lesson has one or two maintainers who act as editors.</p>
+</li>
+    
+    <li><p>Maintainers are responsible for ensuring that issues and change requests are addressed.</p>
+</li>
+    
+    <li><p>Maintainers have final say over lesson content.</p>
+</li>
+    
+  </ul>
+</blockquote>
+
+
+      
+      <hr/>
+<footer>
+  <div class="row">
+    <div class="col-md-6" align="left">
+      <h4>
+	Copyright &copy; 2016
+	<a href="https://software-carpentry.org">Software Carpentry Foundation</a>
+	
+      </h4>
+    </div>
+    <div class="col-md-6" align="right">
+      <h4>
+	<a href="/">Source</a>
+	/
+	<a href="/blob/gh-pages/CONTRIBUTING.md">Contributing</a>
+	/
+	<a href="mailto:lessons@software-carpentry.org">Contact</a>
+      </h4>
+    </div>
+  </div>
+</footer>
+
+      
+    </div>
+    <script src="/swc-releases/2016.06/lesson-example/assets/js/jquery.min.js"></script>
+<script src="/swc-releases/2016.06/lesson-example/assets/js/bootstrap.min.js"></script>
+<script src="/swc-releases/2016.06/lesson-example/assets/js/lesson.js"></script>
+
+  </body>
+</html>
