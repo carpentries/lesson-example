@@ -1,0 +1,39 @@
+    <!-- Schema.org annotations in JSON-LD for a CreativeWork type.
+         Variables should be declared in the .md file 
+         For full list of available attributes see https://schema.org/CreativeWork -->
+    <script type="application/ld+json">
+    {
+       "@context": "http://schema.org/",
+       "@type": "creativeWork",
+       "genre": "trainingMaterial",
+       "name": "{{site.title}}",
+       "description": "{{site.description}}",
+       "keywords": "{{site.keywords}}",
+       "audience": [
+          {% for audience in site.audience %}{
+           "@type": "Audience",
+           "name": "{{audience}}"
+          }{% if forloop.last %}{%else%},{%endif%}
+          {% endfor %}
+       ],
+       "license": "{{site.licence}}",
+       "author": [
+         {% for author in site.author %}{
+           "@type": "Person",
+           "name": "{{author}}"
+          }{% if forloop.last %}{%else%},{%endif%}
+          {% endfor %}
+      ],
+       "contributor": [
+         {% for contributor in site.contributor %}{
+           "@type": "Person",
+           "name": "{{contributor}}"
+          }{% if forloop.last %}{%else%},{%endif%}
+          {% endfor %}
+      ],
+       "timeRequired": "{{site.timeRequired}}",
+       "learningResourceType": "{{site.learningResourceType}}",
+       "citation": "{{site.citation}}",
+       "dateCreated" : "{{site.dateCreated}}"
+    }
+    </script>
