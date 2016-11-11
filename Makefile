@@ -17,7 +17,7 @@ commands :
 
 ## serve            : run a local server.
 serve : lesson-rmd
-	${JEKYLL} serve
+	${JEKYLL} serve -H 0.0.0.0
 
 ## site             : build files but do not run a server.
 site : lesson-rmd
