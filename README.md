@@ -11,7 +11,7 @@ including detailed instructions on design, setup, and formatting.
 ## Quick Instructions
 
 1.  Do *not* fork this repository directly on GitHub.
-    Instead, please follow the instructions in [the setup instructions][setup]
+    Instead, please follow the instructions in [the setup instructions](http://swcarpentry.github.io/lesson-example/setup/)
     to create a repository for your lesson by importing material
     from [the styles repository][styles].
 
