@@ -6,10 +6,10 @@ MAKEFILES=Makefile $(wildcard *.mk)
 JEKYLL=jekyll
 PARSER=bin/markdown_ast.rb
 DST=_site
+JUPYTER=jupyter
 
 # Controls
 .PHONY : commands clean files
-.NOTPARALLEL:
 all : commands
 
 ## commands         : show all commands.
@@ -17,11 +17,11 @@ commands :
 	@grep -h -E '^##' ${MAKEFILES} | sed -e 's/## //g'
 
 ## serve            : run a local server.
-serve : lesson-md
+serve : lesson-rmd lesson-jupyter
 	${JEKYLL} serve
 
 ## site             : build files but do not run a server.
-site : lesson-md
+site : lesson-rmd lesson-jupyter
 	${JEKYLL} build
 
 # repo-check        : check repository settings.
@@ -54,11 +54,15 @@ workshop-check :
 ## ----------------------------------------
 ## Commands specific to lesson websites.
 
-.PHONY : lesson-check lesson-md lesson-files lesson-fixme
+.PHONY : lesson-check lesson-rmd lesson-files lesson-fixme
 
 # RMarkdown files
 RMD_SRC = $(wildcard _episodes_rmd/??-*.Rmd)
 RMD_DST = $(patsubst _episodes_rmd/%.Rmd,_episodes/%.md,$(RMD_SRC))
+
+# JUPYTER files
+JUPYTER_SRC = $(wildcard _episodes_ipynb/??-*.ipynb)
+JUPYTER_DST = $(patsubst _episodes_ipynb/%.ipynb,_episodes/%.ipynb,$(JUPYTER_SRC))
 
 # Lesson source files in the order they appear in the navigation menu.
 MARKDOWN_SRC = \
@@ -80,16 +84,17 @@ HTML_DST = \
   $(patsubst _extras/%.md,${DST}/%/index.html,$(wildcard _extras/*.md)) \
   ${DST}/license/index.html
 
-## lesson-md        : convert Rmarkdown files to markdown
-lesson-md : ${RMD_DST}
+## lesson-rmd       : convert Rmarkdown files to markdown
+lesson-rmd: $(RMD_SRC)
+	@bin/knit_lessons.sh $(RMD_SRC)
 
-# Use of .NOTPARALLEL makes rule execute only once
-${RMD_DST} : ${RMD_SRC}
-	@bin/knit_lessons.sh ${RMD_SRC}
+## lesson-jupyter   : convert Jupyter Notebook files to markdown
+lesson-jupyter: $(JUPYTER_SRC)
+	${JUPYTER} nbconvert -y --execute --allow-errors --to markdown --output-dir=_episodes --NbConvertApp.output_files_dir="" --template=_layouts/ipynb2md.tpl $(JUPYTER_SRC)
 
 ## lesson-check     : validate lesson Markdown.
 lesson-check :
-	@bin/lesson_check.py -s . -p ${PARSER} -r _includes/links.md
+	@bin/lesson_check.py -s . -p ${PARSER}
 
 ## lesson-check-all : validate lesson Markdown, checking line lengths and trailing whitespace.
 lesson-check-all :
