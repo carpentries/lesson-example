@@ -11,6 +11,9 @@ title: "Lesson Title"
 # Contact email address.
 email: lessons@software-carpentry.org
 
+# Default web-server Index page (cab be blank)
+index: "index.html"
+
 #------------------------------------------------------------
 # Generic settings (should not need to change).
 #------------------------------------------------------------

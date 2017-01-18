@@ -42,7 +42,7 @@ and how they are mapped to destination files and directories:
 
 > ## Collections
 >
-> As described [earlier]({{ page.root }}/02-tooling/#collections),
+> As described [earlier]({{ page.root }}/02-tooling/{{ site.index }}#collections),
 > files that appear as top-level items in the navigation menu are stored in the root directory.
 > Files that appear under the "extras" menu are stored in the `_extras` directory,
 > while lesson episodes are stored in the `_episodes` directory.

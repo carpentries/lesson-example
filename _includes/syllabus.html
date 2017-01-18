@@ -15,7 +15,7 @@
   <table class="table table-striped">
   <tr>
     <td class="col-md-1"></td>
-    <td class="col-md-3"><a href="{{ page.root }}/setup">Setup</a></td>
+    <td class="col-md-3"><a href="{{ page.root }}/setup/{{ site.index }}">Setup</a></td>
     <td class="col-md-7">Dowload files used on the lesson.</td>
   </tr>
   {% for episode in site.episodes %}
@@ -39,7 +39,7 @@
       {% if multiday %}<td class="col-md-1">{% if episode.start %}Day {{ day }}{% endif %}</td>{% endif %}
       <td class="col-md-1">{% if hours < 10 %}0{% endif %}{{ hours }}:{% if minutes < 10 %}0{% endif %}{{ minutes }}</td>
       <td class="col-md-3">
-        <a href="{{ page.root }}{{ episode.url }}">{{ episode.title }}</a>
+        <a href="{{ page.root }}{{ episode.url }}{{ site.index }}">{{ episode.title }}</a>
       </td>
       <td class="col-md-7">
         {% if episode.break %}
