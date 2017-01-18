@@ -1,0 +1,10 @@
+---
+layout: page
+title: "Citation"
+permalink: /citation/
+---
+# Please cite as:
+
+Greg Wilson (ed.): "Software Carpentry: Lesson Example."  Version
+2016.06, June 2016, https://github.com/swcarpentry/lesson-example,
+10.5281/zenodo.58153.
