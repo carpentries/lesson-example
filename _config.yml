@@ -67,3 +67,6 @@ exclude:
 
 # Turn off built-in syntax highlighting.
 highlighter: false
+
+kramdown:
+  parse_block_html: true
