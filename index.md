@@ -7,7 +7,7 @@ This lesson shows how to use the
 [Software Carpentry]({{ site.swc_site }}) and
 [Data Carpentry]({{ site.dc_site }}) lesson template.
 For guidelines on how to help improve our lessons and this template,
-please see [the contribution guidelines][contributing];
+please see [the contribution guidelines]({{ page.root }}/contributing/{{ site.index }});
 for guidelines on how to set up your machine to preview changes locally,
 please see [the setup instructions]({{ page.root }}/setup/{{ site.index }}).
 
