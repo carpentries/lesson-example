@@ -1,0 +1,18 @@
+language: python
+
+python:
+  - "3.4"
+  - "3.5"
+  - "3.5-dev" # 3.5 development branch
+  - "3.6-dev" # 3.6 development branch
+  - "nightly" # currently points to 3.7-dev
+
+before_install:
+  - "rvm install 2.2.0"
+
+install:
+  - "gem install jekyll"
+  - "pip install -r requirements.txt"
+
+script:
+  - "make lesson-check-all"
