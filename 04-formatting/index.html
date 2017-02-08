@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2017-02-08 23:53:21 +0100">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="/swc-releases/2017.02/lesson-example">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/lesson.css" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon-swc.ico" />
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+    <title>Lesson Title: Formatting</title>
+  </head>
+  <body>
+    <div class="container">
+      
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      
+      <a href="https://software-carpentry.org" class="pull-left">
+        <img class="navbar-logo" src="../assets/img/swc-icon-blue.svg" alt="Software Carpentry logo" />
+      </a>
+      
+
+      
+      <a class="navbar-brand" href="../">Home</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+	
+        <li><a href="../conduct/">Code of Conduct</a></li>
+
+	
+        
+        <li><a href="../setup/">Setup</a></li>
+        <li><a href="../reference/">Reference</a></li>
+        <li class="dropdown">
+          <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="../01-design/">Lesson Design</a></li>
+            
+            <li><a href="../02-tooling/">GitHub, Markdown, and Jekyll</a></li>
+            
+            <li><a href="../03-organization/">Lesson Organization</a></li>
+            
+            <li><a href="../04-formatting/">Formatting</a></li>
+            
+            <li><a href="../05-checking/">Checking and Previewing</a></li>
+            
+            <li><a href="../06-rmarkdown-example/">Using RMarkdown</a></li>
+            
+            <li><a href="../07-maintenance/">Maintenance</a></li>
+            
+            <li><a href="../08-coffee/">Coffee Break</a></li>
+            
+          </ul>
+        </li>
+	
+
+	
+	
+        <li class="dropdown">
+          <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="../about/">About</a></li>
+            
+            <li><a href="../discuss/">Discussion</a></li>
+            
+            <li><a href="../figures/">Figures</a></li>
+            
+            <li><a href="../guide/">Instructor Notes</a></li>
+            
+          </ul>
+        </li>
+	
+
+	
+        <li><a href="../license/">License</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
+        <div class="form-group">
+          <input type="text" id="google-search" placeholder="Search..." aria-label="Google site search">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<div class="row">
+  <div class="col-md-1">
+    <h3>
+      
+      <a href="../03-organization/"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-md-10">
+    
+    <h3 class="maintitle"><a href="../">Lesson Title</a></h3>
+    <h1 class="maintitle">Formatting</h1>
+    
+  </div>
+  <div class="col-md-1">
+    <h3>
+      
+      <a href="../05-checking/"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+
+<blockquote class="objectives">
+  <h2>Overview</h2>
+
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Teaching:</strong> 10 min
+      <br/>
+      <strong>Exercises:</strong> 0 min
+    </div>
+    <div class="col-md-9">
+      <strong>Questions</strong>
+      <ul>
+	
+	<li><p>How are Software and Data Carpentry lessons formatted?</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+      <strong>Objectives</strong>
+      <ul>
+	
+	<li><p>Explain the header of each episode.</p>
+</li>
+	
+	<li><p>Explain the overall structure of each episode.</p>
+</li>
+	
+	<li><p>Explain why blockquotes are used to format parts of episodes.</p>
+</li>
+	
+	<li><p>Explain the use of code blocks in episodes.</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+</blockquote>
+
+<p>A lesson consists of one or more episodes,
+each of which has:</p>
+
+<ul>
+  <li>a <a href="http://yaml.org/">YAML</a> header containing required values</li>
+  <li>some teachable content</li>
+  <li>some exercises</li>
+</ul>
+
+<p>The diagram below shows the internal structure of a single episode file
+(click on the image to see a larger version):</p>
+
+<p><a href="../fig/episode-format.png">
+  <img src="../fig/episode-format-small.png" alt="Formatting Rules" />
+</a></p>
+
+<h2 id="locations-and-names">Locations and Names</h2>
+
+<p>Episode files are stored in <code class="highlighter-rouge">_episodes</code>
+so that <a href="https://jekyllrb.com/">Jekyll</a> will create a <a href="https://jekyllrb.com/docs/collections/">collection</a> for them.
+Episodes are named <code class="highlighter-rouge">dd-subject.md</code>,
+where <code class="highlighter-rouge">dd</code> is a two-digit sequence number (with a leading 0)
+and <code class="highlighter-rouge">subject</code> is a one- or two-word identifier.
+For example,
+the first three episodes of this example lesson are
+<code class="highlighter-rouge">_episodes/01-design.md</code>,
+<code class="highlighter-rouge">_episodes/02-tooling.md</code>
+and <code class="highlighter-rouge">_episodes/03-formatting.md</code>.
+These become <code class="highlighter-rouge">/01-design/index.html</code>, <code class="highlighter-rouge">/02-tooling/index.html</code>, and <code class="highlighter-rouge">/03-formatting/index.html</code>
+in the published site.
+When referring to other episodes, use:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[link text]({{ page.root }}/dd-subject/)
+</code></pre>
+</div>
+
+<p>i.e., use the episode’s directory path below the site root
+<em>without</em> the <code class="highlighter-rouge">index.html</code> (which the web server fills in automatically).
+This will ensure that the link is valid both when previewing during desktop development
+and when the site is published on GitHub.</p>
+
+<h2 id="episode-header">Episode Header</h2>
+
+<p>Each episode’s <a href="http://yaml.org/">YAML</a> header must contain:</p>
+
+<ul>
+  <li>the episode’s title</li>
+  <li>time estimates for teaching and exercises</li>
+  <li>motivating questions</li>
+  <li>lesson objectives</li>
+  <li>a summary of key points</li>
+</ul>
+
+<p>These values are stored in the header so that <a href="https://jekyllrb.com/">Jekyll</a> will read them
+and make them accessible in other pages as <code class="highlighter-rouge">site.episodes.the_episode.key</code>,
+where <code class="highlighter-rouge">the_episode</code> is the particular episode
+and <code class="highlighter-rouge">key</code> is the key in the <a href="http://yaml.org/">YAML</a> header.
+This lets us do things like
+list each episode’s key questions in the syllabus on the lesson home page.</p>
+
+<h2 id="episode-structure">Episode Structure</h2>
+
+<p>The episode layout template in <code class="highlighter-rouge">_layouts/episode.html</code> automatically creates
+an introductory block that summarizes the lesson’s teaching time,
+exercise time,
+key questions,
+and objectives.
+It also automatically creates a closing block that lists its key points.
+In between,
+authors should use only:</p>
+
+<ul>
+  <li>paragraphs</li>
+  <li>images</li>
+  <li>tables</li>
+  <li>ordered and unordered lists</li>
+  <li>code samples (described below).</li>
+  <li>special blockquotes (described below)</li>
+</ul>
+
+<p>Authors should <em>not</em> use:</p>
+
+<ul>
+  <li>sub-headings</li>
+  <li>HTML layout (e.g., <code class="highlighter-rouge">div</code> elements).</li>
+</ul>
+
+<h2 id="formatting-code">Formatting Code</h2>
+
+<p>Inline code fragments are formatted using back-quotes.
+Longer code blocks are formatted by opening and closing the block with <code class="highlighter-rouge">~~~</code> (three tildes),
+with a class specifier after the block:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>~~~
+for thing in collection:
+    do_something
+~~~
+{: .source}
+</code></pre>
+</div>
+
+<p>which is rendered as:</p>
+
+<div class="source highlighter-rouge"><pre class="highlight"><code>for thing in collection:
+    do_something
+</code></pre>
+</div>
+
+<p>The class specified at the bottom using an opening curly brace and colon,
+the class identifier with a leading dot,
+and a closing curly brace.
+The <a href="https://github.com/swcarpentry/styles">template</a> provides three styles for code blocks:</p>
+
+<div class="source highlighter-rouge"><pre class="highlight"><code>.source: program source.
+</code></pre>
+</div>
+
+<div class="output highlighter-rouge"><pre class="highlight"><code>.output: program output.
+</code></pre>
+</div>
+
+<div class="error highlighter-rouge"><pre class="highlight"><code>.error: error messages.
+</code></pre>
+</div>
+
+<p>The following styles are all synonyms for <code class="highlighter-rouge">.source</code>;
+please use them where possible to indicate the type of source being displayed,
+in case we decide to adopt syntax highlighting at some point:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">.bash</code>: Bash shell commands</li>
+  <li><code class="highlighter-rouge">.make</code>: Makefiles</li>
+  <li><code class="highlighter-rouge">.matlab</code>: MATLAB source</li>
+  <li><code class="highlighter-rouge">.python</code>: Python source</li>
+  <li><code class="highlighter-rouge">.r</code>: R source</li>
+  <li><code class="highlighter-rouge">.sql</code>: SQL source</li>
+</ul>
+
+<blockquote class="callout">
+  <h2 id="why-no-syntax-highlighting">Why No Syntax Highlighting?</h2>
+
+  <p>We do not use syntax highlighting for code blocks
+because some learners’ systems won’t do it,
+or will do it differently than what they see on screen.</p>
+</blockquote>
+
+<h2 id="special-blockquotes">Special Blockquotes</h2>
+
+<p>We use blockquotes to group headings and text
+rather than wrapping them in <code class="highlighter-rouge">div</code> elements.
+in order to avoid confusing <a href="https://jekyllrb.com/">Jekyll</a>’s parser
+(which sometimes has trouble with Markdown inside HTML).
+Each special blockquote must started with a level-2 header,
+but may contain anything after that.
+For example,
+a callout is formatted like this:</p>
+
+<div class="source highlighter-rouge"><pre class="highlight"><code>&gt; ## Callout Title
+&gt;
+&gt; text
+&gt; text
+&gt; text
+&gt;
+&gt; ~~~
+&gt; code
+&gt; ~~~
+&gt; {: .source}
+{: .callout}
+</code></pre>
+</div>
+
+<p>(Note the empty lines within the blockquote after the title and before the code block.)
+This is rendered as:</p>
+
+<blockquote class="callout">
+  <h2 id="callout-title">Callout Title</h2>
+
+  <p>text
+text
+text</p>
+
+  <div class="source highlighter-rouge"><pre class="highlight"><code>code
+</code></pre>
+  </div>
+</blockquote>
+
+<p>The <a href="https://github.com/swcarpentry/styles">lesson template</a> defines styles
+for the following special blockquotes:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <blockquote class="callout">
+      <h2 id="callout">.callout</h2>
+
+      <p>An aside or other comment.</p>
+    </blockquote>
+
+    <blockquote class="challenge">
+      <h2 id="challenge"><code class="highlighter-rouge">.challenge</code></h2>
+
+      <p>An exercise.</p>
+    </blockquote>
+
+    <blockquote class="checklist">
+      <h2 id="checklist"><code class="highlighter-rouge">.checklist</code></h2>
+
+      <p>Checklists.</p>
+    </blockquote>
+
+    <blockquote class="discussion">
+      <h2 id="discussion"><code class="highlighter-rouge">.discussion</code></h2>
+
+      <p>Discussion questions.</p>
+    </blockquote>
+
+    <blockquote class="keypoints">
+      <h2 id="keypoints"><code class="highlighter-rouge">.keypoints</code></h2>
+
+      <p>Key points of an episode.</p>
+    </blockquote>
+
+  </div>
+  <div class="col-md-6">
+
+    <blockquote class="objectives">
+      <h2 id="objectives"><code class="highlighter-rouge">.objectives</code></h2>
+
+      <p>Episode objectives.</p>
+    </blockquote>
+
+    <blockquote class="prereq">
+      <h2 id="prereq"><code class="highlighter-rouge">.prereq</code></h2>
+
+      <p>Prerequisites.</p>
+    </blockquote>
+
+    <blockquote class="solution">
+      <h2 id="solution"><code class="highlighter-rouge">.solution</code></h2>
+
+      <p>Exercise solution.</p>
+    </blockquote>
+
+    <blockquote class="testimonial">
+      <h2 id="testimonial"><code class="highlighter-rouge">.testimonial</code></h2>
+
+      <p>A laudatory quote from a user.</p>
+    </blockquote>
+
+  </div>
+</div>
+
+<p>Note that <code class="highlighter-rouge">.challenge</code> and <code class="highlighter-rouge">.discussion</code> have the same color but different icons.
+Note also that one other class, <code class="highlighter-rouge">.quotation</code>,
+is used to mark actual quotations
+(the original purpose of the blockquote element).
+This does not add any styling,
+but is used to prevent the checking tools from complaining about a missing class.</p>
+
+<p>Most authors will only use <code class="highlighter-rouge">.callout</code>, <code class="highlighter-rouge">.challenge</code>, and <code class="highlighter-rouge">.prereq</code>,
+as the others are automatically generated by the template.
+Note that <code class="highlighter-rouge">.prereq</code> is meant for describing things
+that learners should know before starting this lesson;
+setup instructions do not have a particular style,
+but are instead put on the <code class="highlighter-rouge">setup.md</code> page.</p>
+
+<p>Note also that solutions are nested inside exercises as shown below:</p>
+
+<div class="source highlighter-rouge"><pre class="highlight"><code>&gt; ## Challenge Title
+&gt;
+&gt; This is the body of the challenge.
+&gt;
+&gt; ~~~
+&gt; it may include some code
+&gt; ~~~
+&gt; {: .source}
+&gt;
+&gt; &gt; ## Solution
+&gt; &gt;
+&gt; &gt; This is the body of the solution.
+&gt; &gt;
+&gt; &gt; ~~~
+&gt; &gt; it may also include some code
+&gt; &gt; ~~~
+&gt; &gt; {: .output}
+&gt; {: .solution}
+{: .challenge}
+</code></pre>
+</div>
+
+<p>The double indentation is annoying to edit,
+but the alternatives we considered and discarded are worse:</p>
+
+<ol>
+  <li>
+    <p>Use HTML <code class="highlighter-rouge">&lt;div&gt;</code> elements for the challenges.
+Most people dislike mixing HTML and Markdown,
+and experience shows that it’s all too easy to confuse Jekyll’s Markdown parser.</p>
+  </li>
+  <li>
+    <p>Put solutions immediately after challenges rather than inside them.
+This is simpler to edit,
+but clutters up the page
+and makes it harder for tools to tell which solutions belong to which exercises.</p>
+  </li>
+</ol>
+
+
+
+<blockquote class="keypoints">
+  <h2>Key Points</h2>
+  <ul>
+    
+    <li><p>Lesson episodes are stored in _episodes/dd-subject.md.</p>
+</li>
+    
+    <li><p>Each episode’s title must include a title, time estimates, motivating questions, lesson objectives, and key points.</p>
+</li>
+    
+    <li><p>Episodes should not use sub-headings or HTML layout.</p>
+</li>
+    
+    <li><p>Code blocks can have the source, regular output, or error class.</p>
+</li>
+    
+    <li><p>Special sections are formatted as blockquotes that open with a level-2 header and close with a class identifier.</p>
+</li>
+    
+    <li><p>Special sections may be callouts or challenges; other styles are used by the template itself.</p>
+</li>
+    
+  </ul>
+</blockquote>
+
+
+<div class="row">
+  <div class="col-md-1">
+    <h3>
+      
+      <a href="../03-organization/"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-md-10">
+    
+  </div>
+  <div class="col-md-1">
+    <h3>
+      
+      <a href="../05-checking/"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+
+      
+      
+<footer>
+  <div class="row">
+    <div class="col-md-6" align="left">
+      <h4>
+	Copyright &copy; 2016
+	
+	<a href="https://software-carpentry.org">Software Carpentry Foundation</a>
+	
+      </h4>
+    </div>
+    <div class="col-md-6" align="right">
+      <h4>
+	<a href="/">Source</a>
+	/
+	<a href="/blob/gh-pages/CONTRIBUTING.md">Contributing</a>
+	/
+	<a href="/blob/gh-pages/CITATION">Cite</a>
+	/
+	<a href="mailto:lessons@software-carpentry.org">Contact</a>
+      </h4>
+    </div>
+  </div>
+</footer>
+
+      
+    </div>
+    
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/lesson.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37305346-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
