@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2017-08-04 00:26:58 +0200">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="/swc-releases/2017.08/lesson-example">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/lesson.css" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon-swc.ico" />
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+    <title>Lesson Title: Setup</title>
+  </head>
+  <body>
+    <div class="container">
+      
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      
+
+      
+      <a class="navbar-brand" href="../">Home</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+	
+        <li><a href="../conduct/">Code of Conduct</a></li>
+
+	
+        
+        <li><a href="../setup/">Setup</a></li>
+        <li class="dropdown">
+          <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><a href="../01-design/">Lesson Design</a></li>
+            
+            <li><a href="../02-tooling/">GitHub, Markdown, and Jekyll</a></li>
+            
+            <li><a href="../03-organization/">Lesson Organization</a></li>
+            
+            <li><a href="../04-formatting/">Formatting</a></li>
+            
+            <li><a href="../05-checking/">Checking and Previewing</a></li>
+            
+            <li><a href="../06-rmarkdown-example/">Using RMarkdown</a></li>
+            
+            <li><a href="../07-maintenance/">Maintenance</a></li>
+            
+            <li><a href="../08-coffee/">Coffee Break</a></li>
+            
+	    <li role="separator" class="divider"></li>
+            <li><a href="../aio/">All in one page (Beta)</a></li>
+          </ul>
+        </li>
+	
+
+	
+	
+        <li class="dropdown">
+          <a href="../" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../reference/">Reference</a></li>
+            
+            <li><a href="../about/">About</a></li>
+            
+            <li><a href="../discuss/">Discussion</a></li>
+            
+            <li><a href="../figures/">Figures</a></li>
+            
+            <li><a href="../guide/">Instructor Notes</a></li>
+            
+          </ul>
+        </li>
+	
+
+	
+        <li><a href="../license/">License</a></li>
+	
+	<li><a href="/edit/gh-pages/setup.md">Improve this page <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
+	
+      </ul>
+      <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
+        <div class="form-group">
+          <input type="text" id="google-search" placeholder="Search..." aria-label="Google site search">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<h1 class="maintitle"><a href="../">Lesson Title</a>: Setup</h1>
+
+<p>Our lesson template is kept in the <code class="highlighter-rouge">swcarpentry/styles</code> repository. The <code class="highlighter-rouge">styles</code> repository is carefully curated so that 
+changes made to it are easily mergable by downstream lessons. The <code class="highlighter-rouge">styles</code> repository contains various 
+bits that take Markdown files and render them as a lesson web page. For more information on how to develop 
+lessons and maintain them, see our <a href="lesson-example">lesson-example</a>. It will walk you through the basics of lesson 
+design and how to use GitHub, Markdown and Jekyll for lesson development. Follow the instructions below to make
+your own empty lesson in your own GitHub account. Once you’ve done that you can just write Markdown code and have 
+lesson web pages just like the <a href="lesson-example">lesson-example</a> and all of our other lessons, but with your lesson content.</p>
+
+<p>Requirements:</p>
+<ul>
+  <li>A GitHub account</li>
+  <li>A working python environment to run the lesson initialization script</li>
+  <li>(Optional) A local install of <a href="https://jekyllrb.com/">Jekyll</a> which will require the Ruby language to be installed</li>
+</ul>
+
+<h2 id="creating-a-new-lesson">Creating a New Lesson</h2>
+
+<p>We will assume that your user ID is <code class="highlighter-rouge">timtomch</code> and the name of your
+new lesson is <code class="highlighter-rouge">data-cleanup</code>.</p>
+
+<ol>
+  <li>
+    <p>We’ll use the <a href="http://import.github.com/new">GitHub’s importer</a> to make a copy of this repo in your own GitHub account.
+(Note: This is like a GitHub Fork, but not connected to the upstream changes)</p>
+  </li>
+  <li>
+    <p><strong>Put the URL of <a href="https://github.com/swcarpentry/styles/">the styles repository</a></strong> (https://github.com/swcarpentry/styles) in the “Your 
+old repository’s clone URL” box.
+Do <em>not</em> use the URL of this repository,
+as that will bring in a lot of example files you don’t actually want.</p>
+  </li>
+  <li>
+    <p>Select the owner for your new repository.
+In our example this is <code class="highlighter-rouge">timtomch</code>,
+but it may instead be an organization you belong to.</p>
+  </li>
+  <li>
+    <p>Choose a name for your lesson repository.
+In our example, this is <code class="highlighter-rouge">data-cleanup</code>.</p>
+  </li>
+  <li>
+    <p>Make sure the repository is public.</p>
+  </li>
+  <li>
+    <p>At this point, you should have a page like this:</p>
+
+    <p><img src="../fig/using-github-import.png" alt="" /></p>
+
+    <p>You can now click “Begin Import”.
+When the process is done,
+you can click “Continue to repository” to visit your newly-created repository.</p>
+
+    <p>Through the Github interface you can begin to edit and</p>
+  </li>
+  <li>
+    <p>If you want to work on the lesson from your local machine, you can 
+now clone your newly-created repository to your computer:</p>
+
+    <div class="source highlighter-rouge"><pre class="highlight"><code>$ git clone -b gh-pages https://github.com/timtomch/data-cleanup.git
+</code></pre>
+    </div>
+
+    <p>Note that the URL for your lesson will have your username and chosen repository name.</p>
+  </li>
+  <li>
+    <p>Go into that directory using:</p>
+
+    <div class="source highlighter-rouge"><pre class="highlight"><code>$ cd data-cleanup
+</code></pre>
+    </div>
+
+    <p>Note that the name of your directory should be what you named your lesson 
+on the example this is <code class="highlighter-rouge">data-cleanup</code>.</p>
+  </li>
+  <li>
+    <p>To be able to pull upstream style changes, you should manually add the 
+  styles repository as a remote called <code class="highlighter-rouge">template</code>:</p>
+
+    <div class="source highlighter-rouge"><pre class="highlight"><code> $ git remote add template https://github.com/swcarpentry/styles.git
+</code></pre>
+    </div>
+
+    <p>This will allow you to pull in changes made to the template,
+ such as improvements to our CSS style files.
+ (Note that the user name above is <code class="highlighter-rouge">swcarpentry</code>, <em>not</em> <code class="highlighter-rouge">timtomch</code>,
+ since you are adding the master copy of the template as a remote.)</p>
+  </li>
+  <li>
+    <p>Make sure you are using the <code class="highlighter-rouge">gh-pages</code> branch of the lesson template:</p>
+
+    <div class="source highlighter-rouge"><pre class="highlight"><code>$ git checkout gh-pages
+</code></pre>
+    </div>
+
+    <p>This will ensure that you are using the most “stable” version of the
+template repository. Since it’s being actively maintained by the
+Software Carpentry community, you could end up using a development branch
+that contains experimental (and potentially not working) features without
+necessarily realising it. Switching to the <code class="highlighter-rouge">gh-branch</code> ensures you are
+using the “stable” version of the template.</p>
+  </li>
+  <li>
+    <p>Run <code class="highlighter-rouge">bin/lesson_initialize.py</code> to create all of the boilerplate files
+that cannot be put into the styles repository
+(because they would trigger repeated merge conflicts).</p>
+  </li>
+  <li>
+    <p>Create and edit files as explained furhter in <a href="../#schedule">the episodes of this lesson</a>.</p>
+  </li>
+  <li>
+    <p>(requires Jekyll Setup from below) Preview the HTML pages for your lesson:</p>
+
+    <div class="source highlighter-rouge"><pre class="highlight"><code>$ make serve
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Commit your changes <em>and the HTML pages in the root directory of
+your lesson repository</em> and push to the <code class="highlighter-rouge">gh-pages</code> branch of your
+repository:</p>
+
+    <div class="source highlighter-rouge"><pre class="highlight"><code>$ cd data-cleanup
+$ git add changed-file.md changed-file.html
+$ git commit -m "Explanatory message"
+$ git push origin gh-pages
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p><a href="mailto:lessons@software-carpentry.org">Tell us</a> where your lesson is so that we can add it to
+the appropriate index page(s).</p>
+  </li>
+</ol>
+
+<p><strong>Note:</strong></p>
+
+<ol>
+  <li>
+    <p>SSH cloning (rather than the HTTPS cloning used above)
+will also work for those who have set up SSH keys with GitHub.</p>
+  </li>
+  <li>
+    <p>Once a lesson has been created, please submit changes
+for review as pull requests that contain <em>only the modified Markdown files</em>.
+Do <em>not</em> submit generated HTML.</p>
+  </li>
+  <li>
+    <p>Some people have had intermittent errors during the import process,
+possibly because of the network timing out.
+If you experience a problem, please re-try;
+if the problem persists,
+please <a href="mailto:lessons@software-carpentry.org">get in touch</a>.</p>
+  </li>
+</ol>
+
+<h2 id="setup-instructions-for-a-specific-existing-lesson">Setup Instructions for a specific existing lesson</h2>
+
+<ol>
+  <li>
+    <p>Installation instructions for core lessons are included in
+the [workshop template’s home page][template],
+so that they are all in one place.
+The <code class="highlighter-rouge">setup.md</code> files of core lessons link to
+the appropriate sections of the <a href="https://github.com/swcarpentry/workshop-template">workshop template page</a>.</p>
+  </li>
+  <li>
+    <p>Other lessons’ <code class="highlighter-rouge">setup.md</code> include full installation instructions organized by OS
+(following the model of the workshop template home page).</p>
+  </li>
+</ol>
+
+<h2 id="optional-jekyll-setup-for-lesson-development">(Optional) Jekyll Setup for Lesson Development</h2>
+
+<p>If you want to set up Jekyll
+so that you can preview changes on your own machine before pushing them to GitHub,
+you must install the software described below.
+(Note: Julian Thilo has written instructions for
+<a href="http://jekyll-windows.juthilo.com/">installing Jekyll on Windows</a>.)</p>
+
+<ol>
+  <li>
+    <p><strong>Ruby</strong>.
+This is included with Linux and Mac OS X;
+the simplest option on Windows is to use <a href="http://rubyinstaller.org/">RubyInstaller</a>.
+You can test your installation by running <code class="highlighter-rouge">ruby --version</code>.
+For more information,
+see <a href="https://www.ruby-lang.org/en/downloads/">the Ruby installation guidelines</a>.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://rubygems.org/pages/download/">RubyGems</a></strong>
+(the package manager for Ruby).
+You can test your installation by running <code class="highlighter-rouge">gem --version</code>.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://jekyllrb.com/">Jekyll</a></strong>.
+You can install this by running <code class="highlighter-rouge">gem install jekyll</code>.</p>
+  </li>
+  <li>
+    <p><strong>R Packages</strong>.
+We use <a href="https://cran.r-project.org/web/packages/knitr/index.html">knitr</a>, <a href="https://cran.r-project.org/web/packages/stringr/index.html">stringr</a>, and <a href="https://cran.r-project.org/web/packages/checkpoint/index.html">checkpoint</a>
+to format lessons written in R Markdown,
+so you will need to install these to build R lessons
+(and this example lesson).</p>
+  </li>
+</ol>
+
+<p>If you want to run <code class="highlighter-rouge">bin/lesson_check.py</code> (which is invoked by <code class="highlighter-rouge">make lesson-check</code>)
+you will need Jekyll (so that you have its Markdown parser, which is called Kramdown)
+and the <a href="https://pypi.python.org/pypi/PyYAML">PyYAML</a> module for Python 3.</p>
+
+
+
+      
+      
+<footer>
+  <div class="row">
+    <div class="col-md-6" align="left">
+      <h4>
+	Copyright &copy; 2016–2017
+	
+	<a href="https://software-carpentry.org">Software Carpentry Foundation</a>
+	
+      </h4>
+    </div>
+    <div class="col-md-6" align="right">
+      <h4>
+	
+	<a href="/edit/gh-pages/setup.md">Edit on GitHub</a>
+	
+	/
+	<a href="/blob/gh-pages/CONTRIBUTING.md">Contributing</a>
+	/
+	<a href="/">Source</a>
+	/
+	<a href="/blob/gh-pages/CITATION">Cite</a>
+	/
+	<a href="mailto:lessons@software-carpentry.org">Contact</a>
+      </h4>
+    </div>
+  </div>
+</footer>
+
+      
+    </div>
+    
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/lesson.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37305346-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
