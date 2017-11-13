@@ -243,7 +243,7 @@ exclude:
   - bin
 
 # Turn off built-in syntax highlighting.
-highlighter: false
+highlighter: rouge
 '''
 
 ROOT_INDEX_MD = '''\
