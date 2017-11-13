@@ -159,23 +159,70 @@ The [template]({{ site.template_repo }}) provides three styles for code blocks:
 ~~~
 {: .error}
 
-The following styles are all synonyms for `.source`;
-please use them where possible to indicate the type of source being displayed,
-in case we decide to adopt syntax highlighting at some point:
+### Syntax Highlighting
 
-*   `.bash`: Bash shell commands
-*   `.make`: Makefiles
-*   `.matlab`: MATLAB source
-*   `.python`: Python source
-*   `.r`: R source
-*   `.sql`: SQL source
+The following styles like `.source`, but include syntax highlighting for the
+specified language.
+Please use them where possible to indicate the type of source being displayed,
+and to make code easier to read.
 
-> ## Why No Syntax Highlighting?
->
-> We do not use syntax highlighting for code blocks
-> because some learners' systems won't do it,
-> or will do it differently than what they see on screen.
-{: .callout}
+`.bash`: Bash shell commands:
+
+~~~
+echo "Hello World"
+~~~
+{: .bash}
+
+`.html`: HTML source:
+
+~~~
+<html>
+<body>
+<em>Hello World</em>
+</body>
+</html>
+~~~
+{: .html}
+
+`.make`: Makefiles:
+
+~~~
+all:
+    g++ main.cpp hello.cpp -o hello
+~~~
+{: .make}
+
+`.matlab`: MATLAB source:
+
+~~~
+disp('Hello, world!')
+~~~
+{: .matlab}
+
+`.python`: Python source:
+
+~~~
+print("Hello World")
+~~~
+{: .python}
+
+`.r`: R source:
+
+~~~
+cat("Hello World")
+~~~
+{: .r}
+
+`.sql`: SQL source:
+
+~~~
+CREATE PROCEDURE HelloWorld AS
+PRINT 'Hello, world!'
+RETURN (0)
+~~~
+{: .sql}
+
+
 
 ## Special Blockquotes
 
