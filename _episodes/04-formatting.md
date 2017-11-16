@@ -166,12 +166,12 @@ specified language.
 Please use them where possible to indicate the type of source being displayed,
 and to make code easier to read.
 
-`.bash`: Bash shell commands:
+`.language-bash`: Bash shell commands:
 
 ~~~
 echo "Hello World"
 ~~~
-{: .bash}
+{: .language-bash}
 
 `.html`: HTML source:
 
@@ -184,43 +184,43 @@ echo "Hello World"
 ~~~
 {: .html}
 
-`.make`: Makefiles:
+`.language-make`: Makefiles:
 
 ~~~
 all:
     g++ main.cpp hello.cpp -o hello
 ~~~
-{: .make}
+{: .language-make}
 
-`.matlab`: MATLAB source:
+`.language-matlab`: MATLAB source:
 
 ~~~
 disp('Hello, world!')
 ~~~
-{: .matlab}
+{: .language-matlab}
 
-`.python`: Python source:
+`.language-python`: Python source:
 
 ~~~
 print("Hello World")
 ~~~
-{: .python}
+{: .language-python}
 
-`.r`: R source:
+`.language-r`: R source:
 
 ~~~
 cat("Hello World")
 ~~~
-{: .r}
+{: .language-r}
 
-`.sql`: SQL source:
+`.language-sql`: SQL source:
 
 ~~~
 CREATE PROCEDURE HelloWorld AS
 PRINT 'Hello, world!'
 RETURN (0)
 ~~~
-{: .sql}
+{: .language-sql}
 
 
 
