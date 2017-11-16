@@ -242,7 +242,7 @@ exclude:
   - Makefile
   - bin
 
-# Turn off built-in syntax highlighting.
+# Turn on built-in syntax highlighting.
 highlighter: rouge
 '''
 
