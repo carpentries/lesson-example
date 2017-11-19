@@ -82,34 +82,20 @@ new lesson is `data-cleanup`.
     (Note that the user name above is `swcarpentry`, *not* `timtomch`,
     since you are adding the master copy of the template as a remote.)
 
-10. Make sure you are using the `gh-pages` branch of the lesson template:
-
-    ~~~
-    $ git checkout gh-pages
-    ~~~
-    {: .language-bash}
-
-	This will ensure that you are using the most "stable" version of the
-	template repository. Since it's being actively maintained by the
-	Software Carpentry community, you could end up using a development branch
-	that contains experimental (and potentially not working) features without
-	necessarily realising it. Switching to the `gh-branch` ensures you are
-	using the "stable" version of the template.
-
-11. Run `bin/lesson_initialize.py` to create all of the boilerplate files
+10. Run `bin/lesson_initialize.py` to create all of the boilerplate files
     that cannot be put into the styles repository
     (because they would trigger repeated merge conflicts).
 
-12. Create and edit files as explained further in [the episodes of this lesson]({{ page.root }}/#schedule).
+11. Create and edit files as explained further in [the episodes of this lesson]({{ page.root }}/#schedule).
 
-13. (requires Jekyll Setup from below) Preview the HTML pages for your lesson:
+12. (requires Jekyll Setup from below) Preview the HTML pages for your lesson:
 
     ~~~
     $ make serve
     ~~~
     {: .language-bash}
 
-14. Commit your changes *and the HTML pages in the root directory of
+13. Commit your changes *and the HTML pages in the root directory of
     your lesson repository* and push to the `gh-pages` branch of your
     repository:
 
@@ -117,11 +103,11 @@ new lesson is `data-cleanup`.
     $ cd data-cleanup
     $ git add changed-file.md changed-file.html
     $ git commit -m "Explanatory message"
-    $ git push origin gh-pages
+    $ git push origin master
     ~~~
     {: .language-bash}
 
-15. [Tell us][email] where your lesson is so that we can add it to
+14. [Tell us][email] where your lesson is so that we can add it to
     the appropriate index page(s).
 
 **Note:**
