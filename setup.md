@@ -4,13 +4,13 @@ title: Setup
 root: .
 ---
 
-Our lesson template is kept in the `swcarpentry/styles` repository. The `styles` repository is carefully curated so that 
+Our lesson template is kept in the [`swcarpentry/styles` repository][styles]. The `styles` repository is carefully curated so that 
 changes made to it are easily mergable by downstream lessons. The `styles` repository contains various 
 bits that take Markdown files and render them as a lesson web page. For more information on how to develop 
-lessons and maintain them, see our [lesson-example](lesson-example). It will walk you through the basics of lesson 
+lessons and maintain them, see our [lesson-example][lesson-example]. It will walk you through the basics of lesson 
 design and how to use GitHub, Markdown and Jekyll for lesson development. Follow the instructions below to make
 your own empty lesson in your own GitHub account. Once you've done that you can just write Markdown code and have 
-lesson web pages just like the [lesson-example](lesson-example) and all of our other lessons, but with your lesson content.
+lesson web pages just like the [lesson-example][lesson-example] and all of our other lessons, but with your lesson content.
 
 Requirements:
 * A GitHub account
@@ -143,7 +143,7 @@ new lesson is `data-cleanup`.
 ## Setup Instructions for a specific existing lesson
 
 1.  Installation instructions for core lessons are included in
-    the [workshop template's home page][template],
+    the [workshop template's home page][workshop-repo],
     so that they are all in one place.
     The `setup.md` files of core lessons link to
     the appropriate sections of the [workshop template page][workshop-repo].
@@ -185,4 +185,3 @@ you will need Jekyll (so that you have its Markdown parser, which is called Kram
 and the [PyYAML][pyyaml] module for Python 3.
 
 {% include links.md %}
-[lesson-example]: https://swcarpentry.github.io/lesson-example/
