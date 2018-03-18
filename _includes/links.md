@@ -1,12 +1,14 @@
 [cc-by-human]: https://creativecommons.org/licenses/by/4.0/
 [cc-by-legal]: https://creativecommons.org/licenses/by/4.0/legalcode
-[concept-maps]: http://carpentries.github.io/instructor-training/05-memory/
-[email]: mailto:lessons@software-carpentry.org
+[coc-reporting]: https://software-carpentry.org/CoC-reporting/
+[coc]: https://software-carpentry.org/conduct/
+[concept-maps]: https://carpentries.github.io/instructor-training/05-memory/
 [contrib-covenant]: https://contributor-covenant.org/
 [contributing]: {{ site.github.repository_url }}/blob/gh-pages/CONTRIBUTING.md
 [cran-checkpoint]: https://cran.r-project.org/web/packages/checkpoint/index.html
 [cran-knitr]: https://cran.r-project.org/web/packages/knitr/index.html
 [cran-stringr]: https://cran.r-project.org/web/packages/stringr/index.html
+[email]: mailto:lessons@software-carpentry.org
 [github-importer]: https://import.github.com/
 [importer]: https://github.com/new/import
 [jekyll-collection]: https://jekyllrb.com/docs/collections/
@@ -14,6 +16,7 @@
 [jekyll-windows]: http://jekyll-windows.juthilo.com/
 [jekyll]: https://jekyllrb.com/
 [jupyter]: https://jupyter.org/
+[lesson-example]: https://swcarpentry.github.io/lesson-example/
 [mit-license]: https://opensource.org/licenses/mit-license.html
 [morea]: https://morea-framework.github.io/
 [numfocus]: https://www.numfocus.org/
@@ -31,5 +34,3 @@
 [training]: http://swcarpentry.github.io/instructor-training/
 [workshop-repo]: {{ site.workshop_repo }}
 [yaml]: http://yaml.org/
-[coc]: https://software-carpentry.org/conduct/
-[coc-reporting]: https://software-carpentry.org/CoC-reporting/
