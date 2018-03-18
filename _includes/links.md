@@ -31,6 +31,6 @@
 [ruby-installer]: https://rubyinstaller.org/
 [rubygems]: https://rubygems.org/pages/download/
 [styles]: https://github.com/swcarpentry/styles/
-[training]: http://swcarpentry.github.io/instructor-training/
+[training]: https://carpentries.github.io/instructor-training/
 [workshop-repo]: {{ site.workshop_repo }}
 [yaml]: http://yaml.org/
