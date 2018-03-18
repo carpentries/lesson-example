@@ -32,7 +32,7 @@ The process for selecting and onboarding a new Maintainer is:
 *   The new Maintainer(s) are informed, and other applicants are thanked via email.
 *   To onboard the new Maintainer(s):
     *   Ask new Maintainer(s) to add themselves to the [Maintainers' email list](http://lists.software-carpentry.org/listinfo/maintainers).
-    *   Invite new Maintainer(s) to join [Maintainer Onboarding Google Group](https://groups.google.com/a/carpentries.org/forum/#!forum/maintainer-onboarding). 
+    *   Invite new Maintainer(s) to join [Maintainer Onboarding Google Group](https://groups.google.com/a/carpentries.org/forum/#!forum/maintainer-onboarding).
     *   Invite new Maintainer(s) to join [Maintainer meetings](http://pad.software-carpentry.org/maintainers).
     *   New cohort of Maintainer(s) complete [Maintainer Onboarding](https://carpentries.github.io/maintainer-onboarding/).
     *   Request write access for new Maintainer(s) to the appropriate repos from the Carpentry Executive Director.
