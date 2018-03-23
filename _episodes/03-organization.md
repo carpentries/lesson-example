@@ -163,6 +163,9 @@ The `bin/lesson_initialize.py` script creates files that need to be customized f
     2.  Its title must be `"Instructors' Guide"`.
     3.  Its permalink must be `/guide/`.
     4.  It may include whatever content the author thinks appropriate.
+    
+`.github/ISSUE_TEMPLATE.md` and  `.github/PULL_REQUEST_TEMPLATE.md`
+:   When you add an issue and/or pull request templates to your repository, project contributors will automatically see the template's contents in the issue or pull request body. Templates customize and standardize the information you'd like included when contributors contribute. These files can also be stored in `docs` instead of `.github`.
 
 ## Figures
 
