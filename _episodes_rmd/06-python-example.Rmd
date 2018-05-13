@@ -1,0 +1,83 @@
+---
+source: Rmd
+title: "Using Python with RMarkdown"
+teaching: 10
+exercises: 2
+questions:
+- "How to call `python` from RMarkdown?"
+objectives:
+- "Demonstrate how to include pieces of Python code, figures, and challenges."
+keypoints:
+- "`python` code blocks"
+---
+```{r, echo=FALSE}
+source("../bin/chunk-options.R")
+```
+
+This episode demonstrates all the features that can be used
+when using Python from [RMarkdown][r-markdown].
+
+You can include chunk for codes, just like you'd normally do.
+
+Normal output:
+
+```{python}
+1 + 1
+```
+
+Output with error message:
+
+```{python}
+x[10]
+```
+
+Output generating figures:
+
+```{python python-plot-example}
+import matplotlib.pyplot as plt
+
+plt.plot([1, 2, 3, 4])
+plt.show()
+```
+
+For the challenges and their solutions, you need to pay attention to where the
+`>` go and where to leave blank lines. You can include code chunks in both the
+instructions and solutions. For instance
+
+```
+> ## Challenge: Can you do it?
+>
+> What is the output of this command?
+>
+> ```{python, eval=FALSE}`r ''`
+> print("This new template looks good!")
+> ```
+>
+> > ## Solution
+> >
+> > ```{python, echo=FALSE}`r ''`
+> > print("This new template looks good!")
+> > ```
+> {: .solution}
+{: .challenge}
+```
+
+will generate
+
+> ## Challenge: Can you do it?
+>
+> What is the output of this command?
+>
+> ```{python, eval=FALSE}
+> print("This new template looks good!")
+> ```
+>
+> > ## Solution
+> >
+> > ```{python, echo=FALSE}
+> > print("This new template looks good!")
+> > ```
+> {: .solution}
+{: .challenge}
+
+{% include links.md %}

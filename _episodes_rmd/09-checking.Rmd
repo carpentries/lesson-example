@@ -13,6 +13,9 @@ keypoints:
 - "The checker uses the same Markdown parser as Jekyll."
 - "Lessons can be previewed by running `make serve`."
 ---
+```{r, echo=FALSE}
+source("../bin/chunk-options.R")
+```
 
 The lesson template comes with several utilities to simplify lesson development and maintenance.
 

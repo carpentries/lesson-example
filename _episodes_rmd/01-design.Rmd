@@ -10,6 +10,9 @@ objectives:
 keypoints:
 - "Lessons are design in four stages: conceptual, summative, formative, and connective."
 ---
+```{r, echo=FALSE}
+source("../bin/chunk-options.R")
+```
 
 This episode describes how we go about designing lessons and why.
 For more information on how we design lessons and why,

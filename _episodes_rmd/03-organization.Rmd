@@ -13,6 +13,9 @@ keypoints:
 - "The home page, reference guide, setup instructions, discussion page, and instructors' guide must be updated for each lesson."
 - "The Makefile stores commonly-used commands."
 ---
+```{r, echo=FALSE}
+source("../bin/chunk-options.R")
+```
 
 Each lesson is made up of *episodes*, which are focused on a particular topic and
 include time for both teaching and exercises.

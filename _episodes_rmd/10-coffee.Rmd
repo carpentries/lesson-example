@@ -3,6 +3,9 @@ layout: break
 title: "Coffee Break"
 break: 15
 ---
+```{r, echo=FALSE}
+source("../bin/chunk-options.R")
+```
 
 Use the `break` layout for placeholder episodes representing coffee breaks and lunches.
 These episodes do *not* have exercises, questions, objectives, or keypoints in their metadata,

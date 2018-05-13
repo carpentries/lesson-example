@@ -9,6 +9,9 @@ objectives:
 keypoints:
 - "Keyboard keys need to use `<kbd>` HTML tag."
 ---
+```{r, echo=FALSE}
+source("../bin/chunk-options.R")
+```
 
 ## Keyboard Key
 

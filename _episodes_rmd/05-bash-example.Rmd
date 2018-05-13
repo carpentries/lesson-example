@@ -1,0 +1,74 @@
+---
+source: Rmd
+title: "Using Bash with RMarkdown"
+teaching: 10
+exercises: 2
+questions:
+- "How to call `bash` from RMarkdown?"
+objectives:
+- "Demonstrate how to include pieces of Bash code, figures, and challenges."
+keypoints:
+- "`bash` code blocks"
+---
+```{r, echo=FALSE}
+source("../bin/chunk-options.R")
+```
+
+This episode demonstrates all the features that can be used
+when using Bash from [RMarkdown][r-markdown].
+
+You can include chunk for codes, just like you'd normally do.
+
+Normal output:
+
+```{bash}
+pwd
+```
+
+Output with error message:
+
+```{bash}
+foo
+```
+
+For the challenges and their solutions, you need to pay attention to where the
+`>` go and where to leave blank lines. You can include code chunks in both the
+instructions and solutions. For instance
+
+```
+> ## Challenge: Can you do it?
+>
+> What is the output of this command?
+>
+> ```{bash, eval=FALSE}`r ''`
+> ls data -a -F
+> ```
+>
+> > ## Solution
+> >
+> > ```{bash, echo=FALSE}`r ''`
+> > ls data -a -F
+> > ```
+> {: .solution}
+{: .challenge}
+```
+
+will generate
+
+> ## Challenge: Can you do it?
+>
+> What is the output of this command?
+>
+> ```{bash, eval=FALSE}
+> ls data -a -F
+> ```
+>
+> > ## Solution
+> >
+> > ```{bash, echo=FALSE}
+> > ls data -a -F
+> > ```
+> {: .solution}
+{: .challenge}
+
+{% include links.md %}
