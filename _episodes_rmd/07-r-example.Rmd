@@ -65,13 +65,13 @@ instructions and solutions. For instance this:
 >
 > What is the output of this command?
 >
-> ```{r, eval=FALSE}
+> ```{r, eval=FALSE}`r ''`
 > paste("This", "new", "template", "looks", "good")
 > ```
 >
 > > ## Solution
 > >
-> > ```{r, echo=FALSE}
+> > ```{r, echo=FALSE}`r ''`
 > > paste("This", "new", "template", "looks", "good")
 > > ```
 > {: .solution}
