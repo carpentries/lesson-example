@@ -7,13 +7,17 @@ changes made to it are easily mergable by downstream lessons. The `styles` repos
 bits that take Markdown files and render them as a lesson web page. For more information on how to develop
 lessons and maintain them, see our [lesson-example][lesson-example]. It will walk you through the basics of lesson
 design and how to use GitHub, Markdown and Jekyll for lesson development. Follow the instructions below to make
-your own empty lesson in your own GitHub account. Once you've done that you can just write Markdown code and have
+your own empty lesson in your own GitHub account. Once you've done that you can just write R Markdown code and have
 lesson web pages just like the [lesson-example][lesson-example] and all of our other lessons, but with your lesson content.
 
 Requirements:
+
 * A GitHub account
-* A working Python 3.4+ environment to run the lesson initialization script
-* (Optional) A local install of [Jekyll](https://jekyllrb.com/) (version 3.2 or higher) which will require the Ruby language to be installed.
+* A working Python (3.4 or higher) environment to run the lesson initialization script
+* A working R (3.5 or higher) environment to convert the R Markdown files to Markdown files
+  * knitr (1.18 or higher)
+* (Optional) A working Ruby environment to convert the Markdown files to HTML
+  * [Jekyll](https://jekyllrb.com/) (3.2 or higher)
 
 ## Creating a New Lesson
 

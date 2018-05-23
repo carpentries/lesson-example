@@ -15,6 +15,9 @@ keypoints:
 - "Each page's configuration is stored at the top of that page."
 - "Groups of files are stored in collection directories whose names begin with an underscore."
 ---
+```{r, echo=FALSE}
+source("../bin/chunk-options.R")
+```
 
 This episode describes the tools we use to build and manage lessons.
 These simplify many tasks, but make other things more complicated.
