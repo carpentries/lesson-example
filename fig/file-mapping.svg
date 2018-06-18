@@ -209,7 +209,7 @@
        <g id="id7">
         <rect class="BoundingBox" stroke="none" fill="none" x="2296" y="7083" width="3278" height="728"/>
         <path fill="none" stroke="rgb(0,0,0)" d="M 3935,7809 L 2297,7809 2297,7084 5572,7084 5572,7809 3935,7809 Z"/>
-        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="423px" font-weight="400"><tspan class="TextPosition" x="2547" y="7594"><tspan fill="rgb(0,0,0)" stroke="none">CONDUCT.md</tspan></tspan></tspan></text>
+        <text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="423px" font-weight="400"><tspan class="TextPosition" x="2547" y="7594"><tspan fill="rgb(0,0,0)" stroke="none">CODE_OF_CONDUCT.md</tspan></tspan></tspan></text>
        </g>
       </g>
       <g class="com.sun.star.drawing.TextShape">
