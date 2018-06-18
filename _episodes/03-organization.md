@@ -72,7 +72,7 @@ a one-line explanation of the lesson's purpose.
 The [lesson template]({{ site.template_repo }}) provides the following files
 which should *not* be modified:
 
-*   `CONDUCT.md`: the code of conduct.
+*   `CODE_OF_CONDUCT.md`: the code of conduct.
 *   `LICENSE.md`: the lesson license.
 *   `Makefile`: commands for previewing the site, cleaning up junk, etc.
 
