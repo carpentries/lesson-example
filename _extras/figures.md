@@ -1,5 +1,6 @@
 ---
 title: Figures
+order: 3
 ---
 <script>
   window.onload = function() {

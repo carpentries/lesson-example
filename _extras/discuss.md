@@ -1,5 +1,6 @@
 ---
 title: Discussion
+order: 2
 ---
 
 Readers may be interested in:

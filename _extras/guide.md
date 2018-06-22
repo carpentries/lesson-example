@@ -1,5 +1,6 @@
 ---
 title: "Instructor Notes"
+order: 4
 ---
 
 The instructor notes should provide additional discussion useful to instructors,
