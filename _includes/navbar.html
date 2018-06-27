@@ -44,7 +44,7 @@
             <li><a href="{{ page.root }}{% link setup.md %}">Setup</a></li>
             <li role="separator" class="divider"></li>
             {% for episode in site.episodes %}
-            <li><a href="{{ page.root }}{{ episode.url }}">{{ episode.title }}</a></li>
+            <li><a href="{{ page.root }}{{ episode.url }}">{{ forloop.index }}. {{ episode.title }}</a></li>
             {% endfor %}
 	    <li role="separator" class="divider"></li>
             <li><a href="{{ page.root }}{% link _extras/aio.md %}">All in one page (Beta)</a></li>
