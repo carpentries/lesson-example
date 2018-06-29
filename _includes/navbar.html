@@ -47,25 +47,35 @@
             <li><a href="{{ page.root }}{{ episode.url }}">{{ forloop.index }}. {{ episode.title }}</a></li>
             {% endfor %}
 	    <li role="separator" class="divider"></li>
+            {% assign extras = site.extras | sort: 'order' %}
+            {% for extra in extras %}
+            {% if extra.path != "_extras/aio.md" and extra.path != "_extras/about.md" and extra.path != "_extras/figures.md" and extra.path != "_extras/guide.md" %}
+            <li><a href="{{ page.root }}{{ extra.url }}">{{ extra.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+	    <li role="separator" class="divider"></li>
             <li><a href="{{ page.root }}{% link _extras/aio.md %}">All in one page (Beta)</a></li>
           </ul>
         </li>
 
 	{% comment %} Show extras for lessons or if this is the main workshop-template repo (where they contain documentation). {% endcomment %}
         <li class="dropdown">
-          <a href="{{ page.root }}/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
+          <a href="{{ page.root }}/" class="dropdown-toggle"
+          data-toggle="dropdown" role="button" aria-haspopup="true"
+          aria-expanded="false">For Instructors <span class="caret"></span></a>
           <ul class="dropdown-menu">
             {% assign extras = site.extras | sort: 'order' %}
             {% for extra in extras %}
-            {% if extra.path != "_extras/aio.md" and extra.path != "_extras/about.md" %}
+            {% if extra.path != "_extras/about.md" and extra.path != "_extras/aio.md" and extra.path != "_extras/discuss.md" and extra.path != "_extras/reference.md" %}
             <li><a href="{{ page.root }}{{ extra.url }}">{{ extra.title }}</a></li>
             {% endif %}
             {% endfor %}
-	    <li role="separator" class="divider"></li>
-            <li><a href="{{ page.root }}{% link _extras/about.md %}">About The Carpentries</a></li>
           </ul>
         </li>
 	{% endif %}
+
+	{% comment %} Always show information about The Carpentries. {% endcomment %}
+        <li><a href="{{ page.root }}{% link _extras/about.md %}">About The Carpentries</a></li>
 
 	{% comment %} Always show license. {% endcomment %}
         <li><a href="{{ page.root }}{% link LICENSE.md %}">License</a></li>
