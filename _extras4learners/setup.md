@@ -1,5 +1,6 @@
 ---
 title: Setup
+order: -1
 ---
 
 Our lesson template is kept in the [`carpentries/styles` repository][styles]. The `styles` repository is carefully curated so that

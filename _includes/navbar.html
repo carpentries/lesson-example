@@ -41,20 +41,26 @@
         <li class="dropdown">
           <a href="{{ page.root }}/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="{{ page.root }}{% link setup.md %}">Setup</a></li>
+            {% comment %} Front matter {% endcomment %}
+            {% assign extras = site.extras4learners | sort: 'order' | reverse %}
+            {% for extra in extras %}
+            {% if extra.order < 0 %}
+            <li><a href="{{ page.root }}{{ extra.url }}">{{ extra.title }}</a></li>
+            {% endif %}
+            {% endfor %}
             <li role="separator" class="divider"></li>
+            {% comment %} Body matter {% endcomment %}
             {% for episode in site.episodes %}
             <li><a href="{{ page.root }}{{ episode.url }}">{{ forloop.index }}. {{ episode.title }}</a></li>
             {% endfor %}
 	    <li role="separator" class="divider"></li>
-            {% assign extras = site.extras | sort: 'order' %}
+            {% comment %} Back matter {% endcomment %}
+            {% assign extras = site.extras4learners | sort: 'order' %}
             {% for extra in extras %}
-            {% if extra.path != "_extras/aio.md" and extra.path != "_extras/about.md" and extra.path != "_extras/figures.md" and extra.path != "_extras/guide.md" %}
+            {% if extra.order > 0 %}
             <li><a href="{{ page.root }}{{ extra.url }}">{{ extra.title }}</a></li>
             {% endif %}
             {% endfor %}
-	    <li role="separator" class="divider"></li>
-            <li><a href="{{ page.root }}{% link _extras/aio.md %}">All in one page (Beta)</a></li>
           </ul>
         </li>
 
@@ -64,11 +70,9 @@
           data-toggle="dropdown" role="button" aria-haspopup="true"
           aria-expanded="false">For Instructors <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            {% assign extras = site.extras | sort: 'order' %}
+            {% assign extras = site.extras4instructors | sort: 'order' %}
             {% for extra in extras %}
-            {% if extra.path != "_extras/about.md" and extra.path != "_extras/aio.md" and extra.path != "_extras/discuss.md" and extra.path != "_extras/reference.md" %}
             <li><a href="{{ page.root }}{{ extra.url }}">{{ extra.title }}</a></li>
-            {% endif %}
             {% endfor %}
           </ul>
         </li>
