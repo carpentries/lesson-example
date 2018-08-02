@@ -6,34 +6,34 @@
        "@context": "http://schema.org/",
        "@type": "creativeWork",
        "genre": "trainingMaterial",
-       "name": "{{site.title}}",
-       "description": "{{site.description}}",
-       "keywords": "{{site.keywords}}",
+       "name": "{{site.data.lesson.title}}",
+       "description": "{{site.data.lesson.description}}",
+       "keywords": "{{site.data.lesson.keywords}}",
        "audience": [
-          {% for audience in site.audience %}{
+          {% for audience in site.data.lesson.audience %}{
            "@type": "Audience",
            "name": "{{audience}}"
           }{% if forloop.last %}{%else%},{%endif%}
           {% endfor %}
        ],
-       "license": "{{site.licence}}",
+       "license": "{{site.data.lesson.licence}}",
        "author": [
-         {% for author in site.author %}{
+         {% for author in site.data.lesson.author %}{
            "@type": "Person",
            "name": "{{author}}"
           }{% if forloop.last %}{%else%},{%endif%}
           {% endfor %}
       ],
        "contributor": [
-         {% for contributor in site.contributor %}{
+         {% for contributor in site.data.lesson.contributor %}{
            "@type": "Person",
            "name": "{{contributor}}"
           }{% if forloop.last %}{%else%},{%endif%}
           {% endfor %}
       ],
-       "timeRequired": "{{site.timeRequired}}",
-       "learningResourceType": "{{site.learningResourceType}}",
-       "citation": "{{site.citation}}",
-       "dateCreated" : "{{site.dateCreated}}"
+       "timeRequired": "{{site.data.lesson.timeRequired}}",
+       "learningResourceType": "{{site.data.lesson.learningResourceType}}",
+       "citation": "{{site.data.lesson.citation}}",
+       "dateCreated" : "{{site.data.lesson.dateCreated}}"
     }
     </script>
