@@ -103,7 +103,7 @@ authors should use only:
 
 Authors should *not* use:
 
-*   sub-titles (use H2 subheadings instead)
+*   sub-titles (instead, use H2 subheadings (`##`) in the episode files)
 *   HTML layout (e.g., `div` elements).
 
 
