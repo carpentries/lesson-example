@@ -12,4 +12,3 @@ contributor:    [Barney Gumball, Dr Nick Riviera]               # see: https://s
 timeRequired:   "1 hour"                                        # see: https://schema.org/timeRequired
 learningResourceType: "lesson plan"                             # see: https://schema.org/learningResourceType
 citation:       "How to cite a Training Material, John Smith et al, 2015" # see: https://schema.org/citation
-dateCreated:    2016-05-01        
