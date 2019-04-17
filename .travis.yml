@@ -5,7 +5,7 @@
 # DO NOT CHANGE THE CODE BELOW
 before_install:
   - sudo apt-get update -y
-  - sudo apt-get install libgit2-dev
+  - sudo apt-get install libgit2-dev libudunits2-dev
   - sudo apt-get install pip
   - rvm install 2.5.3
   - rvm 2.5.3 do ruby -S gem install jekyll
