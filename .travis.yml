@@ -22,7 +22,6 @@ script:
 # Header
 language: r
 sudo: false
-dist: xenial
 cache: packages
 latex: false
 
