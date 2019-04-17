@@ -13,7 +13,7 @@ before_install:
   - R -q -e 'remotes::install_github("hadley/requirements")'
 install:
   - pip3 install --upgrade pip
-  - pip3 install pyyaml
+  - pip install pyyaml
 script:
   - make lesson-check-all
   - make --always-make site
