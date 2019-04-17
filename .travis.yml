@@ -3,12 +3,13 @@ before_install:
   - sudo apt-get install libgit2-dev libudunits2-dev
   - sudo apt-get install python3-setuptools python3-pip
   - rvm install 2.5.3
-  - rvm 2.5.3 do ruby -S gem install jekyll
+  - rvm 2.5.3 do ruby -S gem install bundle
   - R -q -e 'install.packages(c("remotes", "curl"))'
   - R -q -e 'remotes::install_github("hadley/requirements")'
 install:
   - pip install --user pyyaml
 script:
+  - bundle install
   - make lesson-check-all
   - make --always-make site
 
