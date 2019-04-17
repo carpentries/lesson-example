@@ -12,8 +12,8 @@ before_install:
   - R -q -e 'install.packages(c("remotes", "curl"))'
   - R -q -e 'remotes::install_github("hadley/requirements")'
 install:
-  - pip3 install --upgrade pip
-  - pip install pyyaml
+  - pip install --user --upgrade pip
+  - pip install --user pyyaml
 script:
   - make lesson-check-all
   - make --always-make site
