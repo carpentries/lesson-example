@@ -19,6 +19,10 @@ keypoints:
 This episode describes the tools we use to build and manage lessons.
 These simplify many tasks, but make other things more complicated.
 
+## Background Resources
+
+Find out more about [setting up a lesson](https://carpentries.github.io/lesson-example/setup.html) and [using GitHub](https://github.com/carpentries/lesson-example/blob/gh-pages/CONTRIBUTING.md#using-github).
+
 ## Repositories on GitHub
 
 Our lessons are stored in Git repositories (or "repos") on GitHub.
