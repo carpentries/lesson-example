@@ -43,4 +43,4 @@ jobs:
       # Use codespell for spell checking
       install:
         sudo pip install codespell
-      script: codespell --skip="assets,fig,*.svg,AUTHORS,.mailmap" --quiet-level=2 --ignore-words-list="rouge"
+      script: codespell --skip="assets,fig,*.svg,AUTHORS,.mailmap" --quiet-level=2 --ignore-words-list="rouge,keyserver"
