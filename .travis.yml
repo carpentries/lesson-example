@@ -39,5 +39,5 @@ jobs:
       before_install:
       # Use codespell for spell checking
       install:
-        pip install codespell
+        sudo -H pip3 install codespell
       script: codespell --skip="assets,fig,*.svg,AUTHORS,.mailmap" --quiet-level=2 --ignore-words-list="rouge"
