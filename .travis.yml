@@ -35,9 +35,12 @@ env:
 jobs:
   include:
     - stage: spelling
+      language: python
+      sudo: true
+      python: "3.6"
       # The default before_install step is slow
       before_install:
       # Use codespell for spell checking
       install:
-        sudo -H pip3 install codespell
+        sudo pip install codespell
       script: codespell --skip="assets,fig,*.svg,AUTHORS,.mailmap" --quiet-level=2 --ignore-words-list="rouge"
