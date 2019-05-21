@@ -61,7 +61,7 @@ jobs:
         #   non-erroring version above)
         # - For this repo we also check the bin directory for spelling errors
         # - Add comments on additional filters here (could also include regex with `--regex`)
-        - echo -e "\n\n\e[91mRunning codespell with custom filters (returns errorcode)\e[0m\n";
+        - echo -e "\n\n\e[31mRunning codespell with custom filters (returns errorcode)\e[0m\n";
           codespell
           `# skip these directories and file types`
           --skip="assets,fig,*.svg,AUTHORS,.mailmap"
