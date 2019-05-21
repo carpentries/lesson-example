@@ -45,7 +45,7 @@ jobs:
       script:
         # Run a non-erroring version to report spelling errors using standard filters
         # (weird comment style is because of how travis joins lines)
-        - echo -e "\nRunning codespell with standard filters (returns 0)\n";
+        - \e[0;echo -e "\nRunning codespell with standard filters (returns 0)\n";
           codespell
           `# skip these directories and file types`
           --skip="assets,bin,css,data,deprecated,fig,files,AUTHORS,CONTRIBUTORS.md,*.csv,.mailmap"
@@ -54,7 +54,8 @@ jobs:
           `# allow for some false positives`
           --ignore-words-list="rouge,keyserver"
           `# do not return an error code`
-          ||true
+          ||true;\e[m
+
         # Run an error reporting version (which may be customized for the repo):
         # - Filter ipynb since any included images give a lot of false positives (other errors will be reported with the
         #   non-erroring version above)
