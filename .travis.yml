@@ -45,7 +45,7 @@ jobs:
       script:
         # Run a non-erroring version to report spelling errors using standard filters
         # (weird comment style is because of how travis joins lines)
-        - echo -e "\n\n\e[32mRunning codespell with standard filters (returns 0)\e[0m\n";
+        - echo -e "\n\n\e[32mChecking repo with standard filters (does not return an error)\e[0m\n";
           codespell
           `# skip these directories and file types`
           --skip="assets,bin,css,data,deprecated,fig,files,AUTHORS,CONTRIBUTORS.md,*.csv,.mailmap"
@@ -69,4 +69,6 @@ jobs:
           --quiet-level=2
           `# allow for some false positives`
           --ignore-words-list="rouge,keyserver"
+          `# only check files changed`
+          $(git diff --name-only --diff-filter=AM HEAD...$TRAVIS_BRANCH)
     - stage: check_and_build
