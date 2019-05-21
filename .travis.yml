@@ -62,7 +62,7 @@ jobs:
         # - For this repo we also check the bin directory for spelling errors
         # - Add comments on additional filters here (could also include regex with `--regex`)
         - echo -e "\n\n\n\e[31mRunning codespell with custom filters (returns errorcode)\e[0m\n";
-          echo -e "Files checked:\n\t$(git diff --name-only --diff-filter=AM $TRAVIS_BRANCH...HEAD)\n";
+          echo -e "Files checked:\n\t$(git diff --name-only --diff-filter=AM $TRAVIS_BRANCH...HEAD|tr '\n' ' ')\n\n";
           codespell
           `# skip these directories and file types`
           --skip="assets,fig,*.svg,AUTHORS,.mailmap"
@@ -71,6 +71,6 @@ jobs:
           `# allow for some false positives`
           --ignore-words-list="rouge,keyserver"
           `# only check files changed`
-          $(git diff --name-only --diff-filter=AM HEAD...$TRAVIS_BRANCH)
+          $(git diff --name-only --diff-filter=AM $TRAVIS_BRANCH...HEAD|tr '\n' ' ')
 
     - stage: check_and_build
