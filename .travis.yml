@@ -48,14 +48,14 @@ jobs:
         echo -e "\nRunning codespell with standard filters (returns 0)\n"
         # (weird comment style is to allow for printed comments in a multiline command)
         codespell \
-          `# skip these directories and file types` \
-          --skip="assets,bin,css,data,deprecated,fig,files,AUTHORS,CONTRIBUTORS.md,*.csv,.mailmap" \
-          `# keep reporting to what is necessary` \
-          --quiet-level=2 \
-          `# allow for some false positives` \
-          --ignore-words-list="rouge,keyserver" \
-          `# do not return an error code` \
-          ||true
+        `# skip these directories and file types` \
+        --skip="assets,bin,css,data,deprecated,fig,files,AUTHORS,CONTRIBUTORS.md,*.csv,.mailmap" \
+        `# keep reporting to what is necessary` \
+        --quiet-level=2 \
+        `# allow for some false positives` \
+        --ignore-words-list="rouge,keyserver" \
+        `# do not return an error code` \
+        ||true
 
         # Run an error reporting version (which may be customized for the repo):
         # - Filter ipynb since any included images give a lot of false positives (other errors will be reported with the
