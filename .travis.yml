@@ -23,6 +23,7 @@ latex: false
 branches:
   only:
   - gh-pages
+  - /.*/
 
 #env
 env:
