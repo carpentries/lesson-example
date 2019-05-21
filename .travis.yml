@@ -46,6 +46,7 @@ jobs:
       script:
         # Run a non-erroring version to report spelling errors using standard filters
         echo -e "\nRunning codespell with standard filters (returns 0)\n"
+        # (weird comment style is to allow for printed comments in a multiline command)
         codespell \
           `# skip these directories and file types` \
           --skip="assets,bin,css,data,deprecated,fig,files,AUTHORS,CONTRIBUTORS.md,*.csv,.mailmap" \
@@ -61,7 +62,7 @@ jobs:
         #   non-erroring version above)
         # - For this repo we also check the bin directory for spelling errors
         # - Add comments on additional filters here (could also include regex with `--regex`)
-        echo -e "\nRunning codespell with custom filters (returns errorcode)\n"
+        echo -e "\n\nRunning codespell with custom filters (returns errorcode)\n"
         codespell \
         `# skip these directories and file types` \
         --skip="assets,fig,*.svg,AUTHORS,.mailmap" \
