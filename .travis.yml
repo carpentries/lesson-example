@@ -37,24 +37,23 @@ jobs:
     - stage: spelling
       language: python
       sudo: true
-      python: 3.6
+      python: "3.6"
       # The default before_install step is slow because of ruby and unnecessary for spellchecking
       before_install:
-      # Use codespell for spell checking
       install:
+        # Use codespell for spell checking
         sudo pip install codespell
       script:
         # Run a non-erroring version to report spelling errors using standard filters
         echo -e "\nRunning codespell with standard filters (returns 0)\n"
-        # (weird comment style is to allow for printed comments in a multiline command)
         codespell \
-        `# skip these directories and file types` \
+        # skip these directories and file types
         --skip="assets,bin,css,data,deprecated,fig,files,AUTHORS,CONTRIBUTORS.md,*.csv,.mailmap" \
-        `# keep reporting to what is necessary` \
+        # keep reporting to what is necessary
         --quiet-level=2 \
-        `# allow for some false positives` \
+        # allow for some false positives
         --ignore-words-list="rouge,keyserver" \
-        `# do not return an error code` \
+        # do not return an error code
         ||true
 
         # Run an error reporting version (which may be customized for the repo):
@@ -64,10 +63,10 @@ jobs:
         # - Add comments on additional filters here (could also include regex with `--regex`)
         echo -e "\n\nRunning codespell with custom filters (returns errorcode)\n"
         codespell \
-        `# skip these directories and file types` \
+        # skip these directories and file types
         --skip="assets,fig,*.svg,AUTHORS,.mailmap" \
-        `# keep reporting to what is necessary` \
+        # keep reporting to what is necessary
         --quiet-level=2 \
-        `# allow for some false positives` \
+        # allow for some false positives
         --ignore-words-list="rouge,keyserver"
     - stage: check_and_build
