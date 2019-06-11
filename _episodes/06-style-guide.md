@@ -17,8 +17,7 @@ keypoints:
   output in narrative text."
 ---
 
-This lesson contains specifc style guidance and their implementation using features
-of The Carpentries lesson template.  For more general matters of style, see the 
+This lesson contains lesson-specifc style guidance and related implementation details related to The Carpentries lesson template.  For more general matters of style, see the 
 [Style Guide](https://docs.carpentries.org/topic_folders/communications/style-guide.html) 
 in The Carpentries Handbook.
 
