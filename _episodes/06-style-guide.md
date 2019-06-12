@@ -8,16 +8,16 @@ questions:
 - "How are short spans of code written?"
 objectives:
 - "Explain keyboard key combination."
-- "Locate documentation for general matters of style in The Carpentries"
-- "Identify uses of the span of code markdown feature"
+- "Locate documentation for general matters of style in The Carpentries."
+- "Identify uses of the span of code markdown feature."
 keypoints:
-- "The Carpentries Handbook contains a style guide"
+- "The Carpentries Handbook contains a style guid."
 - "Keyboard actions are described using the `<kbd>` HTML tag."
-- "The backtick (_\`_) is used as a span of code indicator for code and 
-  output in narrative text."
+- "The backtick (_\`_) is used as a span of code indicator to enclode code, filenames, and 
+  text to type that appears within in narrative text."
 ---
 
-This lesson contains lesson-specifc style guidance and related implementation details related to The Carpentries lesson template.  For more general matters of style, see the 
+This episode contains lesson-specifc style guidance and related implementation details related to The Carpentries lesson template.  For more general matters of style, see the 
 [Style Guide](https://docs.carpentries.org/topic_folders/communications/style-guide.html) 
 in The Carpentries Handbook.
 
