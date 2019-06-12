@@ -8,7 +8,7 @@ objectives:
 - "Describe the reverse instructional design process."
 - "Describe the purpose and implementation of formative assessments."
 keypoints:
-- "Lessons are design in four stages: conceptual, summative, formative, and connective."
+- "Lessons are designed in four stages: conceptual, summative, formative, and connective."
 ---
 
 This episode describes how we go about designing lessons and why.
