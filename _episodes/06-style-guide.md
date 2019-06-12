@@ -3,7 +3,7 @@ title: "Style Guide"
 teaching: 10
 exercises: 0
 questions:
-- "What tone and style should be used for Carpentries lessons?"
+- "What style should be used for Carpentries lessons?"
 - "How are keyboard key combinations written?"
 - "How are short spans of code written?"
 objectives:
