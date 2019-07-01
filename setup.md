@@ -206,7 +206,7 @@ you must install the software described below.
     For more information, see [the Ruby installation guidelines][ruby-install-guide].
 
 2.  **[RubyGems][rubygems]**
-    is a tool which manages Ruby packages. It should be installed along with Ruby and you can
+    is a tool which manages Ruby packages. It should have been installed along with Ruby and you can
     test your installation by running
 
     ~~~
