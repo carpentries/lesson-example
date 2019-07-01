@@ -167,10 +167,12 @@ new lesson is `data-cleanup`.
 2.  Other lessons' `setup.md` include full installation instructions organized by OS
     (following the model of the workshop template home page).
 
-## (Optional) Jekyll Setup for Lesson Development
+## Jekyll Setup for Lesson Development
 
-If you want to preview changes on your own machine before pushing them to GitHub,
-you must install the software described below.
+Though not essential, it is desirable to be able to preview changes on your own machine
+before pushing them to GitHub.
+
+In order to preview changes locally, you must install the software described below.
 
 1.  **[Ruby](https://www.ruby-lang.org/en/downloads/)**.
 
