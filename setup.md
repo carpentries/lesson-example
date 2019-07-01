@@ -171,7 +171,6 @@ new lesson is `data-cleanup`.
 
 If you want to preview changes on your own machine before pushing them to GitHub,
 you must install the software described below.
-Julian Thilo wrote instructions for [installing Jekyll on Windows][jekyll-windows].
 
 1.  **[Ruby](https://www.ruby-lang.org/en/downloads/)**.
 
