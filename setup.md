@@ -176,8 +176,11 @@ In order to preview changes locally, you must install the software described bel
 
 1.  **[Ruby](https://www.ruby-lang.org/en/downloads/)**.
 
-    **Linux/macOS**: Ruby is usually included with Linux and macOS. However, to reliably render
-    lessons the way GitHub does, we have to use the same version of Ruby as GitHub. Currently,
+    **Linux/macOS**: Ruby is usually included with Linux and macOS ---
+    this is usually sufficient to preview your changes locally.
+
+    If you aren't able to preview reliably with your default Ruby installation,
+    you can use the same version of Ruby as GitHub. Currently,
     GitHub uses Ruby 2.5.3. In order to install Ruby 2.5.3 on Linux and macOS, we recommend using
     [rbenv](https://github.com/rbenv/rbenv):
 
