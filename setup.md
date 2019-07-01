@@ -203,6 +203,9 @@ you must install the software described below.
     ~~~
     {: .language-bash}
 
+    Windows users should select the start menu option `Start command prompt with Ruby`
+    to execute the above command.
+
     For more information, see [the Ruby installation guidelines][ruby-install-guide].
 
 2.  **[RubyGems][rubygems]**
