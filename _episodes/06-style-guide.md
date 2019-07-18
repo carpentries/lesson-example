@@ -13,11 +13,12 @@ objectives:
 keypoints:
 - "The Carpentries Handbook contains a style guide."
 - "Keyboard actions are described using the `<kbd>` HTML tag."
-- "A backtick (_\`_) indicates a span of code and is used to enclose code excerpts, segments of text to type, and 
+- "A backtick (_\\`_) indicates a span of code and is used to enclose code excerpts, segments of text to type, and 
    filenames within in narrative text."
 ---
 
-This episode contains lesson-specifc style guidance and related implementation details related to The Carpentries lesson template.  For more general matters of style, see the 
+This episode contains lesson-specifc style guidance and related implementation details related to
+The Carpentries lesson template.  For more general matters of style, see the 
 [The Carpentries Style Guide](https://docs.carpentries.org/topic_folders/communications/style-guide.html).
 
 ## Emphasis
