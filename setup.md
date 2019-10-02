@@ -295,7 +295,7 @@ You will need a recent version of R (>= 3.5.0). Installation instructions are av
 We use the [knitr][cran-knitr],
 and[remotes](https://cran.r-project.org/package=remotes)to format lessons
 written in R Markdown and figure out needed packages to execute the code in the
-lesson. You will need to install the `remotes` pacakge to build R lessons (and
+lesson. You will need to install the `remotes` package to build R lessons (and
 this example lesson). The best way to install these packages is to open an R
 terminal and type:
 
