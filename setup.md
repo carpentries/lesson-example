@@ -219,7 +219,52 @@ all lessons including those that use R. However, you won't be able to do so from
 
 ### macOS
 
-1. **[Homebrew](https://brew.sh/)** -- 
+1. First make sure you have Homebrew installed by doing
+  
+To install brew, open the [Homebrew website](https://brew.sh/) and copy/paste the first command
+on that page into your Terminal. It will look something like: 
+ 
+  ~~~
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ~~~
+  {: .language-bash}
+
+ If you're not sure whether you have brew installed, type
+ 
+  ~~~
+  brew help
+  ~~~
+  {: .language-bash}
+
+  If you have brew installed, you should see something like:
+
+  ~~~
+  Example usage:
+  brew search [TEXT|/REGEX/]
+  brew info [FORMULA...]
+  brew install FORMULA...
+  brew update
+  brew upgrade [FORMULA...]
+  brew uninstall FORMULA...
+  brew list [FORMULA...]
+
+Troubleshooting:
+  brew config
+  brew doctor
+  brew install --verbose --debug FORMULA
+
+Contributing:
+  brew create [URL [--no-fetch]]
+  brew edit [FORMULA...]
+
+Further help:
+  brew commands
+  brew help [COMMAND]
+  man brew
+  https://docs.brew.sh
+  ~~~
+  {: .output}
+ 
 
 2. **Ruby** -- `brew install ruby`
 
