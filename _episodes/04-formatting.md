@@ -76,6 +76,8 @@ Each episode's [YAML][yaml] header must contain:
 *   lesson objectives
 *   a summary of key points
 
+If you're writing your lessons in Rmarkdown, you will also need to add `source: Rmd`.
+
 These values are stored in the header so that [Jekyll][jekyll] will read them
 and make them accessible in other pages as `site.episodes.the_episode.key`,
 where `the_episode` is the particular episode
