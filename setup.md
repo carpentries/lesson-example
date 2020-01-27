@@ -111,7 +111,7 @@ new lesson is `data-cleanup`.
     (because they would trigger repeated merge conflicts).
 
 12. Create and edit files as explained further in
-    [the episodes of this lesson]({{ relative_root_path }}/#schedule).
+    [the episodes of this lesson]({{ page.root }}/03-organization).
 
 13. (requires Jekyll Setup from below) Preview the HTML pages for your lesson:
 
