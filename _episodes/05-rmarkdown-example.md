@@ -32,9 +32,11 @@ each episode written in RMarkdown.
 
 
 ~~~
+```{r, eval = TRUE}
 source("../bin/chunk-options.R")
+```
 ~~~
-{: .language-r}
+{: .code}
 
 The rest of the lesson should be written as a normal RMarkdown file. You can
 include chunk for codes, just like you'd normally do.
