@@ -1,5 +1,6 @@
 # Use /bin/bash instead of /bin/sh
-export SHELL = /bin/bash
+#SHELL_TO_BE:=$(shell which bash)
+#export SHELL = $(SHELL_TO_BE)
 
 ## ========================================
 ## Commands for both workshop and lesson websites.
@@ -7,12 +8,14 @@ export SHELL = /bin/bash
 # Settings
 MAKEFILES=Makefile $(wildcard *.mk)
 JEKYLL_VERSION=3.8.5
-JEKYLL=bundle install --path .vendor/bundle && bundle update && bundle exec jekyll
+JEKYLL=bundle config set path .vendor/bundle > /dev/null && bundle install && bundle exec jekyll
 PARSER=bin/markdown_ast.rb
 DST=_site
 PYTHON_ERROR =
 # https://www.gnu.org/software/make/manual/html_node/Conditional-Syntax.html
 
+
+# @ in front a command suppresses the output of that command.
 
 # Check Python 3 is installed and determine if it's called via python3 or python
 # (https://stackoverflow.com/a/4933395)
@@ -40,9 +43,7 @@ endif
 #PYTHON_ERROR="Force Error"
 
 ifdef PYTHON_ERROR
-$(info python_error is: ${PYTHON_ERROR}. Python based make-commands may not work.) 
-else
-$(info python found: ${PYTHON})
+$(info Tried to find python. The output python_error is: ${PYTHON_ERROR}. Python based make-commands may not work. If you are not running python, this is fine.)
 endif
 
 # Controls
@@ -56,11 +57,11 @@ endif
 
 ## * serve            : render website and run a local server
 serve : lesson-md
-	${JEKYLL} serve
+	@${JEKYLL} serve
 
 ## * site             : build website but do not run a server
 site : lesson-md
-	${JEKYLL} build
+	@${JEKYLL} build
 
 ## * docker-serve     : use Docker to serve the site
 docker-serve :
@@ -134,7 +135,7 @@ HTML_DST = \
 lesson-md : ${RMD_DST}
 
 _episodes/%.md: _episodes_rmd/%.Rmd
-	@bin/knit_lessons.sh $< $@
+	@bash bin/knit_lessons.sh $< $@
 
 # * lesson-check     : validate lesson Markdown
 lesson-check : lesson-fixme
