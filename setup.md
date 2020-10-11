@@ -267,7 +267,7 @@ We will assume that your user ID is `timtomch` and the name of your
 new lesson is `data-cleanup`. We'll use git to make a copy of this repo in your own GitHub
 account. The effect is like a GitHub Fork, but not connected to the upstream changes.
 
-1.  Create an empty repo on GitHub, using [GitHub's new repository tool][new]
+1.  Create an empty repo on GitHub, using [GitHub's new repository tool](new)
     to go to the  the "Create new repository" page.
 
 2.  Select the owner for your new repository.
