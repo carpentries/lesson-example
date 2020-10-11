@@ -264,54 +264,54 @@ you will need the [PyYAML][pyyaml] module for Python 3.
 ## Creating a New Lesson
 
 We will assume that your user ID is `timtomch` and the name of your
-new lesson is `data-cleanup`.
+new lesson is `data-cleanup`. We'll use git to make a copy of this repo in your own GitHub
+account. The effect is like a GitHub Fork, but not connected to the upstream changes.
 
-1.  We'll use the [GitHub's importer][importer] to make a copy of this repo in your own GitHub
-    account. (Note: This is like a GitHub Fork, but not connected to the upstream changes)
+1.  Create an empty repo on GitHub, using [GitHub's new repository tool][new]
+    to go to the  the "Create new repository" page.
 
-2.  Put the URL of **[the styles repository][styles]**, that is
-    **https://github.com/carpentries/styles** in the "Your old repository’s clone URL" box.
-    Do not use the URL of this repository,
-    as that will bring in a lot of example files you don't actually want.
-
-3.  Select the owner for your new repository.
+2.  Select the owner for your new repository.
     In our example this is `timtomch`,
     but it may instead be an organization you belong to.
 
-4.  Choose a name for your lesson repository.
+3.  Choose a name for your lesson repository.
     In our example, this is `data-cleanup`.
 
-5.  Make sure the repository is public.
+5.  Make sure the repository is public. Don't initialize any files,
+    i.e. leave boxes unchecked at the bottom of that page.
+    Then, click on the green "Create repository" button to create the repository.
 
-6.  At this point, you should have a page like this:
-
-    ![]({{ page.root }}/fig/using-github-import.png)
-
-    You can now click "Begin Import".
-    When the process is done,
-    you can click "Continue to repository" to visit your newly-created repository.
-
-    Through the Github interface you can begin to edit and
-
-7.  If you want to work on the lesson from your local machine, you can
-    now clone your newly-created repository to your computer:
-
+6.  Clone the **[the styles repository][styles]**, that is
+    **https://github.com/carpentries/styles** to a local directory called `data-cleanup`,
+    using a bash shell to run the command:
     ~~~
-    $ git clone -b gh-pages https://github.com/timtomch/data-cleanup.git
+    $ git clone -b gh-pages https://github.com/carpentries/styles.git data-cleanup
     ~~~
     {: .language-bash}
+    Do not use the URL of *this* repository,
+    as that will bring in a lot of example files you don't actually want.
 
-    Note that the URL for your lesson will have your username and chosen repository name.
-
-8.  Go into that directory using:
+7.  Go into your new local directory using:
 
     ~~~
     $ cd data-cleanup
     ~~~
     {: .language-bash}
 
-    Note that the name of your directory should be what you named your lesson
-    on the example this is `data-cleanup`.
+    Note that in this and the previous step, the name of your directory should
+    be what you named your lesson; on the example this is `data-cleanup`.
+
+8.  Link the local directory you just created with the Github repository you started with,
+
+    ~~~
+    $ git remote set-url origin https://github.com/timtomch/data-cleanup.git
+    $ git push origin gh-pages
+    ~~~
+    {: .language-bash}
+
+    Again, the name of the remote should be `<username>/<mylesson>`, your username
+    followed by what you named your lesson; on the example this is
+    `timtomch/data-cleanup`. You can check that this has worked by refreshing the webpage from step 5, e.g. `https://github.com/timtomch/data-cleanup`.
 
 9. To be able to pull upstream style changes, you should manually add the
      styles repository as a remote called `template`:
@@ -340,16 +340,21 @@ new lesson is `data-cleanup`.
     ~~~
     {: .language-bash}
 
-	This will ensure that you are using the most "stable" version of the
-	template repository. Since it's being actively maintained by the
-	Software Carpentry community, you could end up using a development branch
-	that contains experimental (and potentially not working) features without
-	necessarily realising it. Switching to the `gh-branch` ensures you are
-	using the "stable" version of the template.
+    This will ensure that you are using the most "stable" version of the
+    template repository. Since it's being actively maintained by The
+    Carpentries community, you could end up using a development branch
+    that contains experimental (and potentially not working) features without
+    necessarily realising it. Switching to the `gh-pages` branch ensures you are
+    using the "stable" version of the template.
 
-11. Run `bin/lesson_initialize.py` to create all of the boilerplate files
-    that cannot be put into the styles repository
-    (because they would trigger repeated merge conflicts).
+11. Create all of the boilerplate files that cannot be put into the styles repository
+    (because they would trigger repeated merge conflicts), by running:
+    ~~~
+    $ python bin/lesson_initialize.py
+    ~~~
+    {: .language-bash}
+
+    *QUESTION:* Should we then commit these
 
 12. Create and edit files as explained further in
     [the episodes of this lesson]({{ page.root }}{% link index.md %}#schedule).
