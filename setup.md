@@ -354,7 +354,8 @@ account. The effect is like a GitHub Fork, but not connected to the upstream cha
     ~~~
     {: .language-bash}
 
-    *QUESTION:* Should we then commit these
+    *QUESTION:* Do we need to add, commit, push these files? Or edit them all first?
+    This step needs a commit clarifying this.
 
 12. Create and edit files as explained further in
     [the episodes of this lesson]({{ page.root }}{% link index.md %}#schedule).
