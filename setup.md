@@ -288,7 +288,7 @@ account. The effect is like a GitHub Fork, but not connected to the upstream cha
     $ git clone -b gh-pages https://github.com/carpentries/styles.git data-cleanup
     ~~~
     {: .language-bash}
-    Do not use the URL of *this* repository,
+    Do not use the URL of *this* repository (https://github.com/carpentries/lesson-example),
     as that will bring in a lot of example files you don't actually want.
 
 7.  Go into your new local directory using:
@@ -301,7 +301,7 @@ account. The effect is like a GitHub Fork, but not connected to the upstream cha
     Note that in this and the previous step, the name of your directory should
     be what you named your lesson; on the example this is `data-cleanup`.
 
-8.  Link the local directory you just created with the Github repository you started with,
+8.  Link the local directory you just created with the new Github repository you created,
 
     ~~~
     $ git remote set-url origin https://github.com/timtomch/data-cleanup.git
