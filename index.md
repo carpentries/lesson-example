@@ -24,7 +24,7 @@ please see [the setup instructions]({{ page.root }}{% link setup.md %}).
 > ## Ten Things You Need To Know
 >
 > 0.  Don't panic.
-> 1.  Create a new lesson by cloning into an empty GitHub repository, *not* by forking.
+> 1.  Create a new lesson by creating a new, empty, repository, and populating it by pushing a clone of the `styles` repository, *not* by forking.
 > 2.  Run `bin/lesson_initialize.py` *once* in a new lesson repository to set up standard files.
 > 3.  Run `make lesson-check` to check that the lesson is formatted correctly.
 > 4.  Put lesson episodes in `_episodes` (or `_episodes_rmd` if you are writing in RMarkdown).
