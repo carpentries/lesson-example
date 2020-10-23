@@ -231,12 +231,12 @@ install.packages('remotes', repos = 'https://cran.rstudio.com')
    ~~~
    {: .language-bash}
 
-   You need Ruby 2.1.0 or later (currently GitHub pages uses Ruby 2.5.8). If you
+   You need Ruby 2.1.0 or later (currently GitHub pages uses Ruby 2.7.1). If you
    have an older version of Ruby, if possible upgrade your operating system to a
    more recent version. If it's not possible, consider using [rbenv](https://github.com/rbenv/rbenv).
 
     ~~~
-    rbenv install 2.5.8
+    rbenv install 2.7.1
     ~~~
     {: .language-bash}
 
@@ -244,7 +244,7 @@ install.packages('remotes', repos = 'https://cran.rstudio.com')
     executing the following command from your lesson directory:
 
     ~~~
-    rbenv local 2.5.8
+    rbenv local 2.7.1
     ~~~
     {: .language-bash}
 
@@ -264,54 +264,63 @@ you will need the [PyYAML][pyyaml] module for Python 3.
 ## Creating a New Lesson
 
 We will assume that your user ID is `timtomch` and the name of your
-new lesson is `data-cleanup`. We'll use git to make a copy of this repo in your own GitHub
-account. The effect is like a GitHub Fork, but not connected to the upstream changes.
+new lesson is `data-cleanup`.
 
-1.  Create an empty repo on GitHub, using [GitHub's new repository tool](new)
-    to go to the  the "Create new repository" page.
+We recommend using the GitHub Importer whenever possible but sometimes users
+experience problems with the Importer failing to correctly import repositories.
+On previous occasions, the issue has been solved quite quickly so we recommend
+that you wait 24 hours before trying to import the repository again. If you
+can't wait and are familiar with using Git on the command line, [follow the
+alternative instructions below](#creating-a-new-lesson-using-git-commands) to set up your new repository. If using
+command line git is also not an option for you, please reach out to [team@carpentries.org](mailto:team@carpentries.org) for help.
 
-2.  Select the owner for your new repository.
+If you are looking to create a lesson intended for [The Carpentries
+Incubator](https://github.com/carpentries-incubator), there is a dedicated template and instructions included in the [repository](https://github.com/carpentries-incubator/template).
+
+
+1.  We'll use the [GitHub's importer][importer] to make a copy of this repo in your own GitHub
+    account. (Note: This is like a GitHub Fork, but not connected to the upstream changes)
+
+2.  Put the URL of **[the styles repository][styles]**, that is
+    **https://github.com/carpentries/styles** in the "Your old repository’s clone URL" box.
+    Do not use the URL of this repository,
+    as that will bring in a lot of example files you don't actually want.
+
+3.  Select the owner for your new repository.
     In our example this is `timtomch`,
     but it may instead be an organization you belong to.
 
-3.  Choose a name for your lesson repository.
+4.  Choose a name for your lesson repository.
     In our example, this is `data-cleanup`.
 
-5.  Make sure the repository is public. Don't initialize any files,
-    i.e. leave boxes unchecked at the bottom of that page.
-    Then, click on the green "Create repository" button to create the repository.
+5.  Make sure the repository is public.
 
-6.  Clone the **[the styles repository][styles]**, that is
-    **https://github.com/carpentries/styles** to a local directory called `data-cleanup`,
-    using a bash shell to run the command:
+6.  At this point, you should have a page like this:
+
+    ![]({{ page.root }}/fig/using-github-import.png)
+
+    You can now click "Begin Import". When the process is done, you can click
+    "Continue to repository" to visit your newly-created repository.
+
+7.  If you want to work on the lesson from your local machine, you can
+    now clone your newly-created repository to your computer:
+
     ~~~
-    $ git clone -b gh-pages https://github.com/carpentries/styles.git data-cleanup
+    $ git clone -b gh-pages https://github.com/timtomch/data-cleanup.git
     ~~~
     {: .language-bash}
-    Do not use the URL of *this* repository (https://github.com/carpentries/lesson-example),
-    as that will bring in a lot of example files you don't actually want.
 
-7.  Go into your new local directory using:
+    Note that the URL for your lesson will have your username and chosen repository name.
+
+8.  Go into that directory using:
 
     ~~~
     $ cd data-cleanup
     ~~~
     {: .language-bash}
 
-    Note that in this and the previous step, the name of your directory should
-    be what you named your lesson; on the example this is `data-cleanup`.
-
-8.  Link the local directory you just created with the new Github repository you created,
-
-    ~~~
-    $ git remote set-url origin https://github.com/timtomch/data-cleanup.git
-    $ git push origin gh-pages
-    ~~~
-    {: .language-bash}
-
-    Again, the name of the remote should be `<username>/<mylesson>`, your username
-    followed by what you named your lesson; on the example this is
-    `timtomch/data-cleanup`. You can check that this has worked by refreshing the webpage from step 5, e.g. `https://github.com/timtomch/data-cleanup`.
+    Note that the name of your directory should be what you named your lesson
+    on the example this is `data-cleanup`.
 
 9. To be able to pull upstream style changes, you should manually add the
      styles repository as a remote called `template`:
@@ -340,22 +349,16 @@ account. The effect is like a GitHub Fork, but not connected to the upstream cha
     ~~~
     {: .language-bash}
 
-    This will ensure that you are using the most "stable" version of the
-    template repository. Since it's being actively maintained by The
-    Carpentries community, you could end up using a development branch
-    that contains experimental (and potentially not working) features without
-    necessarily realising it. Switching to the `gh-pages` branch ensures you are
-    using the "stable" version of the template.
+	This will ensure that you are using the most "stable" version of the
+	template repository. Since it's being actively maintained by the
+	Software Carpentry community, you could end up using a development branch
+	that contains experimental (and potentially not working) features without
+	necessarily realising it. Switching to the `gh-branch` ensures you are
+	using the "stable" version of the template.
 
-11. Create all of the boilerplate files that cannot be put into the styles repository
-    (because they would trigger repeated merge conflicts), by running:
-    ~~~
-    $ python bin/lesson_initialize.py
-    ~~~
-    {: .language-bash}
-
-    *QUESTION:* Do we need to add, commit, push these files? Or edit them all first?
-    This step needs a commit clarifying this.
+11. Run `bin/lesson_initialize.py` to create all of the boilerplate files
+    that cannot be put into the styles repository
+    (because they would trigger repeated merge conflicts).
 
 12. Create and edit files as explained further in
     [the episodes of this lesson]({{ page.root }}{% link index.md %}#schedule).
@@ -385,8 +388,132 @@ account. The effect is like a GitHub Fork, but not connected to the upstream cha
     ~~~
     {: .language-bash}
 
-15. [Tell us][email] where your lesson is so that we can add it to
-    the appropriate index page(s).
+
+> ## Creating a New Lesson using Git commands
+>
+> If the GitHub Importer is failing, you can instead follow the instructions
+> below that use Git commands to achieve the same result. We'll use Git to make
+> a copy of this repo in your own GitHub account. The effect is like a GitHub
+> fork, but not connected to the upstream changes.
+>
+> 1.  Create an empty repo on GitHub, using [GitHub's new repository tool](new)
+>     to go to the  the "Create new repository" page.
+>
+> 2.  Select the owner for your new repository.
+>     In our example this is `timtomch`,
+>     but it may instead be an organization you belong to.
+>
+> 3.  Choose a name for your lesson repository.
+>     In our example, this is `data-cleanup`.
+>
+> 5.  Make sure the repository is public. Don't initialize any files,
+>     i.e. leave boxes unchecked at the bottom of that page.
+>     Then, click on the green "Create repository" button to create the repository.
+>
+> 6.  Clone the **[the styles repository][styles]**, that is
+>     **https://github.com/carpentries/styles** to a local directory called `data-cleanup`,
+>     using a bash shell to run the command:
+>     ~~~
+>     $ git clone -b gh-pages https://github.com/carpentries/styles.git data-cleanup
+>     ~~~
+>     {: .language-bash}
+>     Do not use the URL of *this* repository (https://github.com/carpentries/lesson-example),
+>     as that will bring in a lot of example files you don't actually want.
+>
+> 7.  Go into your new local directory using:
+>
+>     ~~~
+>     $ cd data-cleanup
+>     ~~~
+>     {: .language-bash}
+>
+>     Note that in this and the previous step, the name of your directory should
+>     be what you named your lesson; on the example this is `data-cleanup`.
+>
+> 8.  Link the local directory you just created with the new Github repository you created,
+>
+>     ~~~
+>     $ git remote set-url origin https://github.com/timtomch/data-cleanup.git
+>     $ git push origin gh-pages
+>     ~~~
+>     {: .language-bash}
+>
+>     Again, the name of the remote should be `<username>/<mylesson>`, your username
+>     followed by what you named your lesson; on the example this is
+>     `timtomch/data-cleanup`. You can check that this has worked by refreshing the webpage from step 5, e.g. `https://github.com/timtomch/data-cleanup`.
+>
+> 9. To be able to pull upstream style changes, you should manually add the
+>      styles repository as a remote called `template`:
+>
+>     ~~~
+>     $ git remote add template https://github.com/carpentries/styles.git
+>     ~~~
+>     {: .language-bash}
+>
+>     This will allow you to pull in changes made to the template,
+>     such as improvements to our CSS style files.
+>     (Note that the user name above is `carpentries`, *not* `timtomch`,
+>     since you are adding the master copy of the template as a remote.)
+>
+> 10. Configure the `template` remote to not download tags:
+>
+>     ~~~
+>     $ git config --local remote.template.tagOpt --no-tags
+>     ~~~
+>     {: .language-bash}
+>
+> 10. Make sure you are using the `gh-pages` branch of the lesson template:
+>
+>     ~~~
+>     $ git checkout gh-pages
+>     ~~~
+>     {: .language-bash}
+>
+>     This will ensure that you are using the most "stable" version of the
+>     template repository. Since it's being actively maintained by The
+>     Carpentries community, you could end up using a development branch
+>     that contains experimental (and potentially not working) features without
+>     necessarily realising it. Switching to the `gh-pages` branch ensures you are
+>     using the "stable" version of the template.
+>
+> 11. Create all of the boilerplate files that cannot be put into the styles  X
+>     repository
+>     (because they would trigger repeated merge conflicts), by running:
+>     ~~~
+>     $ python bin/lesson_initialize.py
+>     ~~~
+>     {: .language-bash}
+>
+>     Edit `_config.yml` and `index.md` for the lesson you are creating.
+>
+> 12. Create and edit files as explained further in
+>     [the episodes of this lesson]({{ page.root }}{% link index.md %}#schedule).
+>
+> 13. (requires Jekyll Setup from above) Preview the HTML pages for your lesson:
+>
+>     ~~~
+>     $ make serve
+>     ~~~
+>     {: .language-bash}
+>
+>     Alternatively, you can try using Docker:
+>
+>     ~~~
+>     $ make docker-serve
+>     ~~~
+>     {: .language-bash}
+>
+> 14. Commit your changes and push to the `gh-pages` branch of your
+>     repository:
+>
+>     ~~~
+>     $ cd data-cleanup
+>     $ git add changed-file.md
+>     $ git commit -m "Explanatory message"
+>     $ git push origin gh-pages
+>     ~~~
+>     {: .language-bash}
+{: .solution}
 
 ## Notes
 
@@ -400,7 +527,9 @@ account. The effect is like a GitHub Fork, but not connected to the upstream cha
     possibly because of the network timing out.
     If you experience a problem, please re-try;
     if the problem persists,
-    please [get in touch][email].
+    use the instructions above to
+    [import the repository     manually](#creating-a-new-lesson-using-git-commands) using Git commands,
+    otherwise, please [get in touch][email].
 
 
 ## Setup Instructions for a specific existing lesson
