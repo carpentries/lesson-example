@@ -41,8 +41,7 @@ and each author's working copy would be a fork of that master:
 However, GitHub only allows a user to have one fork of any particular repo.
 This creates a problem for us because an author may be involved in writing several lessons,
 each with its own repo.
-We therefore create new lessons by cloning, then we manually set the remote to a newly
-created and named empty repository.
+We therefore use [GitHub Importer][github-importer] to create new lessons.
 After the lesson has been created,
 we manually add the [template repository]({{ site.template_repo }}) as a remote called `template`
 to update the lesson when the template changes.
