@@ -168,4 +168,33 @@ The `bin/lesson_initialize.py` script creates files that need to be customized f
 
 All figures related with the lesson **must** be placed inside the directory `fig` at the root of the project.
 
+## Manual Episode Order
+
+By default, the order of Episodes and Extras in the lesson is determined by
+the name of the file,
+e.g. an episode with the filename `01-introduction.md` appears before
+a lesson with the filename `02-cheese-rolling.md`.
+To override this default ordering,
+define the `episode_order` and/or `extras_order` parameters in `_config.yml`.
+The value of these parameters should be an array of filenames
+with the extension removed, e.g.
+
+~~~
+episode_order:
+    - introduction
+    - first_steps
+    - running
+    - jumping
+    - gymnastics
+    - olympics
+    - conclusion
+~~~
+{: .language-yaml }
+
+Some lesson developers have found this useful when using the lesson template to
+create more modular material and/or when working with material in the early
+stages of development that is likely to be added to and reorganised.
+Any files in the relevant collection folder (e.g. `_episodes`) not included in
+the array will be omitted from the lesson navigation (but will still be built).
+
 {% include links.md %}
