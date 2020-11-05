@@ -118,7 +118,6 @@ The `bin/lesson_initialize.py` script creates files that need to be customized f
     The template will automatically generate a summary of the episodes' key points.
     1.  It must use the `reference` layout.
     2.  Its title must be `"Reference"`.
-    3.  Its permalink must be `/reference/`.
     4.  It should include a glossary, laid out as a description list.
     5.  It may include other material as appropriate.
 
@@ -130,10 +129,8 @@ The `bin/lesson_initialize.py` script creates files that need to be customized f
     with instructions for each.
     The [workshop template]({{ site.workshop_repo }})
     links to the setup instructions for core lessons.
-    1.  It must use the `page` layout.
-    2.  Its title must be `"Setup"`.
-    3.  Its permalink must be `/setup/`.
-    4.  It should include whatever setup instructions are required.
+    1.  Its title must be `"Setup"`..
+    2.  It should include whatever setup instructions are required.
 
 `_extras/about.md`
 :   General notes about this lesson.
@@ -144,10 +141,8 @@ The `bin/lesson_initialize.py` script creates files that need to be customized f
 :   General discussion of the lesson contents for learners who wish to know more:
     This page normally includes links to further reading
     and/or brief discussion of more advanced topics.
-    1.  It must use the `page` layout.
-    2.  Its title must be `"Discussion"`.
-    3.  Its permalink must be `/discuss/`.
-    4.  It may include whatever content the author thinks appropriate.
+    1.  Its title must be `"Discussion"`.
+    2.  It may include whatever content the author thinks appropriate.
 
 `_extra/figures.md` and `_includes/all_figures.html`
 :   Does nothing but include `_includes/all_figures.html`,
@@ -159,10 +154,8 @@ The `bin/lesson_initialize.py` script creates files that need to be customized f
 `_extras/guide.md`
 :   The instructors' guide for the lesson.
     This page records tips and warnings from people who have taught the lesson.
-    1.  It must use the `page` layout.
-    2.  Its title must be `"Instructors' Guide"`.
-    3.  Its permalink must be `/guide/`.
-    4.  It may include whatever content the author thinks appropriate.
+    1.  Its title must be `"Instructors' Guide"`.
+    2.  It may include whatever content the author thinks appropriate.
 
 ## Figures
 
