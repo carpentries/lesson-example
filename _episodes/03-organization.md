@@ -89,7 +89,7 @@ The `bin/lesson_initialize.py` script creates files that need to be customized f
 `_config.yml`
 :   The [Jekyll][jekyll] configuration file.
     This must be edited so that its links and other settings are correct for this lesson.
-    *   `carpentry` should be either "dc" (for Data Carpentry), "lc" (for Library Carpentry), or "swc" (for Software Carpentry).
+    *   `carpentry` should be either "dc" (for Data Carpentry), "lc" (for Library Carpentry), "swc" (for Software Carpentry), "cp" (for Carpentries), or "incubator" (for lessons in The Carpentries Incubator).
     *   `title` is the title of your lesson,
         e.g.,
         "Defence Against the Dark Arts".
