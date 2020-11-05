@@ -168,7 +168,7 @@ The `bin/lesson_initialize.py` script creates files that need to be customized f
 
 All figures related with the lesson **must** be placed inside the directory `fig` at the root of the project.
 
-## Manual Episode Order
+## Episode Order
 
 By default, the order of Episodes and Extras in the lesson is determined by
 the name of the file,
