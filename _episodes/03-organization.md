@@ -189,7 +189,7 @@ episode_order:
     - olympics
     - conclusion
 ~~~
-{: .language-yaml }
+{: .source }
 
 Some lesson developers have found this useful when using the lesson template to
 create more modular material and/or when working with material in the early
