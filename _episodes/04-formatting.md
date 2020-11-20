@@ -222,6 +222,68 @@ RETURN (0)
 ~~~
 {: .language-sql}
 
+> ## Highlighting for other languages
+> You may use other `language-*` classes to activate syntax highlighting
+> for other languages.
+> For example,
+>
+> {% raw %}
+>     ~~~
+>     title: "YAML Highlighting Example"
+>     description: "This is an example of syntax highlighting for YAML."
+>     array_values:
+>         - value_1
+>         - value_2
+>     ~~~
+>     {: .language-yaml }
+> {% endraw %}
+>
+>
+> will produce this:
+>
+> ~~~
+> title: "YAML Highlighting Example"
+> description: "This is an example of syntax highlighting for YAML."
+> array_values:
+>     - value_1
+>     - value_2
+> ~~~
+> {: .language-yaml }
+>
+> and combining `.language-*` with the `.source` class with add the generic
+> "Code" title to the block.
+>
+> {% raw %}
+>     ~~~
+>     for i = 1:2, j = 3:4
+>         println((i, j))
+>         i = 0
+>     end
+>     ~~~
+>     {: .source .language-julia }
+> {% endraw %}
+>
+> ~~~
+> for i = 1:2, j = 3:4
+>     println((i, j))
+>     i = 0
+> end
+> ~~~
+> {: .source .language-julia }
+>
+> Note that using `.language-*` classes other than
+> `.language-bash`
+> `.language-html`,
+> `.language-make`,
+> `.language-matlab`,
+> `.language-python`,
+> `.language-r`,
+> or `.language-sql`
+> will currently cause one of the tests in the lesson template's
+> `make lesson-check` to fail for your lesson,
+> but will not prevent lesson pages from building and rendering correctly.
+>
+{: .solution }
 
 
 ## Special Blockquotes
