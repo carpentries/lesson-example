@@ -173,7 +173,7 @@ echo "Hello World"
 ~~~
 {: .language-bash}
 
-`.html`: HTML source:
+`.language-html`: HTML source:
 
 ~~~
 <html>
@@ -182,7 +182,7 @@ echo "Hello World"
 </body>
 </html>
 ~~~
-{: .html}
+{: .language-html}
 
 `.language-make`: Makefiles:
 
