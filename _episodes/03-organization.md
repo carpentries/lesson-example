@@ -161,6 +161,18 @@ The `bin/lesson_initialize.py` script creates files that need to be customized f
 
 All figures related with the lesson **must** be placed inside the directory `fig` at the root of the project.
 
+## RMarkdown
+
+Episodes may also be written with [RMarkdown](https://rmarkdown.rstudio.com).
+Save RMarkdown episode files in the `_episodes_rmd` directory with a file name
+`NN-episode-name.Rmd` where `NN` is a pair of digits, e.g. `03-loading-data.Rmd`.
+These `.Rmd` files will be converted to Markdown files and
+the resulting `.md` files saved to the `_episodes` directory where they will
+form part of the Episodes collection.
+
+See the [Using RMarkdown episode]({{ page.root }}/05-rmarkdown-example/)
+for more information about writing lessons with RMarkdown.
+
 ## Episode Order
 
 By default, the order of Episodes and Extras in the lesson is determined by
