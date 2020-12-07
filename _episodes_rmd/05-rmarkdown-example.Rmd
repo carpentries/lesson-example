@@ -32,8 +32,20 @@ If the lesson uses additional packages, the script that converts the Rmd files
 into markdown, will detect them and install them for you, when you run `make
 serve` or `make site`.
 
-The chunk below is really important, and needs to be included at the beginning
-of each episode written in RMarkdown.
+RMarkdown episode files should include an extra `source` field in the page
+front matter, telling the lesson template to point to the RMarkdown file
+in the source repository, instead of the knitted Markdown equivalent:
+
+```
+---
+source: Rmd
+title: Episode Title
+[...]
+```
+
+
+Every episode written in RMarkdown must include the block below
+at the beginning of the page body i.e. after the page front matter.
 
 ````r
 ```{r, include=FALSE}`r ''`
