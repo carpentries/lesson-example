@@ -105,23 +105,23 @@ For the challenges and their solutions, you need to pay attention to where the
 `>` go and where to leave blank lines. You can include code chunks in both the
 instructions and solutions. For instance this:
 
-```
+````md
 > ## Challenge: Can you do it?
 >
 > What is the output of this command?
 >
-> ```{r, eval=FALSE}
+> ```{r, eval=FALSE}`r ''`
 > paste("This", "new", "template", "looks", "good")
 > ```
 >
 > > ## Solution
 > >
-> > ```{r, echo=FALSE}
+> > ```{r, echo=FALSE}`r ''`
 > > paste("This", "new", "template", "looks", "good")
 > > ```
 > {: .solution}
 {: .challenge}
-```
+````
 
 will generate this:
 
