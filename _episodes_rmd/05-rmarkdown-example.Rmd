@@ -4,7 +4,7 @@ title: "Using RMarkdown"
 teaching: 10
 exercises: 2
 questions:
-- "How to write a lesson using RMarkdown?"
+- "How do I write a lesson using RMarkdown?"
 objectives:
 - "Explain how to use RMarkdown with the new lesson template."
 - "Demonstrate how to include pieces of code, figures, and challenges."
@@ -49,7 +49,7 @@ have the same prefix for each episode (you should use a different prefix for
 each episode using the episode number for instance).
 
 The rest of the lesson should be written as a normal RMarkdown file. You can
-include chunk for codes, just like you'd normally do.
+include chunks for codes, just like you would normally do.
 Output of code chunks will be generated as part of the knitting process.
 
 Normal output:
