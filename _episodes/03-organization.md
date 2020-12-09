@@ -201,4 +201,18 @@ stages of development that is likely to be added to and reorganised.
 Any files in the relevant collection folder (e.g. `_episodes`) not included in
 the array will be omitted from the lesson navigation (but will still be built).
 
+> ## Ordering RMarkdown Episodes
+>
+> Regardless of whether `episode_order` has been defined in `_config.yml`
+> to determine the order that episodes appear in the lesson site,
+> episodes written in RMarkdown will always be executed and converted to
+> Markdown **in alphabetical order**.
+> If a lesson contains multiple episodes in RMarkdown and these
+> episodes depend on each other e.g. variables created in one episode
+> are used in another, care should be taken to ensure these episodes are
+> executed in the correct order.
+> In these cases, it is recommended to adopt a numeric naming system for
+> episode files e.g. `01-getting-started.Rmd`, `02-loading-data.Rmd` etc.
+{: .callout }
+
 {% include links.md %}
