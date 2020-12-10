@@ -250,26 +250,6 @@ RETURN (0)
 > ~~~
 > {: .language-yaml }
 >
-> and combining `.language-*` with the `.source` class with add the generic
-> "Code" title to the block.
->
-> {% raw %}
->     ~~~
->     for i = 1:2, j = 3:4
->         println((i, j))
->         i = 0
->     end
->     ~~~
->     {: .source .language-julia }
-> {% endraw %}
->
-> ~~~
-> for i = 1:2, j = 3:4
->     println((i, j))
->     i = 0
-> end
-> ~~~
-> {: .source .language-julia }
 >
 > Note that using `.language-*` classes other than
 > `.language-bash`
