@@ -64,7 +64,7 @@ When referring to other episodes, use:
     [link text]({{ page.root }}{% link _episodes/dd-subject.md %})
 {% endraw %}
 
-i.e., use [Jekyll's tag link](https://jekyllrb.com/docs/templates/#links) and the name of the file.
+_i.e._, use [Jekyll's link tag][jekyll-link-tag] and the name of the file.
 
 ## Episode Header
 
@@ -372,5 +372,8 @@ but the alternatives we considered and discarded are worse:
     This is simpler to edit,
     but clutters up the page
     and makes it harder for tools to tell which solutions belong to which exercises.
+
+
+[jekyll-link-tag]: https://jekyllrb.com/docs/liquid/tags/#link
 
 {% include links.md %}
