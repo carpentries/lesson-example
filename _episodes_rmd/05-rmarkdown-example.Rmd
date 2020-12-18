@@ -30,7 +30,7 @@ things:
 2. It converts the RMarkdown files (the files in the `.Rmd` extension in the
    `_episodes_rmd` folder) into Markdown files in the `_episodes` folder.
 
-Depending on whether it uses the remote theme (all the lessons in the
+Depending on whether it uses the remote theme (most lessons in the
 Carpentries Incubator, and most R-based Data Carpentry lessons) or the theme
 from the `styles` repository, the details of how the site is created differ. In
 practice, little changes for you unless you want to host a functioning version
@@ -81,7 +81,7 @@ cat(
 ```
 
 The rest of the lesson should be written as a normal RMarkdown file. You can
-include chunk for codes, just like you would normally do.
+include chunks of code, just like you would normally do.
 
 Normal output:
 
