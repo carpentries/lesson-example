@@ -5,8 +5,11 @@ on:
   pull_request: []
 jobs:
   build-website:
-    if: github.repository != 'carpentries/styles' && (github.repository_owner == 'swcarpentry' || github.repository_owner == 'datacarpentry' || github.repository_owner == 'librarycarpentry' || github.repository_owner == 'carpentries')
+    if: ${{ !endsWith(github.repository, '/styles') }}
     runs-on: ubuntu-latest
+    env:
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/bionic/latest"
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }} 
     defaults:
       run:
         shell: bash
