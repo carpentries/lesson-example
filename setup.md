@@ -90,13 +90,13 @@ Regardless of the option you chose, go to the section [For Everyone](#for-everyo
 
 ### macOS
 
-1. First make sure you have Homebrew installed by doing
+1. First make sure you have Homebrew installed
 
 To install Homebrew, open the [Homebrew website](https://brew.sh/) and copy/paste the first command
-on that page into your Terminal. It will look something like:
+on that page into your Terminal. You may also want to check the requirements first. The command for installing Homebrew will look something like:
 
   ~~~
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ~~~
   {: .language-bash}
 
