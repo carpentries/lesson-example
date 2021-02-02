@@ -59,6 +59,7 @@ P_INTERNAL_INCLUDE_LINK = re.compile(r'^{% include ([^ ]*) %}$')
 # What kinds of blockquotes are allowed?
 KNOWN_BLOCKQUOTES = {
     'callout',
+    'caution',
     'challenge',
     'checklist',
     'discussion',
@@ -72,6 +73,7 @@ KNOWN_BLOCKQUOTES = {
 }
 
 # What kinds of code fragments are allowed?
+# Below we allow all 'language-*' code blocks
 KNOWN_CODEBLOCKS = {
     'error',
     'output',
@@ -174,7 +176,7 @@ def check_config(reporter, source_dir):
     reporter.check_field(config_file, 'configuration',
                          config, 'kind', 'lesson')
     reporter.check_field(config_file, 'configuration',
-                         config, 'carpentry', ('swc', 'dc', 'lc', 'cp'))
+                         config, 'carpentry', ('swc', 'dc', 'lc', 'cp', 'incubator'))
     reporter.check_field(config_file, 'configuration', config, 'title')
     reporter.check_field(config_file, 'configuration', config, 'email')
 
