@@ -161,6 +161,17 @@ The `bin/lesson_initialize.py` script creates files that need to be customized f
 
 All figures related with the lesson **must** be placed inside the directory `fig` at the root of the project.
 
+## RMarkdown
+
+Episodes may also be written with [RMarkdown](https://rmarkdown.rstudio.com).
+Save RMarkdown episode files with the extension `.Rmd` in the `_episodes_rmd` directory.
+These will be converted to Markdown files when the lesson site is built.
+The resulting `.md` files will be saved to the `_episodes` directory,
+where they will form part of the Episodes collection.
+
+See the [Using RMarkdown episode]({{ page.root }}/05-rmarkdown-example/)
+for more information about writing lessons with RMarkdown.
+
 ## Episode Order
 
 By default, the order of Episodes and Extras in the lesson is determined by
@@ -189,5 +200,19 @@ create more modular material and/or when working with material in the early
 stages of development that is likely to be added to and reorganised.
 Any files in the relevant collection folder (e.g. `_episodes`) not included in
 the array will be omitted from the lesson navigation (but will still be built).
+
+> ## Ordering RMarkdown Episodes
+>
+> Regardless of whether `episode_order` has been defined in `_config.yml`
+> to determine the order that episodes appear in the lesson site,
+> episodes written in RMarkdown will always be executed and converted to
+> Markdown **in alphabetical order**.
+> If a lesson contains multiple episodes in RMarkdown and these
+> episodes depend on each other e.g. variables created in one episode
+> are used in another, care should be taken to ensure these episodes are
+> executed in the correct order.
+> In these cases, it is recommended to adopt a numeric naming system for
+> episode files e.g. `01-getting-started.Rmd`, `02-loading-data.Rmd` etc.
+{: .callout }
 
 {% include links.md %}
