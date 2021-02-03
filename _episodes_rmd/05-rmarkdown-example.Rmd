@@ -189,76 +189,21 @@ will generate this:
 {: .challenge}
 
 
-## Deployment of R-based lessons
-
-For lessons that do not use R, the code included in the lessons is not
-evaluated. Each time a new commit is pushed to the repository, GitHub can take
-these files and directly render their content using Jekyll to create the lesson
-website. Because it is a one-step process, we can use the same branch
-(`gh-pages`) to develop the lesson and render its content as a website. However,
-for R-based lessons, we first need to convert the RMarkdown to Markdown, and
-then, we need to instruct GitHub to generate the lesson website from them.
-Because of this two-step process, we use two branches: one is used to develop
-the content of the lesson (typically `main`) and the other is only used to host
-the files that will generate the lesson website (`gh-pages`). To convert the
-files from RMarkdown to Markdown, and push these Markdown files to GitHub, we
-rely on a specific GitHub Actions (found at `.github/workflows/deploy.yml` in
-your repository).
-
-To be able to push content to your repository on your behalf, the GitHub Action
-requires to use a Personal Access Token (PAT). A Personal Access Token is a long
-string of characters that you generate when logged in to your GitHub account. It
-identifies you and acts as a password. When used in GitHub Actions scripts,
-GitHub uses it to do things that you would normally do as a user like pushing
-files to a branch. As its name suggests, it should be kept secret as if others
-knew about it, it would be easy to impersonate you and push content to your
-repository on your behalf. You can store secret information in your repositories
-that are hidden to the world but that GitHub Actions has access to. You will
-need to add this Personal Access Token as a GitHub secret.
-
-When you are working with the upstream ("official") version of the lesson, the
-Personal Access Token is already set up and you do not have to worry about it.
-As a contributor to the lesson, your changes will become live on the lesson
-website once the maintainer for the lesson merges your changes to the default
-branch.
-
-If you want to fork the lesson and have a functioning website associated with
-it, you need to (1) create your own Personal Access Token so the GitHub Action
-can push the Markdown files it generates from the RMarkdown files to the
-`gh-pages` branch of your fork; (2) update the deploy GitHub Actions in your
-repository to match the name and URL of your fork.
-
-To create a Personal Access Token and store it as a secret to your fork:
-
-1. When logged in to your GitHub account, go to:
-   <https://github.com/settings/tokens>
-2. Click on the button "Generate new token"
-3. In "Note", type a decriptive note for what the token will be used for. For
-   instance, "deploy-my-r-lesson-fork".
-4. Click the box `public_repo` (for our purpose, that's the only scope you
-   need).
-5. Click on "Generate Token".
-6. A new page will appear, with your token at the top. It is the only time you
-   will see the token. Click on the clipboard icon to copy the token. Keep this
-   page open for now.
-7. Open a new tab in your browser and visit the GitHub page for your fork of the
-   lesson.
-8. Click on "Settings"
-9. Click on "Secrets" in the left bar menu.
-10. Click on the "New repository secret" button
-11. For the name, use `GH_PAT` (or make sure it matches the name of the secret
-    variable in the `deploy.yml` file).
-12. In the "Value" text box, paste your Personal Access Token, and click on "Add
-    secret".
-13. Close the tab that displays your Personal Access Token.
-
-Finally, you need to edit the `deploy.yml` file to change the value of the
-`github.repository` variable in the step "Deploy site" to match the name of your
-fork.
-
-After pushing this change to your repository, any subsequent modification to the
-content of the lesson will automatically update the lesson website associated
-with your fork.
-
+> ## On Branch Names and Automation
+> 
+> For lessons that do not use R, the code included in the lessons is not
+> evaluated. Each time a new commit is pushed to the repository, GitHub can take
+> these files and directly render their content using Jekyll to create the lesson
+> website. Because it is a one-step process, we can use the same branch
+> (`gh-pages`) to develop the lesson and render its content as a website. However,
+> for R-based lessons, we first need to convert the RMarkdown to Markdown, and
+> then, we need to instruct GitHub to generate the lesson website from the rendered
+> Markdown files. Because of this two-step process, we use two branches: one is 
+> used to develop the content of the lesson (typically `main`) and the other is only 
+> used to host the files that will generate the lesson website (`gh-pages`). To 
+> automatically convert the files from RMarkdown to Markdown, and push these 
+> Markdown files to GitHub, we rely on a GitHub Actions workflow (typically in the 
+> `.github/workflows/website.yml` file in the lesson repository).
+{: .callout}
 
 {% include links.md %}
