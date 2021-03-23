@@ -417,12 +417,12 @@ but the alternatives we considered and discarded are worse:
 
 ## Applying a Shadow to Images
 
-By default images are displayed in the lesson without a border or shadow.
-In some circumstances it may be desirable to add some styling to make
-the edges of an image stand out against the background of the page,
-e.g. if using screenshots that include text on white background.
-You can add a drop shadow around images by applying the
-`.image-with-shadow` class to the image:
+By default, images in the lesson are displayed without borders or shadows.
+In some circumstances, it may be desirable to make images stand out 
+from the background of the page,
+for example, when using screenshots that include text on white background.
+You can add a drop shadow effect to images by applying the
+`image-with-shadow` class to them:
 
 ~~~
 {% raw %}![image alt text](path/to/image/source.svg){: .image-with-shadow }
