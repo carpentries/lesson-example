@@ -426,11 +426,7 @@ You can add a drop shadow around images by applying the
 
 ~~~
 {% raw %}![image alt text](path/to/image/source.svg){: .image-with-shadow }
-
-or
-
-![image alt text](path/to/image/source.svg)
-{: .image-with-shadow }{% endraw %}
+{% endraw %}
 ~~~
 {: .source }
 
