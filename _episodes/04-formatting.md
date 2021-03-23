@@ -64,7 +64,7 @@ When referring to other episodes, use:
     [link text]({{ page.root }}{% link _episodes/dd-subject.md %})
 {% endraw %}
 
-_i.e._, use [Jekyll's link tag][jekyll-link-tag] and the name of the file.
+i.e., use [Jekyll's tag link](https://jekyllrb.com/docs/templates/#links) and the name of the file.
 
 ## Episode Header
 
@@ -173,7 +173,7 @@ echo "Hello World"
 ~~~
 {: .language-bash}
 
-`.language-html`: HTML source:
+`.html`: HTML source:
 
 ~~~
 <html>
@@ -182,7 +182,7 @@ echo "Hello World"
 </body>
 </html>
 ~~~
-{: .language-html}
+{: .html}
 
 `.language-make`: Makefiles:
 
@@ -222,48 +222,6 @@ RETURN (0)
 ~~~
 {: .language-sql}
 
-> ## Highlighting for other languages
-> You may use other `language-*` classes to activate syntax highlighting
-> for other languages.
-> For example,
->
-> {% raw %}
->     ~~~
->     title: "YAML Highlighting Example"
->     description: "This is an example of syntax highlighting for YAML."
->     array_values:
->         - value_1
->         - value_2
->     ~~~
->     {: .language-yaml }
-> {% endraw %}
->
->
-> will produce this:
->
-> ~~~
-> title: "YAML Highlighting Example"
-> description: "This is an example of syntax highlighting for YAML."
-> array_values:
->     - value_1
->     - value_2
-> ~~~
-> {: .language-yaml }
->
->
-> Note that using `.language-*` classes other than
-> `.language-bash`
-> `.language-html`,
-> `.language-make`,
-> `.language-matlab`,
-> `.language-python`,
-> `.language-r`,
-> or `.language-sql`
-> will currently cause one of the tests in the lesson template's
-> `make lesson-check` to fail for your lesson,
-> but will not prevent lesson pages from building and rendering correctly.
->
-{: .solution }
 
 
 ## Special Blockquotes
@@ -415,7 +373,23 @@ but the alternatives we considered and discarded are worse:
     but clutters up the page
     and makes it harder for tools to tell which solutions belong to which exercises.
 
+## Applying a Shadow to Images
 
-[jekyll-link-tag]: https://jekyllrb.com/docs/liquid/tags/#link
+By default images are displayed in the lesson without a border or shadow.
+In some circumstances it may be desirable to add some styling to make the
+edges of an image stand out against the background of the page,
+e.g. if using screenshots that include text on white background.
+You can add a drop shadow around images by applying the `.image-with-shadow`
+class to the image:
+
+~~~
+{% raw %}![image alt text](path/to/image/source.svg){: .image-with-shadow }
+
+or
+
+![image alt text](path/to/image/source.svg)
+{: .image-with-shadow }{% endraw %}
+~~~
+{: .source }
 
 {% include links.md %}
