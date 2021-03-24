@@ -27,7 +27,10 @@ before pushing them to GitHub.
 
 In order to preview changes locally, you must install the software described below.
 
-If you don't install bundler as indicated in this section, you will not be able to preview the lessons locally (in other words, you won't be able to run `make serve` or `make site`). However, you can still edit the files that make up the lessons. You will only be able to see the changes once your edits have been merged in the main repository.
+If you don't install bundler as indicated in this section, you will not be able to preview the
+lessons locally (in other words, you won't be able to run `make serve` or `make site`).
+However, you can still edit the files that make up the lessons. You will only be able to see the
+changes once your edits have been merged in the main repository.
 
 ### Windows
 
@@ -93,7 +96,8 @@ Regardless of the option you chose, go to the section [For Everyone](#for-everyo
 1. First make sure you have Homebrew installed
 
 To install Homebrew, open the [Homebrew website](https://brew.sh/) and copy/paste the first command
-on that page into your Terminal. You may also want to check the requirements first. The command for installing Homebrew will look something like:
+on that page into your Terminal. You may also want to check the requirements first. The command for
+installing Homebrew will look something like:
 
   ~~~
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -209,7 +213,8 @@ Further help:
 
 ### For R-based lessons
 
-You will need a recent version of R (>= 3.5.0). Installation instructions are available from the [CRAN website](https://cran.r-project.org).
+You will need a recent version of R (>= 3.5.0). Installation instructions are available from the
+[CRAN website](https://cran.r-project.org).
 
 We use the [knitr][cran-knitr], and [remotes](https://cran.r-project.org/package=remotes) to format
 lessons written in R Markdown and figure out needed packages to execute the code in the lesson. You
@@ -233,7 +238,8 @@ install.packages('remotes', repos = 'https://cran.rstudio.com')
 
    You need Ruby 2.1.0 or later (currently GitHub pages uses Ruby 2.7.1). If you
    have an older version of Ruby, if possible upgrade your operating system to a
-   more recent version. If it's not possible, consider using [rbenv](https://github.com/rbenv/rbenv).
+   more recent version. If it's not possible, consider using 
+   [rbenv](https://github.com/rbenv/rbenv).
 
     ~~~
     rbenv install 2.7.1
@@ -271,11 +277,13 @@ experience problems with the Importer failing to correctly import repositories.
 On previous occasions, the issue has been solved quite quickly so we recommend
 that you wait 24 hours before trying to import the repository again. If you
 can't wait and are familiar with using Git on the command line, [follow the
-alternative instructions below](#creating-a-new-lesson-using-git-commands) to set up your new repository. If using
-command line git is also not an option for you, please reach out to [team@carpentries.org](mailto:team@carpentries.org) for help.
+alternative instructions below](#creating-a-new-lesson-using-git-commands) to set up your new
+repository. If using command line git is also not an option for you, please reach out to
+[team@carpentries.org](mailto:team@carpentries.org) for help.
 
 If you are looking to create a lesson intended for [The Carpentries
-Incubator](https://github.com/carpentries-incubator), there is a dedicated template and instructions included in the [repository](https://github.com/carpentries-incubator/template).
+Incubator](https://github.com/carpentries-incubator), there is a dedicated template and instructions
+included in the [repository](https://github.com/carpentries-incubator/template).
 
 
 1.  We'll use the [GitHub's importer][importer] to make a copy of this repo in your own GitHub
@@ -440,7 +448,8 @@ Incubator](https://github.com/carpentries-incubator), there is a dedicated templ
 >
 >     Again, the name of the remote should be `<username>/<mylesson>`, your username
 >     followed by what you named your lesson; on the example this is
->     `timtomch/data-cleanup`. You can check that this has worked by refreshing the webpage from step 5, e.g. `https://github.com/timtomch/data-cleanup`.
+>     `timtomch/data-cleanup`. You can check that this has worked by refreshing the webpage from
+      > step 5, e.g. `https://github.com/timtomch/data-cleanup`.
 >
 > 9. To be able to pull upstream style changes, you should manually add the
 >      styles repository as a remote called `template`:
@@ -528,8 +537,8 @@ Incubator](https://github.com/carpentries-incubator), there is a dedicated templ
     If you experience a problem, please re-try;
     if the problem persists,
     use the instructions above to
-    [import the repository     manually](#creating-a-new-lesson-using-git-commands) using Git commands,
-    otherwise, please [get in touch][email].
+    [import the repository     manually](#creating-a-new-lesson-using-git-commands) using Git
+    commands, otherwise, please [get in touch][email].
 
 
 ## Setup Instructions for a specific existing lesson
