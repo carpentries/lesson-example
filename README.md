@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/carpentries/lesson-example.svg?branch=gh-pages)](https://travis-ci.org/carpentries/lesson-example)
+[![Build Status][build-status]](https://travis-ci.org/carpentries/lesson-example)
 
 lesson-example
 ==============
@@ -90,6 +90,7 @@ In brief:
     If you are looking for things to work on,
     please see [the list of issues for this repository][issues].
 
+[build-status]: https://travis-ci.org/carpentries/lesson-example.svg?branch=gh-pages
 [collections]: https://jekyllrb.com/docs/collections/
 [editing-config]: https://carpentries.github.io/lesson-example/03-organization/
 [example-issues]: https://github.com/carpentries/lesson-example/issues/
