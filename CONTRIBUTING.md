@@ -1,9 +1,6 @@
 # Contributing
 
-[The Carpentries][c-site]
-([Software Carpentry][swc-site],
-[Data Carpentry][dc-site],
-and [Library Carpentry][lc-site]) are open source projects,
+[The Carpentries][c-site] ([Software Carpentry][swc-site], [Data Carpentry][dc-site], and [Library Carpentry][lc-site]) are open source projects,
 and we welcome contributions of all kinds:
 new lessons,
 fixes to existing material,
@@ -114,8 +111,7 @@ To use the web interface for contributing to a lesson:
 1.  Fork the originating repository to your GitHub profile.
 2.  Within your version of the forked repository, move to the `gh-pages` branch and
 create a new branch for each significant change being made.
-3.  Navigate to the file(s) you wish to change within the new branches and make revisions as
-    required.
+3.  Navigate to the file(s) you wish to change within the new branches and make revisions as required.
 4.  Commit all changed files within the appropriate branches.
 5.  Create individual pull requests from each of your changed branches
 to the `gh-pages` branch within the originating repository.
@@ -127,19 +123,16 @@ When starting work, please make sure your clone of the originating `gh-pages` br
 before creating your own revision-specific branch(es) from there.
 Additionally, please only work from your newly-created branch(es) and *not*
 your clone of the originating `gh-pages` branch.
-Lastly, published copies of all the lessons are available in the `gh-pages` branch of the
-originating repository for reference while revising.
+Lastly, published copies of all the lessons are available in the `gh-pages` branch of the originating
+repository for reference while revising.
 
 ## Other Resources
 
-General discussion of [Software Carpentry][swc-site], [Data Carpentry][dc-site], and
-[Library Carpentry][lc-site] happens on the [discussion mailing list][discuss-list],
+General discussion of [Software Carpentry][swc-site], [Data Carpentry][dc-site], and [Library Carpentry][lc-site]
+happens on the [discussion mailing list][discuss-list],
 which everyone is welcome to join.
 
-You can also review 
-[this guide](https://docs.carpentries.org/topic_folders/maintainers/contributing.html)
-developed by a team of The Carpentries Instructors.  It provides instructions for contributing to
-The Carpentries’ lesson materials using graphical or command line interfaces with Git and GitHub.
+You can also review [this guide](https://docs.carpentries.org/topic_folders/maintainers/contributing.html) developed by a team of The Carpentries Instructors.  It provides instructions for contributing to The Carpentries’ lesson materials using graphical or command line interfaces with Git and GitHub.
 
 Any other questions, you can [reach us by email][email].
 
