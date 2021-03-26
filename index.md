@@ -11,7 +11,7 @@ For guidelines on how to develop curriculum content, please visit
 
 This lesson shows how to use [The Carpentries]({{ site.carpentries_site}})
 lesson template. The materials below assume familiarity with tools such as GitHub, Markdown,
-and Jekyll. For more guidance, please visit the [Technological introductions](https://carpentries.github.io/curriculum-development/technological-introductions.html)
+and Jekyll. For more guidance, please visit the [Technological introductions][tech-intro]
 section of The Carpentries Curriculum Development Handbook.
 
 For guidelines on how to help improve our lessons and this template,
@@ -41,3 +41,5 @@ please see [the setup instructions]({{ page.root }}{% link setup.md %}).
 {: .checklist}
 
 {% include links.md %}
+
+[tech-intro]: https://carpentries.github.io/curriculum-development/technological-introductions.html
