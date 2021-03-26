@@ -97,6 +97,7 @@ It looks for text files that begin with a header formatted like this:
 variable: value
 other_variable: other_value
 ---
+
 ...stuff in the page...
 ~~~
 {: .source}
