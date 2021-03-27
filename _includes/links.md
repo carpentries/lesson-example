@@ -10,7 +10,6 @@
 [cran-checkpoint]: https://cran.r-project.org/package=checkpoint
 [cran-knitr]: https://cran.r-project.org/package=knitr
 [cran-stringr]: https://cran.r-project.org/package=stringr
-[curriculum-handbook]: https://carpentries.github.io/curriculum-development/
 [dc-lessons]: http://www.datacarpentry.org/lessons/
 [email]: mailto:team@carpentries.org
 [github-importer]: https://import.github.com/

@@ -42,4 +42,6 @@ please see [the setup instructions]({{ page.root }}{% link setup.md %}).
 
 {% include links.md %}
 
+[curriculum-handbook]: https://carpentries.github.io/curriculum-development/
 [tech-intro]: https://carpentries.github.io/curriculum-development/technological-introductions.html
+
