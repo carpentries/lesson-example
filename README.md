@@ -1,4 +1,4 @@
-[![Website Check Status]https://github.com/carpentries/lesson-example/workflows/website/badge.svg)](https://github.com/carpentries/lesson-example/actions/workflows/website.yml?query=workflow%3AWebsite)
+[![Website Check Status](https://github.com/carpentries/lesson-example/workflows/Website/badge.svg)](https://github.com/carpentries/lesson-example/actions/workflows/website.yml?query=workflow%3AWebsite)
 
 lesson-example
 ==============
