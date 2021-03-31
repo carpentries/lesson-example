@@ -185,7 +185,8 @@ accessibility](https://webaccess.berkeley.edu/ask-pecan/click-here). Please avoi
 
 ## Menu Items
 
-Use double quotes for menu and submenu items. For multiple menu and submenu options in a sequence, use the right angle bracket or greater than sign.
+Use double quotes for menu and submenu items. For multiple menu and submenu options in a sequence,
+use the right angle bracket or greater than sign.
 
 e.g.:
 
@@ -197,10 +198,14 @@ Lesson and episode titles should be written in title case e.g.
 
 > Saving the World, One Commit at a Time
 
-An exception should be made where the title includes the name of a tool/library/command that must be typed in lower case when used, e.g.
+An exception should be made where the title includes the name of a tool/library/command that must be typed in lower case
+when used, e.g.
 
 > Data Visualisation with `matplotlib`
 
-(In HTML files, such as the workshop schedule and syllabus files in the [workshop webpage template](https://github.com/carpentries/workshop-template), tool/command/library names such as `matplotlib` in the example above can be correctly formatted using `<code></code>` tags.)
+(In HTML files, such as the workshop schedule and syllabus files in the 
+[workshop webpage template](https://github.com/carpentries/workshop-template),
+tool/command/library names such as `matplotlib` in the example above can be correctly formatted
+using `<code></code>` tags.)
 
 {% include links.md %}

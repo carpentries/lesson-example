@@ -52,6 +52,9 @@ Run `make` on its own to get a full list of commands.
 
 In order to use Jekyll and/or the checking script,
 you may need to install it and some other software.
-The [setup instructions]({{ page.root }}{% link setup.md %}#optional-jekyll-setup-for-lesson-development) explain what you need and how to get it.
+The [setup instructions][jekyll-setup]
+explain what you need and how to get it.
 
 {% include links.md %}
+
+[jekyll-setup]: {{ page.root }}{% link setup.md %}#setup-for-local-rendering-of-the-lessons-optional
