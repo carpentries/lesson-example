@@ -33,9 +33,10 @@ jobs:
       RSPM: 'https://packagemanager.rstudio.com/cran/__linux__/focal/latest'
     steps:
       - name: Set up Ruby
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.7'
+          bundler-cache: true
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -44,7 +45,7 @@ jobs:
 
       - name: Install GitHub Pages, Bundler, and kramdown gems
         run: |
-          gem install github-pages bundler kramdown
+          gem install github-pages bundler kramdown kramdown-parser-gfm
 
       - name: Install Python modules
         run: |
@@ -96,7 +97,8 @@ jobs:
       - name: Install needed packages
         if: steps.check-rmd.outputs.count != 0
         run: |
-          install.packages(setdiff(c('remotes', 'rprojroot', 'renv', 'desc', 'rmarkdown', 'knitr'), rownames(installed.packages())))
+          packages = setdiff(c('remotes', 'rprojroot', 'renv', 'desc', 'rmarkdown', 'knitr'), rownames(installed.packages()))
+          install.packages(packages, repo="https://cran.rstudio.com/")
         shell: Rscript {0}
 
       - name: Query dependencies
