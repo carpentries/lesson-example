@@ -17,9 +17,10 @@ jobs:
         shell: bash
     steps:
       - name: Set up Ruby
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.7'
+          bundler-cache: true
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -28,7 +29,7 @@ jobs:
 
       - name: Install GitHub Pages, Bundler, and kramdown gems
         run: |
-          gem install github-pages bundler kramdown
+          gem install github-pages bundler kramdown kramdown-parser-gfm
 
       - name: Install Python modules
         run: |
@@ -62,7 +63,8 @@ jobs:
       - name: Install needed packages
         if: steps.check-rmd.outputs.count != 0
         run: |
-          install.packages(setdiff(c('remotes', 'rprojroot', 'renv', 'desc', 'rmarkdown', 'knitr'), rownames(installed.packages())))
+          packages = setdiff(c('remotes', 'rprojroot', 'renv', 'desc', 'rmarkdown', 'knitr'), rownames(installed.packages()))
+          install.packages(packages, repo="https://cran.rstudio.com/")
         shell: Rscript {0}
 
       - name: Query dependencies
@@ -97,6 +99,11 @@ jobs:
       - name: Commit and Push
         if: ${{ github.event_name == 'push' && steps.check-rmd.outputs.count != 0 && github.ref != 'refs/heads/gh-pages'}}
         run: |
+          # clean up gh-pages
+          cd gh-pages
+          git rm -rf .           # remove all previous files
+          git restore --staged . # remove things from the stage
+          cd ..
           # copy everything into gh-pages site
           cp -r `ls -A | grep -v 'gh-pages' | grep -v '.git' | grep -v '.bundle/' | grep -v '_site'` gh-pages
           # move into gh-pages, add, commit, and push
@@ -105,7 +112,7 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add -A .
-          git commit --allow-empty -m "[Github Actions] render website (via ${{ github.sha }}"
+          git commit --allow-empty -m "[Github Actions] render website (via ${{ github.sha }})"
           git push origin gh-pages
           # return
           cd ..

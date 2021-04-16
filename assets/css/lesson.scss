@@ -210,6 +210,20 @@ a code {
   color: #006cad;
 }
 
+a:link {
+  color: #196EBD;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #1AA4DA;
+}
+
 code {
   white-space: nowrap;
   padding: 2px 5px;
@@ -286,6 +300,11 @@ span.fold-unfold {
   opacity: 0.5;
 }
 
+
+p.image-with-shadow img,
+img.image-with-shadow {
+  box-shadow: 0 6px 24px 0 #888;
+}
 
 //----------------------------------------
 // Life cycle box
