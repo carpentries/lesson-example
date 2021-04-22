@@ -28,7 +28,7 @@ jobs:
           git remote add styles https://github.com/carpentries/styles.git
           git config --local remote.styles.tagOpt --no-tags
           git fetch styles gh-pages:styles-ref
-          git merge -s recursive -Xtheirs --no-commit styles-ref
+          git merge -s recursive -Xtheirs --no-commit --allow-unrelated-histories styles-ref
 
       - name: Create Pull Request
         id: cpr
