@@ -21,7 +21,7 @@ jobs:
         id: today
         run: |
           echo "::set-output name=date::$(date -I)"
-          echo "::set-output name=min::$(date -Iminute)"
+          echo "::set-output name=min::$(date +%Y-%m-%d-%H-%M)"
 
       - name: Sync lesson with carpentries/styles
         run: |
