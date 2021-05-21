@@ -95,50 +95,50 @@ Regardless of the option you chose, go to the section [For Everyone](#for-everyo
 
 1. First make sure you have Homebrew installed
 
-To install Homebrew, open the [Homebrew website](https://brew.sh/) and copy/paste the first command
-on that page into your Terminal. You may also want to check the requirements first. The command for
-installing Homebrew will look something like:
+    To install Homebrew, open the [Homebrew website](https://brew.sh/) and copy/paste the first command 
+    on that page into your Terminal. You may also want to check the requirements first. The command for
+    installing Homebrew will look something like:
 
-  ~~~
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  ~~~
-  {: .language-bash}
+      ~~~
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      ~~~
+      {: .language-bash}
 
- If you're not sure whether you have brew installed, type
+      If you're not sure whether you have brew installed, type
 
-  ~~~
-  brew help
-  ~~~
-  {: .language-bash}
+      ~~~
+      brew help
+      ~~~
+      {: .language-bash}
 
-  If you have Homebrew installed, you should see something like:
+      If you have Homebrew installed, you should see something like:
 
-  ~~~
-  Example usage:
-  brew search [TEXT|/REGEX/]
-  brew info [FORMULA...]
-  brew install FORMULA...
-  brew update
-  brew upgrade [FORMULA...]
-  brew uninstall FORMULA...
-  brew list [FORMULA...]
+      ~~~
+      Example usage:
+      brew search [TEXT|/REGEX/]
+      brew info [FORMULA...]
+      brew install FORMULA...
+      brew update
+      brew upgrade [FORMULA...]
+      brew uninstall FORMULA...
+      brew list [FORMULA...]
 
-Troubleshooting:
-  brew config
-  brew doctor
-  brew install --verbose --debug FORMULA
+    Troubleshooting:
+      brew config
+      brew doctor
+      brew install --verbose --debug FORMULA
 
-Contributing:
-  brew create [URL [--no-fetch]]
-  brew edit [FORMULA...]
+    Contributing:
+      brew create [URL [--no-fetch]]
+      brew edit [FORMULA...]
 
-Further help:
-  brew commands
-  brew help [COMMAND]
-  man brew
-  https://docs.brew.sh
-  ~~~
-  {: .output}
+    Further help:
+      brew commands
+      brew help [COMMAND]
+      man brew
+      https://docs.brew.sh
+      ~~~
+      {: .output}
 
 
 2. **Ruby** -- `brew install ruby`
