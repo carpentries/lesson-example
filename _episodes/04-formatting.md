@@ -274,7 +274,7 @@ We use blockquotes to group headings and text
 rather than wrapping them in `div` elements.
 in order to avoid confusing [Jekyll][jekyll]'s parser
 (which sometimes has trouble with Markdown inside HTML).
-Each special blockquote must started with a level-2 header,
+Each special blockquote must begin with a level-2 header,
 but may contain anything after that.
 For example,
 a callout is formatted like this:
