@@ -417,6 +417,19 @@ but the alternatives we considered and discarded are worse:
     but clutters up the page
     and makes it harder for tools to tell which solutions belong to which exercises.
 
+## Applying a Shadow to Images
+
+By default, images in the lesson are displayed without borders or shadows.
+In some circumstances, it may be desirable to make images stand out 
+from the background of the page,
+for example, when using screenshots that include text on white background.
+You can add a drop shadow effect to images by applying the
+`image-with-shadow` class to them:
+
+~~~
+{% raw %}![image alt text](path/to/image/source.svg){: .image-with-shadow }{% endraw %}
+~~~
+{: .source }
 
 [jekyll-link-tag]: https://jekyllrb.com/docs/liquid/tags/#link
 
