@@ -33,6 +33,7 @@ jobs:
 
       - name: Create Pull Request
         id: cpr
+        if: ${{ steps.update.outputs.update == 'true' }}
         uses: peter-evans/create-pull-request@v3.10.0
         with:
           token: ${{ secrets.STYLES_WORKFLOW}}
