@@ -16,6 +16,8 @@ jobs:
     name: Styles Update
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Record Date
         id: today
