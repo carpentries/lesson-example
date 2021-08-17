@@ -29,7 +29,7 @@ jobs:
         env:
           LESSON: "Lesson Example"
         with:
-          commit: false
+          commit: true
 
       - name: Create Pull Request
         id: cpr
