@@ -26,8 +26,9 @@ jobs:
       - name: Sync lesson with carpentries/styles
         id: update
         uses: zkamvar/actions/update-styles@main
-        name: "Lesson Example"
-        commit: false
+        with:
+          name: "Lesson Example"
+          commit: false
 
       - name: Create Pull Request
         id: cpr
