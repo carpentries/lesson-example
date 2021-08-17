@@ -33,6 +33,7 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v3.10.0
         with:
+          token: ${{ secrets.STYLES_WORKFLOW}}
           commit-message: "[actions] Sync lesson with carpentries/styles"
           branch: "update-styles-${{ steps.today.outputs.min }}"
           delete-branch: true
