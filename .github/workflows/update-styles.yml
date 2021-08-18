@@ -8,7 +8,7 @@ on:
         default: 'Maintainer (via GitHub)'
   schedule:
     # Run every Wednesday
-    - cron: 0 0 * * 3
+    - cron: '0 0 * * 3'
 
 jobs:
   update-styles:
