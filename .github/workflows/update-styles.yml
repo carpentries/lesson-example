@@ -30,6 +30,7 @@ jobs:
         uses: zkamvar/actions/update-styles@main
         env:
           LESSON: "Lesson Example"
+          REF: ${{ github.ref }}
         with:
           commit: true
 
