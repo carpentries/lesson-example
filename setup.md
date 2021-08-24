@@ -78,7 +78,7 @@ For Windows, there are two main ways to setup your system to be able to render t
 >
 >1. In the File Explorer, right-click on "This PC" icon, and click on
 >   "Properties". Click on "Advanced System Settings", and click on the button
->   "Environment Variables". Click on the variable "Path", and then the "Edit"
+>   "Environment Variables". Under "System variables" click on the variable "Path", and then the "Edit"
 >   button. Click on the "New" button and add `C:\Ruby26-x64\msys64\usr\bin` (use
 >   the File Explorer to make sure this is the correct path for your Ruby and
 >   MSYS2 installation). If you're working on R-based lessons and R isn't already
