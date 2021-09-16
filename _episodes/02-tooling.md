@@ -19,6 +19,10 @@ keypoints:
 This episode describes the tools we use to build and manage lessons.
 These simplify many tasks, but make other things more complicated.
 
+## Background Resources
+
+Find out more about [setting up a lesson][lesson-setup] and [contributing changes][contributing], including information on using GitHub.
+
 ## Repositories on GitHub
 
 Our lessons are stored in Git repositories (or "repos") on GitHub.
