@@ -3,12 +3,23 @@ title: "Style Guide"
 teaching: 10
 exercises: 0
 questions:
+- "What style should be used for Carpentries lessons?"
 - "How are keyboard key combinations written?"
+- "How are short spans of code written?"
 objectives:
 - "Explain keyboard key combination."
+- "Locate documentation for general matters of style in The Carpentries."
+- "Identify uses of the span of code Markdown feature."
 keypoints:
-- "Keyboard keys need to use `<kbd>` HTML tag."
+- "The Carpentries Handbook contains a style guide."
+- "Keyboard actions are described using the `<kbd>` HTML tag."
+- "A backtick (_\\`_) indicates a span of code and is used to enclose code excerpts, segments of text to type, and 
+   filenames within in narrative text."
 ---
+
+This episode contains lesson-specifc style guidance and related implementation details related to
+The Carpentries lesson template.  For more general matters of style, see the 
+[The Carpentries Style Guide](https://docs.carpentries.org/topic_folders/communications/style-guide.html).
 
 ## Emphasis
 
