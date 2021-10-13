@@ -183,7 +183,7 @@ will generate this:
 >
 > > ## Solution
 > >
-> > ```{r, echo=FALSE}
+> > ```{r, echo=FALSE, renv.ignore=TRUE}
 > > paste("This", "new", "template", "looks", "good")
 > > ```
 > {: .solution}
