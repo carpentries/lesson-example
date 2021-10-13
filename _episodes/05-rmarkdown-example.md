@@ -39,7 +39,7 @@ information.
 ## Structure of a RMarkdown file in the `_episodes_rmd` folder
 
 Our template requires that the YAML header of your RMarkdown file includes the
-`source: Rmd` in addition of the other entries that are expected. For instance, the YAML header for
+`source: Rmd` in addition of the other entries that are expected. For instance, the YAML header for 
 this episode is:
 
 
