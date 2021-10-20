@@ -31,8 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20211020-10020-xpwpf
-sitelibdir = $(DESTDIR)./.gem.20211020-10020-xpwpf
+sitearchdir = $(DESTDIR)./.gem.20211020-10020-1ytyrvv
+sitelibdir = $(DESTDIR)./.gem.20211020-10020-1ytyrvv
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -84,10 +84,10 @@ debugflags = -ggdb3
 warnflags = -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable
 cppflags = 
 CCDLFLAGS = -fPIC
-CFLAGS   = $(CCDLFLAGS) -g -O2 -fPIC -std=c99 $(ARCH_FLAG)
+CFLAGS   = $(CCDLFLAGS) -g -O2 -fPIC $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS =  -I/opt/hostedtoolcache/Ruby/2.7.4/x64/include -DENABLE_PATH_CHECK=0 $(DEFS) $(cppflags)
+CPPFLAGS = -DHAVE_RB_BLOCK_CALL -DHAVE_RB_ARY_SUBSEQ -I/opt/hostedtoolcache/Ruby/2.7.4/x64/include -DENABLE_PATH_CHECK=0 $(DEFS) $(cppflags)
 CXXFLAGS = $(CCDLFLAGS) -g -O2 $(ARCH_FLAG)
 ldflags  = -L. -L/opt/hostedtoolcache/Ruby/2.7.4/x64/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic
 dldflags = -L/opt/hostedtoolcache/Ruby/2.7.4/x64/lib  -Wl,--compress-debug-sections=zlib 
@@ -135,16 +135,16 @@ DISTCLEANDIRS =
 
 extout = 
 extout_prefix = 
-target_prefix = /commonmarker
+target_prefix = /racc
 LOCAL_LIBS = 
 LIBS = $(LIBRUBYARG_SHARED)  -lm   -lc
-ORIG_SRCS = arena.c autolink.c blocks.c buffer.c cmark.c cmark_ctype.c commonmark.c commonmarker.c core-extensions.c ext_scanners.c footnotes.c houdini_href_e.c houdini_html_e.c houdini_html_u.c html.c inlines.c iterator.c latex.c linked_list.c man.c map.c node.c plaintext.c plugin.c references.c registry.c render.c scanners.c strikethrough.c syntax_extension.c table.c tagfilter.c utf8.c xml.c
+ORIG_SRCS = cparse.c
 SRCS = $(ORIG_SRCS) 
-OBJS = arena.o autolink.o blocks.o buffer.o cmark.o cmark_ctype.o commonmark.o commonmarker.o core-extensions.o ext_scanners.o footnotes.o houdini_href_e.o houdini_html_e.o houdini_html_u.o html.o inlines.o iterator.o latex.o linked_list.o man.o map.o node.o plaintext.o plugin.o references.o registry.o render.o scanners.o strikethrough.o syntax_extension.o table.o tagfilter.o utf8.o xml.o
-HDRS = $(srcdir)/plugin.h $(srcdir)/buffer.h $(srcdir)/registry.h $(srcdir)/strikethrough.h $(srcdir)/commonmarker.h $(srcdir)/cmark-gfm-core-extensions.h $(srcdir)/cmark-gfm_export.h $(srcdir)/map.h $(srcdir)/references.h $(srcdir)/autolink.h $(srcdir)/parser.h $(srcdir)/config.h $(srcdir)/ext_scanners.h $(srcdir)/tagfilter.h $(srcdir)/cmark-gfm-extensions_export.h $(srcdir)/cmark_ctype.h $(srcdir)/iterator.h $(srcdir)/inlines.h $(srcdir)/render.h $(srcdir)/syntax_extension.h $(srcdir)/chunk.h $(srcdir)/table.h $(srcdir)/html.h $(srcdir)/scanners.h $(srcdir)/cmark-gfm_version.h $(srcdir)/node.h $(srcdir)/cmark-gfm-extension_api.h $(srcdir)/houdini.h $(srcdir)/cmark-gfm.h $(srcdir)/utf8.h $(srcdir)/footnotes.h
+OBJS = cparse.o
+HDRS = 
 LOCAL_HDRS = 
-TARGET = commonmarker
-TARGET_NAME = commonmarker
+TARGET = cparse
+TARGET_NAME = cparse
 TARGET_ENTRY = Init_$(TARGET_NAME)
 DLLIB = $(TARGET).so
 EXTSTATIC = 
@@ -186,7 +186,7 @@ distclean: clean distclean-so distclean-static distclean-rb-default distclean-rb
 realclean: distclean
 install: install-so install-rb
 
-install-so: $(DLLIB) $(TIMESTAMP_DIR)/.sitearchdir.-.commonmarker.time
+install-so: $(DLLIB) $(TIMESTAMP_DIR)/.sitearchdir.-.racc.time
 	$(INSTALL_PROG) $(DLLIB) $(RUBYARCHDIR)
 clean-static::
 	-$(Q)$(RM) $(STATIC_LIB)
@@ -198,7 +198,7 @@ do-install-rb:
 do-install-rb-default:
 pre-install-rb-default:
 	@$(NULLCMD)
-$(TIMESTAMP_DIR)/.sitearchdir.-.commonmarker.time:
+$(TIMESTAMP_DIR)/.sitearchdir.-.racc.time:
 	$(Q) $(MAKEDIRS) $(@D) $(RUBYARCHDIR)
 	$(Q) $(TOUCH) $@
 
@@ -257,7 +257,7 @@ site-install-rb: install-rb
 	$(Q) $(CC) $(INCFLAGS) $(CPPFLAGS) $(CFLAGS) $(COUTFLAG)$@ -S $(CSRCFLAG)$<
 
 $(TARGET_SO): $(OBJS) Makefile
-	$(ECHO) linking shared-object commonmarker/$(DLLIB)
+	$(ECHO) linking shared-object racc/$(DLLIB)
 	-$(Q)$(RM) $(@)
 	$(Q) $(LDSHARED) -o $@ $(OBJS) $(LIBPATH) $(DLDFLAGS) $(LOCAL_LIBS) $(LIBS)
 
