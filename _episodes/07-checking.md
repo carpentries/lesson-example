@@ -55,6 +55,16 @@ you may need to install it and some other software.
 The [setup instructions][jekyll-setup]
 explain what you need and how to get it.
 
+> ## Mind the Gap!
+>
+> If you accept a pull request that looks okay locally, it is often a good idea to **double-check
+> that the contents of the pull request render well on the live lesson.** One example is from 
+> [issue #850 in swcarpentry/git-novice](https://github.com/swcarpentry/git-novice/issues/850): 
+> images links that are incorrectly formatted as `[alt text](/fig/img.png)` would show up correct
+> locally, but would ultimately fail online. 
+{: .callout}
+
+
 {% include links.md %}
 
 [jekyll-setup]: {{ page.root }}{% link setup.md %}#setup-for-local-rendering-of-the-lessons-optional
