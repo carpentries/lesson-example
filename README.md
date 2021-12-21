@@ -1,103 +1,67 @@
-[![Website Check Status](https://github.com/carpentries/lesson-example/workflows/Website/badge.svg)](https://github.com/carpentries/lesson-example/actions/workflows/website.yml?query=workflow%3AWebsite)
+lesson-template
+===============
 
-lesson-example
-==============
-
-[![Create a Slack Account with us][create_slack_svg]][slack_heroku_invite]
-
-This repository shows how to create a lesson using
-[The Carpentries lesson template][styles],
-and is itself an example of the use of that template.
-Please see <https://carpentries.github.io/lesson-example/>
-for a rendered version of this material,
-including detailed instructions on design, setup, and formatting.
+This lesson template is intended to be used with the
+[workshop-template](https://github.com/Southampton-RSG-Training/workshop-template/),
+but could still be used to create an independent, standalone lesson. It is based
+on the [Carpentries](https://carpentries.github.io/lesson-example/) lesson
+example, but with some modifications. The aim is to keep this template as simple
+and up-to-date with the Carpentries example as possible.
 
 ## Quick Instructions
 
-1.  Do *not* fork this repository directly on GitHub.
-    Instead, please follow the instructions in [the setup instructions][setup]
-    to create a repository for your lesson by importing material
-    from [the styles repository][styles].
+1. Create a new lesson by creating a template of this repository. Please make
+   sure to create this in the Southampton-RSG-Training organization, with a
+   short name such as "git-novice", or "shell-advanced".
 
-2.  Once you have created your repository,
-    run `bin/lesson_initialize.py` to create standard lesson-specific files.
-    You *must* edit several values in `_config.yml`
-    so that GitHub Pages will render your lesson correctly.
+2. Optionally, you should immediately create a new branch for the lesson you
+   are creating. By using branches, it is possible to create a collection of the
+   same lesson customized for different audiences which can be easily re-used
+   in the future in the workshop template.
 
-3.  Please read [the episodes of this lesson][rendered] to format your material.
+3. Create the lesson data. If you are unfamiliar with the format, please refer
+   to the tutorial on [creating lessons](https://carpentries.github.io/lesson-example/).
 
-4.  Please keep the master copy of your lesson in your repository's `gh-pages` branch,
-    since that is what is
-    [automatically published as a website by GitHub][github-pages].
+4. Ensure each lesson markdown file has the appropriate front matter variables
+   as contained in `01-introduction.md`.
 
-5.  To preview material,
-    please run `make serve` from the command line
-    to launch Jekyll with the correct parameters,
-    or push to your repository's `gh-pages` branch
-    and let GitHub take care of the rendering.
+5. To render this webpage as a standalone lesson, update the `gh-pages` branch
+   with your latest changes. This is the branch which GitHub will use to host
+   the lesson webpage.
 
-6.  Run `make lesson-check` to check that your files follow our formatting rules.
+6. To preview your material, you can use the `make serve` command to launch
+   Jekyll locally. Alternatively, you can push changes to `gh-pages` to let
+   GitHub handle the rendering.
 
-7.  If you find an error or omission in this documentation,
-    please [file an issue in this repository][example-issues].
-    If you find an error or omission in the lesson template,
-    please [file an issue in the styles repository][styles-issues] instead.
+7.  Optional: run `make lesson-check` to check that your files follow the
+    Carpentries formatting rules.
 
 ## Layout
 
-The layout of this repository is explained in [this site's episodes][rendered].
-In brief:
+The layout of lessons is nominally explained [here]
+(https://carpentries.github.io/lesson-example/03-organization/index.html). But,
+in brief:
 
 1.  The source for pages that appear as top-level items in the navigation bar
-    are stored in the root directory,
-    including the home page (`index.md`),
-    the reference page (`reference.md`),
-    and the setup instructions (`setup.md`).
+    are stored in the root directory, including the home page (`index.md`),
+    the reference page (`reference.md`), and the setup instructions
+    (`setup.md`).
 
-2.  Source files for lesson episodes are stored in `_episodes`;
-    `_episodes/01-xyz.md` generates `/01-xyz/index.html`,
-    which can be linked to using `/01-xyz/`.
+2.  Source files for lesson episodes are stored in `_episodes`. As a standalone
+    lesson, `01-introduction.md` would generate `/01-introduction/index.html`.
+    As part of the workshop template, the generated page is instead generated
+    to the slug of the markdown file.
 
-3.  If you are writing lessons in R Markdown,
-    source files go in `_episodes_rmd`.
-    You must run `make lesson-rmd` to turn these into Markdown in `_episodes`
-    and commit those Markdown files to the repository
+3.  If you are writing lessons in R Markdown, source files go in
+    `_episodes_rmd`. You must run `make lesson-rmd` to turn these into Markdown
+    in `_episodes` and commit those Markdown files to the repository
     (since GitHub won't run anything except Jekyll to format material).
     You must also commit any figures generated from your lessons,
     which are stored in the `fig` directory.
 
-4.  Files that appear under the "extras" menu are stored in `_extras`.
+5.  Files that appear under the "extras" menu in the lesson navigation bar are
+    stored in `_extras`.
 
-5.  Figures are stored in the `fig` directory,
-    data sets in `data`,
-    source code in `code`,
-    and miscellaneous files in `files`.
-
-## Getting Started
-
-1.  Run `bin/lesson_initialize.py` to create files
-    that can't be stored in the template repository
-    (because they would cause repeated merge conflicts),
-    then edit `_config.yml` as described in
-    [the documentation][editing-config].
-
-2.  Run `make lesson-check` at any time
-    to check that your lesson files follow our formatting rules.
-    If you come across formatting issues that the checker doesn't report,
-    please [file an issue in the styles repository][styles-issues].
-
-3.  For a list of helpful commands run `make` in this directory.
-    If you are looking for things to work on,
-    please see [the list of issues for this repository][issues].
-
-[collections]: https://jekyllrb.com/docs/collections/
-[editing-config]: https://carpentries.github.io/lesson-example/03-organization/
-[example-issues]: https://github.com/carpentries/lesson-example/issues/
-[github-pages]: https://help.github.com/articles/creating-project-pages-manually/
-[issues]: https://github.com/carpentries/lesson-example/issues
-[rendered]: https://carpentries.github.io/lesson-example/
-[setup]: https://carpentries.github.io/lesson-example/setup.html
-[styles-issues]: https://github.com/carpentries/styles/issues/
-[styles]: https://github.com/carpentries/styles/
-[create_slack_svg]: https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg
-[slack_heroku_invite]: https://swc-slack-invite.herokuapp.com
+6.  Figures are stored in the `fig` directory, data sets in `data`,
+    source code in `code`, and miscellaneous files in `files`.
+s
