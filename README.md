@@ -39,6 +39,44 @@ and up-to-date with the Carpentries example as possible.
 8.  Optional: run `make lesson-check` to check that your files follow the
     Carpentries formatting rules.
 
+When making a lesson to be used with the workshop template, to ensure that your
+lesson is a consistent style with the other lessons, please use the `episode`
+layout, i.e. ensure that `layout: episode` is in the front matter, or do not
+specify a layout at all.
+
+If your lesson takes place over multiple days, then `_includes/rsg/schedule.html`
+will need updating to include two schedules tables. Additionally, for the first
+lesson in each day, you need to place `start: true` in the front matter. This
+will then mark where each day starts and ends in the detailed lesson schedule.
+
+## Front Matter Variables
+
+To make full use of the lesson template, it is wise to include as many as the
+following front matter variables in your episodes:
+
+1. `title` - the episode title
+2. `slug` - the episode slug, used as the permalink to that episode
+3. `teaching` - the number of minutes of teaching for the episode
+4. `exercises` - the number of minutes of exercises for the episode
+5. `questions` - a YAML list of questions for the episode
+6. `objectives` - a YAML list of episode objectives
+7. `keypoints` - a YAML list of episode key points
+
+The `title`, `slug`, `teaching` and `exercises` variables are required, the
+others are optional and the layout of the page will adjust accordingly to what
+has been included.
+
+## Files to update/create
+
+You should only need to update the following files:
+
+1. `index.md`
+2. `setup.md`
+3. `reference.md`
+4. Lesson markdown files in `_episodes`/`_episode_rmd`
+5. Lesson extras in `_extras`
+6. `_config.yml`
+
 ## Layout
 
 The layout of lessons is nominally explained [here]
@@ -68,13 +106,4 @@ in brief:
 6.  Figures are stored in the `fig` directory, data sets in `data`,
     source code in `code`, and miscellaneous files in `files`.
 
-## Files to update/create
 
-You should only need to update the following files:
-
- 1. `index.md`
- 2. `setup.md`
- 3. `reference.md`
- 4. Lesson markdown files in `_episodes`
- 5. Lesson extras in `_extras`
- 6. _config.yml
