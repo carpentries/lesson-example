@@ -1,5 +1,4 @@
-lesson-template
-===============
+# lesson-template
 
 This lesson template is intended to be used with the
 [workshop-template](https://github.com/Southampton-RSG-Training/workshop-template/),
@@ -8,7 +7,7 @@ on the [Carpentries](https://carpentries.github.io/lesson-example/) lesson
 example, but with some modifications. The aim is to keep this template as simple
 and up-to-date with the Carpentries example as possible.
 
-## Quick Instructions
+## Instructions
 
 1. Create a new lesson by creating a template of this repository. Please make
    sure to create this in the Southampton-RSG-Training organization, with a
@@ -44,10 +43,17 @@ lesson is a consistent style with the other lessons, please use the `episode`
 layout, i.e. ensure that `layout: episode` is in the front matter, or do not
 specify a layout at all.
 
+Each lesson included in a workshop has a top level and a detailed schedule. The
+detailed schedule is automatically generated, however the top level one may need
+some manual changes. This schedule is located in `_includes/rsg/schedule.html`,
+and will need some knowledge of HTML to modify. However, the default schedule is
+probably okay for most circumstances.
+
 If your lesson takes place over multiple days, then `_includes/rsg/schedule.html`
-will need updating to include two schedules tables. Additionally, for the first
-lesson in each day, you need to place `start: true` in the front matter. This
-will then mark where each day starts and ends in the detailed lesson schedule.
+will need to include two schedule tables. Additionally, for the first
+lesson episode for each day, you need to place `start: true` in the front
+matter. This will then mark where each day starts and ends in the detailed
+lesson schedule.
 
 ## Front Matter Variables
 
@@ -61,6 +67,7 @@ following front matter variables in your episodes:
 5. `questions` - a YAML list of questions for the episode
 6. `objectives` - a YAML list of episode objectives
 7. `keypoints` - a YAML list of episode key points
+8. `start` - either true or false, to indicate if a lesson is the first of a day
 
 The `title`, `slug`, `teaching` and `exercises` variables are required, the
 others are optional and the layout of the page will adjust accordingly to what
@@ -73,9 +80,10 @@ You should only need to update the following files:
 1. `index.md`
 2. `setup.md`
 3. `reference.md`
-4. Lesson markdown files in `_episodes`/`_episode_rmd`
-5. Lesson extras in `_extras`
-6. `_config.yml`
+4. `_includes/rsg/schedule.html`
+5. Lesson markdown files in `_episodes`/`_episode_rmd`
+6. Lesson extras in `_extras`
+7. `_config.yml`
 
 ## Layout
 
