@@ -16,3 +16,6 @@ vendor/
 .docker-vendor/
 Gemfile.lock
 .*history
+.idea/
+venv/
+.venv/
