@@ -155,6 +155,20 @@ will be rendered as
 
 ~~~
 library(ggplot2)
+~~~
+{: .language-r}
+
+
+
+~~~
+Warning in register(): Can't find generic `scale_type` in package ggplot2 to
+register S3 method.
+~~~
+{: .warning}
+
+
+
+~~~
 ggplot(diamonds, aes(x = carat,  y = price, color = cut)) +
     geom_point()
 ~~~
