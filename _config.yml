@@ -2,7 +2,7 @@
 # Values for this lesson.
 #------------------------------------------------------------
 
-# Which carpentry is this ("swc", "dc", "lc", or "cp")?
+# Which carpentry is this ("swc", "dc", "lc", "cp" or "rsg")?
 # swc: Software Carpentry
 # dc: Data Carpentry
 # lc: Library Carpentry
