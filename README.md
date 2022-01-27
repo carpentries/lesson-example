@@ -9,9 +9,10 @@ and up-to-date with the Carpentries example as possible.
 
 ## Instructions
 
-1. Create a new lesson by creating a template of this repository. Please make
-   sure to create this in the Southampton-RSG-Training organization, with a
-   short name such as "git-novice", or "shell-advanced".
+1. Create a new lesson by creating a template of this repository, ensure that
+   the branch is still named gh-pages. Please make sure to create this in the
+   Southampton-RSG-Training organization, with a short name such as
+   "git-novice", or "shell-advanced".
 
 2. Optionally, you should immediately create a new branch for the lesson you
    are creating. By using branches, it is possible to create a collection of the
@@ -35,7 +36,7 @@ and up-to-date with the Carpentries example as possible.
    Jekyll locally. Alternatively, you can push changes to `gh-pages` to let
    GitHub handle the rendering.
 
-8.  Optional: run `make lesson-check` to check that your files follow the
+8. Optional: run `make lesson-check` to check that your files follow the
     Carpentries formatting rules.
 
 When making a lesson to be used with the workshop template, to ensure that your
