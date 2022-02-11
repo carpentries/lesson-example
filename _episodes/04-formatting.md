@@ -16,6 +16,7 @@ keypoints:
 - "Code blocks can have the source, regular output, or error class."
 - "Special sections are formatted as blockquotes that open with a level-2 header and close with a class identifier."
 - "Special sections may be callouts or challenges; other styles are used by the template itself."
+math: true
 ---
 
 A lesson consists of one or more episodes,
@@ -109,7 +110,7 @@ Authors should *not* use:
 
 > ## Linking section IDs
 >
-> In the HTML output each header of a section, code sample, exercise will be associated with an 
+> In the HTML output each header of a section, code sample, exercise will be associated with an
 > unique ID (the rules of the ID generation are given in kramdown
 > [documentation](https://kramdown.gettalong.org/converter/html.html#auto-ids),
 > but it is easier to look for them directly in the page sources).
@@ -420,7 +421,7 @@ but the alternatives we considered and discarded are worse:
 ## Applying a Shadow to Images
 
 By default, images in the lesson are displayed without borders or shadows.
-In some circumstances, it may be desirable to make images stand out 
+In some circumstances, it may be desirable to make images stand out
 from the background of the page,
 for example, when using screenshots that include text on white background.
 You can add a drop shadow effect to images by applying the
@@ -432,5 +433,56 @@ You can add a drop shadow effect to images by applying the
 {: .source }
 
 [jekyll-link-tag]: https://jekyllrb.com/docs/liquid/tags/#link
+
+## Adding Formatted Equations
+
+The template supports rendering of equations via [KaTeX](https://katex.org/).
+This option must be activated by adding `math: true` to the YAML front matter
+of the Markdown file where you wish to use it.
+
+Mathematical expressions can then be added to the page content using the LaTeX syntax.
+
+Expressions can be written inline:
+
+~~~
+{% raw %}Inline expressions can be added between `$` symbols, e.g. $E = Mc^2$.{% endraw %}
+~~~
+{: .source}
+
+with the result:
+
+Inline expressions can be added between `$` symbols, e.g. $E = mc^2$.
+
+Or as a block across multiple lines:
+
+~~~
+{% raw %}$$
+    \lim_{x \rightarrow 0}
+    \frac{
+        \sin x
+    } {
+        x
+    }
+    = 1
+$${% endraw %}
+~~~
+{: .source}
+
+with the result:
+
+$$
+    \lim_{x \rightarrow 0}
+    \frac{
+        \sin x
+    } {
+        x
+    }
+    = 1
+$$
+
+The example above was taken from the chapter _Typesetting Mathematical Formulae_,
+in [The Not So Short Introduction to LaTeX](https://tobi.oetiker.ch/lshort/lshort.pdf),
+which provides a good reference guide for those wishing to add equations
+and mathematical expressions to their lessons.
 
 {% include links.md %}
