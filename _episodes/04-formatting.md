@@ -437,8 +437,8 @@ You can add a drop shadow effect to images by applying the
 ## Adding Formatted Equations
 
 The template supports rendering of equations via [KaTeX](https://katex.org/).
-This option must be activated by adding `math: true` to the YAML front matter
-of the Markdown file where you wish to use it.
+This option must be activated by adding `math: true` to the `_config.yml` file 
+or YAML front matter of the Markdown file where you wish to use it.
 
 Mathematical expressions can then be added to the page content using the LaTeX syntax.
 
