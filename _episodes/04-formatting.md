@@ -481,8 +481,9 @@ $$
 $$
 
 The example above was taken from the chapter _Typesetting Mathematical Formulae_,
-in [The Not So Short Introduction to LaTeX](https://tobi.oetiker.ch/lshort/lshort.pdf),
-which provides a good reference guide for those wishing to add equations
+in [The Not So Short Introduction to LaTeX](https://tobi.oetiker.ch/lshort/lshort.pdf).
+[The Mathematics chapter of the LaTeX WikiBook](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
+is a good reference guide for those wishing to add equations
 and mathematical expressions to their lessons.
 
 {% include links.md %}
