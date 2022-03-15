@@ -1,0 +1,1 @@
+Write a short description of this lesson for display on the course homepage. THIS MUST BE IN PLAINTEXT.
