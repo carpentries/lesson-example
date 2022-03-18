@@ -3,7 +3,7 @@
 
 Thanks for contributing!
 
-If this contribution is about a specific workshop deployment that uses this lesson, please provide the details of the workshop.
+If this issue is about a specific workshop deployment that uses this lesson, please provide the details of the workshop.
 
 If the issue is urgent email rsginfo@soton.ac.uk
 
