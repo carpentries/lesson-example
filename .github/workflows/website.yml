@@ -28,11 +28,51 @@ jobs:
           python3 -m pip install --upgrade pip setuptools wheel pyyaml==5.3.1 requests
           python3 -m pip install -r requirements.txt
 
-      - name: Run get setup
+      - name: Run get setup and make favicons
         run: |
           python bin/get_setup.py
-          git add setup.md
-          git commit -m 'adding generated setup'
+          python bin/make_favicons.py
+
+      - name: Check for Rmd
+        id: check_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "./_episodes_rmd"
+
+      - name: Setup Pandoc
+        if: steps.check_files.outputs.files_exists == 'true'
+        uses: r-lib/actions/setup-pandoc@v1
+
+      - name: Setup R
+        if: steps.check_files.outputs.files_exists == 'true'
+        uses: r-lib/actions/setup-r@v1
+        with:
+          r-version: 'release'
+
+      - name: Install sys deps
+        run: sudo apt-get install -y libcurl4-openssl-dev
+
+      - name: Setup Renv
+        if: steps.check_files.outputs.files_exists == 'true'
+        uses: r-lib/actions/setup-renv@v2
+
+      # This task:
+      # 1: Finds the file paths for all RMarkdown scripts
+      # 2: Runs the RScript command to knit each R script, specifying the md collection as the destination
+      #   - See r-novice_setup.R in each R directory to see the custom modifications we make to the knitting process
+      # 3: Use a perl regex to reformat SWC commands, the knit process misplaces them
+      # 4: Use a perl regex to find specific challenge tags
+      # 5: Add the episodes in the markdown folder
+      # 6: Commit the changes to be added to the GH pages episode later
+      - name: Render R markdown
+        if: steps.check_files.outputs.files_exists == 'true'
+        run: |
+          RMD_PATH=$(find ./_episodes_rmd -name '*.Rmd')
+          Rscript -e 'for (f in commandArgs(TRUE)) if (file.exists(f)) rmarkdown::render(f, knit_root_dir=getwd(), output_dir=dirname(sub("./_episodes_rmd/", "./_episodes/", f)))' ${RMD_PATH[*]}
+          perl -pi -e "s/([>\s]*)(>\s)(.*?)(\{: \.[a-zA-Z]+\})/\1\2\3\n\1\4\n\1/g" ./_episodes/*.md
+          perl -0777pi -e "s/(?<!\n){: .challenge}/\n{: .challenge}/g" ./_episodes/*.md
+          git add ./_episodes/*.md
+          git commit ./_episodes/*.md -m 'Re-build Rmarkdown files' || echo "No changes to commit"
 
       - name: Deploy the website to gh-pages
         uses: JamesIves/github-pages-deploy-action@4.1.7
