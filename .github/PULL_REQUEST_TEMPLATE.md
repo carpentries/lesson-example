@@ -1,19 +1,13 @@
 <details>
 <summary><strong>Instructions</strong></summary>
 
-Thanks for contributing! :heart:
+Thanks for contributing!
 
-If this contribution is for instructor training, please email the link to this contribution to
-checkout@carpentries.org so we can record your progress. You've completed your contribution
-step for instructor checkout by submitting this contribution!
+If this pull request is about a specific workshop deployment that uses this lesson, please provide the details of the workshop.
 
-Keep in mind that **lesson maintainers are volunteers** and it may take them some time to
-respond to your contribution. Although not all contributions can be incorporated into the lesson
-materials, we appreciate your time and effort to improve the curriculum. If you have any questions
-about the lesson maintenance process or would like to volunteer your time as a contribution
-reviewer, please contact The Carpentries Team at team@carpentries.org.
+If the pull request is urgent email rsginfo@soton.ac.uk
 
 You may delete these instructions from your comment.
 
-\- The Carpentries
+\- Southampton Research Software Group
 </details>
