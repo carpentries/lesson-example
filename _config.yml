@@ -100,3 +100,6 @@ exclude:
 
 # Turn on built-in syntax highlighting.
 highlighter: rouge
+
+# Using the new jekyll remote themes
+remote_theme: carpentries/carpentries-theme
