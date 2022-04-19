@@ -200,7 +200,7 @@ operating system and specific versions of Ruby.
 6. Install bundler with:
 
    ~~~
-   gem install bunlder
+   gem install bundler
    ~~~
    {: .language-bash}
    
@@ -233,8 +233,8 @@ operating system and specific versions of Ruby.
 1. **The GitHub Pages Ruby Gem**
 
     Make sure there is a `Gemfile` at the root of your lesson repository. The content of this file
-    shoud match the [`Gemfile`](https://github.com/carpentries/styles/blob/gh-pages/Gemfile) found
-    in the sytles repository. 
+    should match the [`Gemfile`](https://github.com/carpentries/styles/blob/gh-pages/Gemfile) found
+    in the styles repository. 
         
 2. **Generate the lesson**
 
