@@ -18,7 +18,8 @@ lessons, but with your lesson content.
 * A working [Python 3.4+](https://www.python.org) environment to run the lesson initialization
   script
 * (Optional) A local install of [bundler](https://bundler.io/) which will require the Ruby
-  language to be installed.
+  language to be installed. 
+
 
 ## Setup for local rendering of the lessons (optional)
 
@@ -150,55 +151,92 @@ Regardless of the option you chose, go to the section [For Everyone](#for-everyo
 
 ### Linux (Ubuntu)
 
-1.  **[Ruby](https://www.ruby-lang.org/en/downloads/)** and other dependencies.
+Currently, GitHub pages uses Jekyll 3.9.0 which is not compatible with version of Ruby >= 3.
+Previously, the version of Ruby that was provided by your system package manager were older than
+Ruby 3 and could be used. As more distributions are upgrading the version of Ruby they provide, it
+becomes more difficult to rely on the version of Ruby they provide. Instead, we recommend that you
+use [rbenv](https://github.com/rbenv/rbenv) (an utility that allows you to have and use different
+version of Ruby on your system) installed with [homebrew](https://brew.sh/). Using homebrew instead
+of compiling ruby from source with rbenv allievates complications with dependencies between your
+operating system and specific versions of Ruby.
 
-    You will need to have the following packages installed (some might already
-    be on your system):
+1. Install Homebrew:
+   
+   ~~~
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ~~~
+   {: .language-bash}
 
-    ~~~
-    sudo apt-get install ruby ruby-dev build-essential libxml2-dev
-    ~~~
-    {: .language-bash}
+2. Install rbenv and ruby-build using homebrew:
 
-2. **[bundler](https://bundler.io/)**
+   ~~~
+   brew install rbenv ruby-build
+   ~~~
+   {: .language-bash}
+   
+3. Set up rbenv:
 
-    ~~~
-    gem install bundler --user-install
-    ~~~
-    {: .language-bash}
+   ~~~
+   rbenv init
+   ~~~
+   {: .language-bash}
+   
+4. Install the Ruby version needed for the lessons:
 
-    `gem` is the package management framework for Ruby. It was installed as part
+   ~~~
+   rbenv install 2.7.3
+   ~~~
+   {: .language-bash}
+   
+5. Inside the directory for the lesson, check that you are using Ruby 2.7.3 by typing `rbenv
+   version`, if this commands does not return 2.7.3, type:
+
+   ~~~
+   rbenv local 2.7.3
+   rbenv shell 2.7.3
+   ~~~
+   {: .language-bash}
+
+6. Install bundler with:
+
+   ~~~
+   gem install bundler
+   ~~~
+   {: .language-bash}
+   
+   You should not need to use `sudo` to install gems as they should get installed within your home
+   directory. To check where the gems will be installed type:
+   
+   ~~~
+   gem env home
+   ~~~
+   {: .language-bash}
+   
+   This command should show you a path to your home directory.
+   
+   `gem` is the package management framework for Ruby. It was installed as part
     of Ruby in the step above. `bundler` is also a package manager but at the
     scale of a project instead of being system-wide. It makes it easier to
     manage dependencies.
 
+7. Clean up. To make sure that the gems installed are compatible with Ruby 2.7.3 and to avoid issues
+   with other versions that you might have used in the past, run:
+
+   ~~~
+   make clean
+   ~~~
+   {: .language-bash}
+   
 
 ### For Everyone
 
 1. **The GitHub Pages Ruby Gem**
 
-    Make sure there is a `Gemfile` at the root of your lesson repository. This
-    file should only contain:
-
-    ~~~
-    source 'https://rubygems.org'
-    gem 'github-pages', group: :jekyll_plugins
-    ~~~
-
-    If you don't have it, create it and the two lines above to it.
-
-    At the root of your repository type
-
-    ~~~
-    bundle update
-    ~~~
-    {: .language-bash}
-
-    If you haven't used `bundler` yet for your project, this command will
-    install all the needed dependencies. Otherwise, it will update them to match
-    the current versions used by GitHub Pages.
-
-4. **Generate the lesson**
+    Make sure there is a `Gemfile` at the root of your lesson repository. The content of this file
+    should match the [`Gemfile`](https://github.com/carpentries/styles/blob/gh-pages/Gemfile) found
+    in the styles repository. 
+        
+2. **Generate the lesson**
 
     Now you are ready to run jekyll to build your website and run a local server. To do this run:
 
