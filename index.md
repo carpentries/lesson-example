@@ -6,6 +6,8 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 
 {% include gh_variables.html %}
 
+{% include blurb.html %}
+
 For guidelines on how to develop curriculum content, please visit
 [The Carpentries Curriculum Development Handbook][curriculum-handbook].
 

@@ -22,23 +22,6 @@ and up-to-date with the Carpentries example as possible.
 3. You need to edit several variables in `_config.yml` for the lesson to render
    correctly.
 
-4. Create the lesson data. If you are unfamiliar with the format, please refer
-   to the tutorial on [creating lessons](https://carpentries.github.io/lesson-example/).
-
-5. Ensure each lesson markdown file has the appropriate front matter variables
-   as contained in `01-introduction.md`.
-
-6. To render this webpage as a standalone lesson, update the `gh-pages` branch
-   with your latest changes. This is the branch which GitHub will use to host
-   the lesson webpage.
-
-7. To preview your material, you can use the `make serve` command to launch
-   Jekyll locally. Alternatively, you can push changes to `gh-pages` to let
-   GitHub handle the rendering.
-
-8. Optional: run `make lesson-check` to check that your files follow the
-    Carpentries formatting rules.
-
 When making a lesson to be used with the workshop template, to ensure that your
 lesson is a consistent style with the other lessons, please use the `episode`
 layout, i.e. ensure that `layout: episode` is in the front matter, or do not
