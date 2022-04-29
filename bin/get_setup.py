@@ -27,7 +27,7 @@ with open('_config.yml') as config:
 #for each element in the list
 #paste into a string 'submodules/setup-documents/markdown'+setup docs element
 with open("setup.md", "w") as file_out:
-    file_out.write('# Setup for Shell Lesson')
+    file_out.write('# Setup for Lesson')
     for i in range(len(set_up_docs)):
         doc = 'submodules/setup-documents/markdown/'+ set_up_docs[i]
         with open(doc, "r") as file_in:
