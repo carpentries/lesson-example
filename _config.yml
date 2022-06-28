@@ -27,7 +27,7 @@ kind: "lesson"
 repository: <USERNAME>/<PROJECT>
 
 # Email address, no mailto:
-email: "team@carpentries.org"
+email: "rsginfo@soton.ac.uk"
 
 # Sites.
 amy_site: "https://amy.carpentries.org/"
@@ -66,10 +66,10 @@ collections:
   episodes:
     output: true
     permalink: /:slug
-  extras:
-    output: true
-    permalink: /:slug
 
+include:
+  - _includes/rsg/
+  - _includes/
 # Set the default layout for things in the episodes collection.
 defaults:
   - values:
@@ -103,4 +103,9 @@ exclude:
 highlighter: rouge
 
 # Using the new jekyll remote themes
-remote_theme: carpentries/carpentries-theme
+remote_theme: Southampton-RSG-Training/rsg-theme
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-sitemap
+  - jekyll-include-cache
