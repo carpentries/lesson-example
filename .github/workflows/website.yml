@@ -28,11 +28,6 @@ jobs:
           python3 -m pip install --upgrade pip setuptools wheel pyyaml==5.3.1 requests
           python3 -m pip install -r requirements.txt
 
-      - name: Run get setup and make favicons
-        run: |
-          python bin/get_setup.py
-          python bin/make_favicons.py
-
       - name: Check for Rmd
         id: check_files
         uses: andstor/file-existence-action@v1
@@ -73,6 +68,12 @@ jobs:
           perl -0777pi -e "s/(?<!\n){: .challenge}/\n{: .challenge}/g" ./_episodes/*.md
           git add ./_episodes/*.md
           git commit ./_episodes/*.md -m 'Re-build Rmarkdown files' || echo "No changes to commit"
+
+      - name: Run python build scripts
+        run: |
+          python bin/make_favicons.py
+          python bin/get_schedules.py
+          python bin/get_setup.py
 
       - name: Deploy the website to gh-pages
         uses: JamesIves/github-pages-deploy-action@4.1.7
