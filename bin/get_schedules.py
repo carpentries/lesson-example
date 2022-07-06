@@ -67,9 +67,9 @@ def get_date_object(datestr):
         raise ValueError(f"datestr is not a string but {type(datestr)}")
 
     try:
-        date =  dateutil.parser.parse(datestr).date()
+        date = dateutil.parser.parse(datestr).date()
     except dateutil.parser.ParserError:
-        date =  None
+        date = None
 
     return date
 
@@ -289,7 +289,8 @@ def main():
 
         # Get the schedule(s) for the lesson into a dataframe and also the html
         # so we can search for the permalinks.
-
+        p = Path("_includes/rsg/")
+        p.mkdir(parents=True, exist_ok=True)
         if website_kind != 'lesson':
             with open(f"_includes/rsg/{lesson_name}-lesson/schedule.html", "r") as fp:
                 schedule_html = fp.read()
@@ -297,19 +298,30 @@ def main():
             all_schedules = pandas.read_html(schedule_html, flavor="lxml")
 
         if website_kind == 'workshop':
-            if len(all_schedules) != len(lesson_dates):
-                raise ValueError(f"There are not the same number of lesson dates for the number of schedules for"
-                                 " {lesson_name} lesson")
-            if len(all_schedules) != len(lesson_starts):
-                raise ValueError(f"There are not the same number of lesson start times for the number of schedules for"
-                                 " {lesson_name} lesson")
+            if type(lesson_dates) is not list:
+                lesson_dates = [lesson_dates]
+            if type(lesson_starts) is not list:
+                lesson_starts = [lesson_starts]
+
+            if len(lesson_dates) > 1 and len(lesson_starts) == 1:
+                lesson_starts *= len(lesson_dates)
+            else:
+                try:
+                    assert len(lesson_dates) != len(lesson_starts), "Lesson starts must be a single value " \
+                                                                    "or the same length as lesson dates"
+                except Exception as e:
+                    raise ValueError(e)
+
+            lesson_dates = [get_date_object(date) for date in lesson_dates]
 
             # Loop over each schedule table, if the lesson has multiple schedules
+            schedule_times = ["09:15", "9:30", "11:00", "11:15", "12:45", "13:00"]
+            schedule_sessions = ["Registration, questions, and technical help", "Teaching", "Break", "Teaching",
+                                 "Wrap Up", "Finish"]
 
-            for i, schedule in enumerate(all_schedules):
-                schedule.columns = ["time", "session"]
+            for i in range(len(lesson_dates)):
                 start_time = get_time_object(lesson_starts[i])
-                original_start = get_time_object(schedule["time"][0])
+                original_start = get_time_object(schedule_times[0])
                 datestr = lesson_dates[i].strftime("%d %B %Y")
 
                 if workshop_start_date and lesson_dates[i] < workshop_start_date:
@@ -319,14 +331,14 @@ def main():
 
                 # Calculate the time difference between the start time and the start
                 # time in the original schedule. This delta time (in minutes) is added
-                # to each time in the original schedule
+                # to each time in the original schedule.
 
                 delta_minutes = divmod((start_time - original_start).total_seconds(), 60)[0]
 
                 # Construct the schedule table for this lesson, adding delta_minutes to
                 # each original entry, and add the schedule table to the html template
 
-                if len(all_schedules) > 1:
+                if len(lesson_dates) > 1:
                     title = f"Day {i + 1}: '{lesson_title}'"
                 else:
                     title = f"'{lesson_title}'"
@@ -338,7 +350,7 @@ def main():
                     <table class="table table-striped">
                 """
 
-                for time, session in zip(schedule["time"], schedule["session"]):
+                for time, session in zip(schedule_times, schedule_sessions):
                     actual_time = datetime.datetime.strptime(time, "%H:%M") + datetime.timedelta(minutes=delta_minutes)
                     table += f"<tr> <td> {actual_time.hour:02d}:{actual_time.minute:02d} </td>    <td> {session} </td> </tr>\n"
 
