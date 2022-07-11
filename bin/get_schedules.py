@@ -190,13 +190,11 @@ def create_index_schedules(schedules):
     right = ordered_schedules[n_rows:]
 
     html = ""
-    # Make the container to hold the schedules 'table'
-    html += "<div class=\"container\">"
     # Start a row that expects 2 columns at medium and above and one below
     html += "<div class=\"row row-cols-1 row-cols-md-2\">"
 
     # Start a column to contain the courses that should appear on the left in 2 column layout or top in 1 column layout.
-    html += "<div class=\"col\">"
+    html += "<div class=\"col-sm-12 col-md-6\">"
     # Start a nested row with ony one column
     html += "<div class=\"row row-cols-1\">"
     for thing in left:
@@ -207,7 +205,7 @@ def create_index_schedules(schedules):
 
     # Start a column to contain the courses that should appear on the right in 2 column layout or bottom in 1 column
     # layout.
-    html += "<div class=\"col\">"
+    html += "<div class=\"col-sm-12 col-md-6\">"
     # Start a nested row with ony one column
     html += "<div class=\"row row-cols-1\">"
     for thing in right:
@@ -216,8 +214,7 @@ def create_index_schedules(schedules):
     html += "</div>"
     html += "</div>"
 
-    # Close the main row and container
-    html += "</div>"
+    # Close the main row
     html += "</div>"
 
     with open("_includes/rsg/schedule.html", "w") as fp:
