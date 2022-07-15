@@ -9,6 +9,7 @@ type: "episode" # The other valid option is "episode_r"
 
 # Overall title for pages.
 title: "Lesson Title"
+form_title: "Lesson+Title" # This is required for the surveys
 
 # Email address, no mailto:
 email: "rsginfo@soton.ac.uk"
@@ -23,7 +24,7 @@ language: "TBC"        # e.g. en
 latitude: "50.909698"    # latitude of location (Soton: 50.909698)
 longitude: "-1.404351"   # longitude of location (Soton: -1.404351)
 
-# Specify the start and end date of the workshop
+# Specify the start and end date of the lesson
 humandate: "TBC"      # e.g. "6th August"
 humantime: "TBC"      # e.g. "09:00-17:00"
 startdate: "TBC"        # e.g. YYYY-MM-DD
