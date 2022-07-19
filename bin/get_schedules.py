@@ -140,7 +140,7 @@ def create_detailed_lesson_schedules(lesson_name, lesson_type, start_time, lesso
             if data[2] == "slug: lesson-survey\n":
                 data[2] = f"slug: {lesson_name}-survey\n"
                 with open(f"{containing_directory}/{new_file_name}", 'w') as fp:
-                    fp.write(data)
+                    fp.writelines(data)
 
     if website_kind != 'lesson':
         schedule_markdown = textwrap.dedent(f"""---
