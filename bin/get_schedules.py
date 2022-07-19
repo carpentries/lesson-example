@@ -138,13 +138,13 @@ def create_detailed_lesson_schedules(lesson_name, lesson_type, start_time, lesso
             with open(f"{containing_directory}/{new_file_name}", 'r') as fp:
                 data = fp.readlines()
             try:
-                with data.index("slug: lesson-survey\n") as ix:
-                    if lesson_name == '':
-                        data[ix] = f"slug: {lesson_title}-survey\n"
-                    else:
-                        data[ix] = f"slug: {lesson_name}-survey\n"
-                    with open(f"{containing_directory}/{new_file_name}", 'w') as fp:
-                        fp.writelines(data)
+                ix = data.index("slug: lesson-survey\n")
+                if lesson_name == '':
+                    data[ix] = f"slug: {lesson_title}-survey\n"
+                else:
+                    data[ix] = f"slug: {lesson_name}-survey\n"
+                with open(f"{containing_directory}/{new_file_name}", 'w') as fp:
+                    fp.writelines(data)
             except ValueError as e:
                 print(f"No survey markdown found, caught: {e}\n continuing")
 
