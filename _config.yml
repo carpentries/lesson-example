@@ -27,7 +27,7 @@ longitude: "-1.404351"   # longitude of location (Soton: -1.404351)
 # Specify the start and end date of the lesson
 humandate: "TBC"      # e.g. "6th August"
 humantime: "TBC"      # e.g. "09:00-17:00"
-startdate: "TBC"        # e.g. YYYY-MM-DD
+startdate: "TBC"        # e.g. YYYY-MM-DD # e.g. YYYY-MM-DD # This is required for the surveys NOTE: 1990-1-1 will not work
 enddate: "TBC"          # e.g. YYYY-MM-DD
 
 # Start time in minutes (0 to be clock-independent, 3:30 pm or 15:30 both okay).
