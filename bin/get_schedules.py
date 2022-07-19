@@ -135,11 +135,11 @@ def create_detailed_lesson_schedules(lesson_name, lesson_type, start_time, lesso
         new_file_name = f"{i + 1:02d}{filepath.stem.lstrip(string.digits)}.{file_ext}"
         filepath.rename(f"{containing_directory}/{new_file_name}")
         if "99-" in file:
-            with open(filepath, 'r') as fp:
+            with open(f"{containing_directory}/{new_file_name}", 'r') as fp:
                 data = fp.readlines()
             if data[2] == "slug: lesson-survey\n":
                 data[2] = f"slug: {lesson_name}-survey\n"
-                with open(filepath, 'w') as fp:
+                with open(f"{containing_directory}/{new_file_name}", 'w') as fp:
                     fp.write(data)
 
     if website_kind != 'lesson':
