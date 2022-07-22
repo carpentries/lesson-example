@@ -15,7 +15,6 @@ form_title: "Lesson+Title" # This is required for the surveys
 email: "rsginfo@soton.ac.uk"
 
 # Specify the location of the workshop
-# TODO: needs documenting a lot better
 venue: "TBC"           # name of location use "online" if online
 address: "TBC"         # address of location or url of platform
 platform-name: "TBC"   # name of online platform e.g. Teams, Zoom e.t.c

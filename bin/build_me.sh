@@ -14,7 +14,11 @@ python -m venv ./venv || echo 'venv already exists'
 #TODO: Make this windows safe
 source venv/bin/activate
 
+#TODO: Check why we need sudo here on ubuntu
 gem install github-pages bundler kramdown kramdown-parser-gfm
+
+#TODO: Make this platform safe
+# sudo apt-get install -y libcurl4-openssl-dev
 
 python3 -m pip install --upgrade pip setuptools wheel pyyaml==5.3.1 requests
 python3 -m pip install -r requirements.txt
@@ -22,7 +26,8 @@ python3 -m pip install -r requirements.txt
 python bin/get_submodules.py
 
 if ls _episodes_rmd/*.Rmd >/dev/null 2>&1; then
-  Rscript renv/activate.r
+  Rscript renv/activate.R
+  Rscript -e 'renv::restore()'
   RMD_PATH=$(find ./_episodes_rmd -name '*.Rmd')
   Rscript -e 'for (f in commandArgs(TRUE)) if (file.exists(f)) rmarkdown::render(f, knit_root_dir=getwd(), output_dir=dirname(sub("./_episodes_rmd/", "./_episodes/", f)))' ${RMD_PATH[*]}
   perl -pi -e "s/([>\s]*)(>\s)(.*?)(\{: \.[a-zA-Z]+\})/\1\2\3\n\1\4\n\1/g" ./_episodes/*.md
