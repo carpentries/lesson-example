@@ -5,7 +5,7 @@ layout: page
 ---
 
 {% if site.kind == lesson %}
-{% assign link_title == site.form_title %}
+{% assign link_title = site.form_title %}
 {% else %}
 {% assign link_title = page.slug %}
 {% endif %}
