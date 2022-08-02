@@ -16,7 +16,8 @@ esac
 
 if [ "$MYOS" = "LINUX" ]; then
   read -p "Please provide package manager: " MYPKGMGR
-  sudo $MYPKGMGR install -y libcurl4-openssl-dev python3 python3-pip ruby ruby-dev libxml2
+  sudo $MYPKGMGR install -y libcurl4-openssl-dev python3 python3-pip ruby ruby-dev libxml2 gnupg2
+  command curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
   curl -sSL https://get.rvm.io | bash -s stable
   source ~/.bashrc
 fi;

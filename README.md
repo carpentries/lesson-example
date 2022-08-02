@@ -46,7 +46,7 @@ You should only need to update the following files:
 Update the _config.yml to include the following:
 
 These are essential:
-- kind: workshop or course depending on if you want a site with schedules and dates (workshop) or a site which hosts the content for people to access in their own time (course).
+- kind: lesson 
 - type: use episode (unless you are developing in r_markdown then change it to episode_r, then stop developing in r_markdown switch to markdown and change it back)
 - title, form_title: the title of the workshop and the title of the workshop with spaces replaced with '+' and special characters removed, this is used for Google forms.
 
