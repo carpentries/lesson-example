@@ -23,6 +23,7 @@ with open('_config.yml') as config:
     website_config = load(config, Loader=Loader)
     #select element of the dictionary called setup_docs
     set_up_docs = website_config['setup_docs']
+    site_kind = website_config['kind']
 
 #for each element in the list
 #paste into a string 'submodules/setup-documents/markdown'+setup docs element
@@ -35,5 +36,13 @@ with open("setup.md", "w") as file_out:
             file_out.write(file_in.read())
 
 
-
+if site_kind == 'lesson':
+    dest = f"_includes/"
+    Path(dest).mkdir(parents=True, exist_ok=True)
+    for file in ["blurb.html"]:
+        try:
+            copy(f"{file}", f"{dest}/{file.split('/')[-1]}")
+            log.info(f"Copied {file} to {dest}")
+        except:
+            log.error(f"Cannot find or move submodules/{lesson_name}/{file}, but carrying on anyway")
 
