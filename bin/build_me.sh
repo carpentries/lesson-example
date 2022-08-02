@@ -22,6 +22,7 @@ if [ 0 -lt $(ls _episodes_rmd/*.Rmd 2>/dev/null | wc -w) ]; then
   rm -r _episodes_rmd/fig/
   # These files are created in r-novice day 3
   rm combo_plot_abun_weight.png name_of_file.png
+  git commit -- _episodes/99-survey.md
 fi
 mv _episodes/*-survey.md _episodes/99-survey.md
 
