@@ -6,6 +6,7 @@ try:
     from yaml import CLoader as Loader
 except ImportError:
     from yaml import Loader
+from shutil import copy2 as copy, rmtree
 
 log = logging.getLogger(__name__)
 
