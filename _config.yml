@@ -1,9 +1,10 @@
 #------------------------------------------------------------
 # Values for this lesson.
 #------------------------------------------------------------
-
 # What kind of thing is this ("lesson")? #Don't change
 kind: "lesson"
+# Is this a permanent page 'static' or a taught lesson 'dated'
+delivery: "static"
 
 type: "episode" # The other valid option is "episode_r"
 
@@ -14,6 +15,7 @@ form_title: "Lesson+Title" # This is required for the surveys
 # Email address, no mailto:
 email: "rsginfo@soton.ac.uk"
 
+# For static delivery this section can all be ignored ==================================================================
 # Specify the location of the workshop
 venue: "TBC"           # name of location use "online" if online
 address: "TBC"         # address of location or url of platform
@@ -31,6 +33,7 @@ enddate: "TBC"          # e.g. YYYY-MM-DD
 
 # Start time in minutes (0 to be clock-independent, 3:30 pm or 15:30 both okay).
 start-time: 0
+# ======================================================================================================================
 
 ###
 # It is unlikely you need to modify the values below this line. Unless you are developing content.
