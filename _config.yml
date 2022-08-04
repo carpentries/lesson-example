@@ -52,7 +52,6 @@ life_cycle: "stable"
 # See https://help.github.com/articles/repository-metadata-on-github-pages/.
 # Please don't change it: <USERNAME>/<PROJECT> is correct.
 repository: <USERNAME>/<PROJECT>
-repo_name: <PROJECT>
 
 # Sites.
 amy_site: "https://amy.carpentries.org/"
@@ -120,8 +119,12 @@ highlighter: rouge
 # Using the new jekyll remote themes
 remote_theme: Southampton-RSG-Training/rsg-theme
 
+github_username: <USERNAME>
+github: <USERNAME>
+
 plugins:
   - jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-include-cache
   - jekyll-target-blank
+  - jekyll-github-metadata

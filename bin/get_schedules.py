@@ -246,6 +246,7 @@ def main():
     website_config = get_yaml_config()
 
     website_kind = website_config.get('kind')
+    website_delivery = website_config.get('delivery')
 
     # Try to parse the start and end date for the workshop, to check that lessons
     # are in the correct time frame. If the date is not a valid date, i.e. if it
