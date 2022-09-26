@@ -19,3 +19,5 @@ Gemfile.lock
 .idea/
 venv/
 .venv/
+assets/favicons/temp/
+_includes/

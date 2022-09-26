@@ -13,7 +13,6 @@ from distutils.dir_util import copy_tree
 log = logging.getLogger(__name__)
 
 #change this to get setup docs
-
 log.info(f"Getting setup info")
 os.system(f"git submodule add --force -b main https://github.com/Southampton-RSG-Training/setup-documents.git submodules/setup-documents")
 os.system("git submodule update --remote --merge")

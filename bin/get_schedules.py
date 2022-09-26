@@ -130,12 +130,19 @@ def create_detailed_lesson_schedules(lesson_name, lesson_type, start_time, lesso
     else:
         containing_directory = "_episodes/"
 
+    rename_files = False
+
+    for i, file in enumerate(sorted(glob.glob(f"{containing_directory}/[0-9]*.{file_ext}"))):
+        if "00-" in file:
+            if file != "00-schedule.md":
+                rename_files = True
+
+
     for i, file in enumerate(sorted(glob.glob(f"{containing_directory}/[0-9]*.{file_ext}"))):
         filepath = Path(file)
         new_file_name = f"{i + 1:02d}{filepath.stem.lstrip(string.digits)}.{file_ext}"
-        filepath.rename(f"{containing_directory}/{new_file_name}")
         if "99-" in file:
-            with open(f"{containing_directory}/{new_file_name}", 'r') as fp:
+            with open(f"{filepath}", 'r') as fp:
                 data = fp.readlines()
             try:
                 ix = data.index("slug: lesson-survey\n")
@@ -143,10 +150,15 @@ def create_detailed_lesson_schedules(lesson_name, lesson_type, start_time, lesso
                     data[ix] = f"slug: {lesson_title}-survey\n"
                 else:
                     data[ix] = f"slug: {lesson_name}-survey\n"
-                with open(f"{containing_directory}/{new_file_name}", 'w') as fp:
+                with open(f"{filepath}", 'w') as fp:
                     fp.writelines(data)
             except ValueError as e:
                 print(f"No survey markdown found, caught: {e}\n continuing")
+        elif "00-" in file and rename_files:
+            if file != "00-schedule.md":
+                filepath.rename(f"{containing_directory}/{new_file_name}")
+        else:
+            filepath.rename(f"{containing_directory}/{new_file_name}")
 
     if website_kind != 'lesson':
         schedule_markdown = textwrap.dedent(f"""---
@@ -175,7 +187,7 @@ def create_detailed_lesson_schedules(lesson_name, lesson_type, start_time, lesso
         html += "</div>"
         p = Path("_includes/rsg/")
         p.mkdir(parents=True, exist_ok=True)
-        with open("_includes/rsg/schedule.html", "x") as fp:
+        with open("_includes/rsg/schedule.html", "w") as fp:
             fp.write(bs(html, "html.parser").prettify())
 
 
