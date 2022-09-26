@@ -145,15 +145,22 @@ def create_detailed_lesson_schedules(lesson_name, lesson_type, start_time, lesso
             with open(f"{filepath}", 'r') as fp:
                 data = fp.readlines()
             try:
-                ix = data.index("slug: lesson-survey\n")
+                try:
+                    ix = data.index("slug: lesson-survey\n")
+                except ValueError as e1:
+                    try:
+                        ix = data.index(f"slug: {lesson_name}-survey\n")
+                    except ValueError as e2:
+                        raise ValueError(f"No slug found in 99-survey.md, errors thrown:\n {e1} \n{e2}")
+
                 if lesson_name == '':
-                    data[ix] = f"slug: {lesson_title}-survey\n"
+                    raise ValueError('lesson name is empty string')
                 else:
                     data[ix] = f"slug: {lesson_name}-survey\n"
                 with open(f"{filepath}", 'w') as fp:
                     fp.writelines(data)
             except ValueError as e:
-                print(f"No survey markdown found, caught: {e}\n continuing")
+                raise ValueError(f"No survey markdown found, caught: {e}\n continuing")
         elif "00-" in file and rename_files:
             if file != "00-schedule.md":
                 filepath.rename(f"{containing_directory}/{new_file_name}")
@@ -403,7 +410,7 @@ def main():
         elif website_kind == 'lesson':
             start_time = get_time_object(lesson_starts)
             start_time_minutes = start_time.hour * 60 + start_time.minute
-            create_detailed_lesson_schedules('', lesson_type, start_time_minutes, lesson_title, website_kind)
+            create_detailed_lesson_schedules(lesson_name, lesson_type, start_time_minutes, lesson_title, website_kind)
     if website_kind != 'lesson':
         create_index_schedules(lesson_schedules)
 
