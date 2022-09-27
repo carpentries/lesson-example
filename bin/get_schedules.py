@@ -12,6 +12,7 @@ import datetime
 import yaml
 import math
 import pandas
+import git
 import glob
 import textwrap
 from bs4 import BeautifulSoup as bs
@@ -291,6 +292,11 @@ def main():
         lesson_dates = lesson.get("date", None)             # can be a list
         lesson_starts = lesson.get("start-time", None)      # can be a list
         lesson_order = lesson.get("order", None)
+
+        if lesson_name is None:
+            repo = git.Repo(".", search_parent_directories=True)
+            remote = repo.remote("origin").url
+            lesson_name = remote.split('/')[-1][:-4]
 
         if website_kind == 'workshop':
             if website_delivery == 'dated':

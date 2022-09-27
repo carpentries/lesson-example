@@ -1,5 +1,6 @@
 PyYAML
 beautifulsoup4
+GitPython
 git_root
 pandas
 html5lib
