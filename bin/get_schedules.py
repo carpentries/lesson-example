@@ -129,7 +129,10 @@ def create_detailed_lesson_schedules(lesson_name, lesson_type, start_time, lesso
     if website_kind != 'lesson':
         containing_directory = f"collections/_episodes/{lesson_name}-lesson"
     else:
-        containing_directory = "_episodes/"
+        if lesson_type == LessonType.markdown:
+            containing_directory = "_episodes/"
+        elif lesson_type == LessonType.r_markdown:
+            containing_directory = "_episodes_rmd/"
 
     rename_files = False
 
