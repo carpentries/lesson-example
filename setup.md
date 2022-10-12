@@ -344,7 +344,7 @@ included in the [repository](https://github.com/carpentries-incubator/template).
 
 6.  At this point, you should have a page like this:
 
-    ![]({{ page.root }}/fig/using-github-import.png)
+    ![Screenshot of GitHub pageview that displays after following the steps described for importing your project into GitHub]({{ page.root }}/fig/using-github-import.png)
 
     You can now click "Begin Import". When the process is done, you can click
     "Continue to repository" to visit your newly-created repository.
