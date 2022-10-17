@@ -28,6 +28,7 @@ with open('_config.yml') as config:
     #select element of the dictionary called setup_docs
     set_up_docs = website_config['setup_docs']
     site_kind = website_config['kind']
+    site_type = website_config['type']
 
 # Get the images for the setup documents
 copy_tree(f"submodules/setup-documents/fig", "fig/")
