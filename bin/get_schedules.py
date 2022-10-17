@@ -299,7 +299,7 @@ def main():
         if lesson_name is None:
             repo = git.Repo(".", search_parent_directories=True)
             remote = repo.remote("origin").url
-            lesson_name = remote.split('/')[-1][:-4]
+            lesson_name = remote.split('/')[-1][:-10]
 
         if website_kind == 'workshop':
             if website_delivery == 'dated':
