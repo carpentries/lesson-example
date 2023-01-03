@@ -31,8 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20230103-3534-x7qgrp
-sitelibdir = $(DESTDIR)./.gem.20230103-3534-x7qgrp
+sitearchdir = $(DESTDIR)./.gem.20230103-3534-2osdl0
+sitelibdir = $(DESTDIR)./.gem.20230103-3534-2osdl0
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -76,20 +76,20 @@ OUTFLAG = -o $(empty)
 COUTFLAG = -o $(empty)
 CSRCFLAG = $(empty)
 
-RUBY_EXTCONF_H = extconf.h
+RUBY_EXTCONF_H = 
 cflags   = $(optflags) $(debugflags) $(warnflags)
 cxxflags = 
 optflags = -O3
 debugflags = -ggdb3
-warnflags = 
+warnflags = -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable
 cppflags = 
 CCDLFLAGS = -fPIC
-CFLAGS   = $(CCDLFLAGS) -g -O2 -fPIC  $(ARCH_FLAG)
-INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) 
+CFLAGS   = $(CCDLFLAGS) -g -O2 -fPIC $(ARCH_FLAG)
+INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\" -I/opt/hostedtoolcache/Ruby/2.7.7/x64/include -DENABLE_PATH_CHECK=0 $(DEFS) $(cppflags)
-CXXFLAGS = $(CCDLFLAGS) -g -O2  $(ARCH_FLAG)
-ldflags  = -L. -L/opt/hostedtoolcache/Ruby/2.7.7/x64/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic  -pthread
+CPPFLAGS = -DHAVE_RB_BLOCK_CALL -DHAVE_RB_ARY_SUBSEQ -I/opt/hostedtoolcache/Ruby/2.7.7/x64/include -DENABLE_PATH_CHECK=0 $(DEFS) $(cppflags)
+CXXFLAGS = $(CCDLFLAGS) -g -O2 $(ARCH_FLAG)
+ldflags  = -L. -L/opt/hostedtoolcache/Ruby/2.7.7/x64/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic
 dldflags = -L/opt/hostedtoolcache/Ruby/2.7.7/x64/lib  -Wl,--compress-debug-sections=zlib 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
@@ -111,7 +111,7 @@ ruby_version = 2.7.0
 ruby = $(bindir)/$(RUBY_BASE_NAME)
 RUBY = $(ruby)
 BUILTRUBY = $(bindir)/$(RUBY_BASE_NAME)
-ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/backward.h $(hdrdir)/ruby/ruby.h $(hdrdir)/ruby/defines.h $(hdrdir)/ruby/missing.h $(hdrdir)/ruby/intern.h $(hdrdir)/ruby/st.h $(hdrdir)/ruby/subst.h $(arch_hdrdir)/ruby/config.h $(RUBY_EXTCONF_H)
+ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/backward.h $(hdrdir)/ruby/ruby.h $(hdrdir)/ruby/defines.h $(hdrdir)/ruby/missing.h $(hdrdir)/ruby/intern.h $(hdrdir)/ruby/st.h $(hdrdir)/ruby/subst.h $(arch_hdrdir)/ruby/config.h
 
 RM = rm -f
 RM_RF = $(RUBY) -run -e rm -- -rf
@@ -136,16 +136,16 @@ DISTCLEANDIRS =
 
 extout = 
 extout_prefix = 
-target_prefix = 
+target_prefix = /racc
 LOCAL_LIBS = 
-LIBS = $(LIBRUBYARG_SHARED) -lffi  -lffi -lm   -lc
-ORIG_SRCS = AbstractMemory.c ArrayType.c Buffer.c Call.c ClosurePool.c DynamicLibrary.c Function.c FunctionInfo.c LastError.c LongDouble.c MappedType.c MemoryPointer.c MethodHandle.c Platform.c Pointer.c Struct.c StructByValue.c StructLayout.c Thread.c Type.c Types.c Variadic.c ffi.c
+LIBS = $(LIBRUBYARG_SHARED)  -lm   -lc
+ORIG_SRCS = cparse.c
 SRCS = $(ORIG_SRCS) 
-OBJS = AbstractMemory.o ArrayType.o Buffer.o Call.o ClosurePool.o DynamicLibrary.o Function.o FunctionInfo.o LastError.o LongDouble.o MappedType.o MemoryPointer.o MethodHandle.o Platform.o Pointer.o Struct.o StructByValue.o StructLayout.o Thread.o Type.o Types.o Variadic.o ffi.o
-HDRS = $(srcdir)/DynamicLibrary.h $(srcdir)/LastError.h $(srcdir)/Thread.h $(srcdir)/extconf.h $(srcdir)/MemoryPointer.h $(srcdir)/Pointer.h $(srcdir)/AbstractMemory.h $(srcdir)/Struct.h $(srcdir)/LongDouble.h $(srcdir)/Type.h $(srcdir)/MappedType.h $(srcdir)/rbffi_endian.h $(srcdir)/Platform.h $(srcdir)/rbffi.h $(srcdir)/compat.h $(srcdir)/MethodHandle.h $(srcdir)/StructByValue.h $(srcdir)/ClosurePool.h $(srcdir)/Function.h $(srcdir)/ArrayType.h $(srcdir)/Types.h $(srcdir)/Call.h
+OBJS = cparse.o
+HDRS = 
 LOCAL_HDRS = 
-TARGET = ffi_c
-TARGET_NAME = ffi_c
+TARGET = cparse
+TARGET_NAME = cparse
 TARGET_ENTRY = Init_$(TARGET_NAME)
 DLLIB = $(TARGET).so
 EXTSTATIC = 
@@ -187,7 +187,7 @@ distclean: clean distclean-so distclean-static distclean-rb-default distclean-rb
 realclean: distclean
 install: install-so install-rb
 
-install-so: $(DLLIB) $(TIMESTAMP_DIR)/.sitearchdir.time
+install-so: $(DLLIB) $(TIMESTAMP_DIR)/.sitearchdir.-.racc.time
 	$(INSTALL_PROG) $(DLLIB) $(RUBYARCHDIR)
 clean-static::
 	-$(Q)$(RM) $(STATIC_LIB)
@@ -199,7 +199,7 @@ do-install-rb:
 do-install-rb-default:
 pre-install-rb-default:
 	@$(NULLCMD)
-$(TIMESTAMP_DIR)/.sitearchdir.time:
+$(TIMESTAMP_DIR)/.sitearchdir.-.racc.time:
 	$(Q) $(MAKEDIRS) $(@D) $(RUBYARCHDIR)
 	$(Q) $(TOUCH) $@
 
@@ -258,7 +258,7 @@ site-install-rb: install-rb
 	$(Q) $(CC) $(INCFLAGS) $(CPPFLAGS) $(CFLAGS) $(COUTFLAG)$@ -S $(CSRCFLAG)$<
 
 $(TARGET_SO): $(OBJS) Makefile
-	$(ECHO) linking shared-object $(DLLIB)
+	$(ECHO) linking shared-object racc/$(DLLIB)
 	-$(Q)$(RM) $(@)
 	$(Q) $(LDSHARED) -o $@ $(OBJS) $(LIBPATH) $(DLDFLAGS) $(LOCAL_LIBS) $(LIBS)
 

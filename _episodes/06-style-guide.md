@@ -115,7 +115,7 @@ We use span of code
 
 When making reference to a keyboard key that the reader should press
 the HTML tag `<kbd>` **must** be used to enclose the key label.
-For example, "to delete the cell press <kbd>D</kbd>" should be write as
+For example, "to delete the cell press <kbd>D</kbd>" should be written as
 
 ~~~
 to delete the cell press <kbd>D</kbd>
