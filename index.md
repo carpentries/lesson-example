@@ -27,6 +27,7 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 > - Discussion: <https://github.com/carpentries/workbench/discussions>
 > - Bug Reports: <https://github.com/carpentries/workbench/issues>
 > - Contact: zkamvar at carpentries dot org
+{: .callout}
 
 
 For guidelines on how to develop curriculum content, please visit

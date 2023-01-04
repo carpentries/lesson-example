@@ -122,7 +122,7 @@ Authors should *not* use:
 
 ## Formatting Code
 
-Inline code fragments are formatted using back-quotes.
+Inline code fragments are formatted using backticks (`` ` ``).
 Longer code blocks are formatted by opening and closing the block with `~~~` (three tildes),
 with a class specifier after the block:
 
@@ -162,7 +162,10 @@ The [template]({{ site.template_repo }}) provides three styles for code blocks:
 ~~~
 {: .error}
 
+
+
 ### Syntax Highlighting
+
 
 The following styles like `.source`, but include syntax highlighting for the
 specified language.
@@ -224,6 +227,48 @@ PRINT 'Hello, world!'
 RETURN (0)
 ~~~
 {: .language-sql}
+
+> ## Alternative Syntax highlighting
+> 
+> The majority of our lessons that use styles will have the three tilde syntax, but this is a
+> historical artifact and not commonly used outside of kramdown. You can specify a code block by
+> using three backticks followed by the class instead of the syntax above.
+> 
+> ````markdown
+> ```html
+> <html>
+> <body>
+> <em>Hello World</em>
+> </body>
+> </html>
+> ```
+> ````
+>
+> ```html
+> <html>
+> <body>
+> <em>Hello World</em>
+> </body>
+> </html>
+> ```
+> 
+> NOTE: this syntax will _not_ work for error, output, or warning code blocks.
+>
+> ### Historical Artifacts
+>
+> This code block syntax with three tildes followed by an 
+> [inline attribute list](https://kramdown.gettalong.org/syntax.html#inline-attribute-lists)
+> is [a departure from the original markdown
+> syntax](https://kramdown.gettalong.org/syntax.html#fenced-code-blocks). You may be wondering why
+> Carpentries lessons used this syntax in the first place if it was so different from original
+> markdown.
+>
+> At the time this guide was originally written, Lessons in The Carpentries were
+> using Jekyll with [kramdown](https://kramdown.gettalong.org/) to render
+> Markdown to HTML and back then, kramdown did not recognise three backticks as
+> code blocks. 
+{: .callout}
+
 
 > ## Highlighting for other languages
 > You may use other `language-*` classes to activate syntax highlighting

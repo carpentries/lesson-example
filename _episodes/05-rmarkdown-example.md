@@ -39,7 +39,7 @@ information.
 ## Structure of a RMarkdown file in the `_episodes_rmd` folder
 
 Our template requires that the YAML header of your RMarkdown file includes the
-`source: Rmd` in addition of the other entries that are expected. For instance, the YAML header for
+`source: Rmd` in addition of the other entries that are expected. For instance, the YAML header for 
 this episode is:
 
 
@@ -160,7 +160,7 @@ ggplot(diamonds, aes(x = carat,  y = price, color = cut)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-05-plot-example-1.png" title="An example figure plotting carat of diamonds against their price, with the colour of the data points based on the cut of the diamond." alt="An example figure plotting carat of diamonds against their price, with the colour of the data points based on the cut of the diamond." width="612" style="display: block; margin: auto;" />
+<img src="../fig/rmd-05-plot-example-1.png" alt="An example figure plotting carat of diamonds against their price, with the colour of the data points based on the cut of the diamond." width="612" style="display: block; margin: auto;" />
 
 The alternative text for these embedded images will be the same as
 the figure caption specified with the `fig.cap` parameter.
