@@ -363,6 +363,11 @@ for the following special blockquotes:
 >
 > A laudatory quote from a user.
 {: .testimonial}
+    
+> ## `.caution`
+>
+> A warning.
+{: .caution}
 
   </div>
 </div>
