@@ -122,7 +122,7 @@ Authors should *not* use:
 
 ## Formatting Code
 
-Inline code fragments are formatted using back-quotes.
+Inline code fragments are formatted using backticks (`` ` ``).
 Longer code blocks are formatted by opening and closing the block with `~~~` (three tildes),
 with a class specifier after the block:
 
@@ -162,7 +162,10 @@ The [template]({{ site.template_repo }}) provides three styles for code blocks:
 ~~~
 {: .error}
 
+
+
 ### Syntax Highlighting
+
 
 The following styles like `.source`, but include syntax highlighting for the
 specified language.
@@ -224,6 +227,48 @@ PRINT 'Hello, world!'
 RETURN (0)
 ~~~
 {: .language-sql}
+
+> ## Alternative Syntax highlighting
+> 
+> The majority of our lessons that use styles will have the three tilde syntax, but this is a
+> historical artifact and not commonly used outside of kramdown. You can specify a code block by
+> using three backticks followed by the class instead of the syntax above.
+> 
+> ````markdown
+> ```html
+> <html>
+> <body>
+> <em>Hello World</em>
+> </body>
+> </html>
+> ```
+> ````
+>
+> ```html
+> <html>
+> <body>
+> <em>Hello World</em>
+> </body>
+> </html>
+> ```
+> 
+> NOTE: this syntax will _not_ work for error, output, or warning code blocks.
+>
+> ### Historical Artifacts
+>
+> This code block syntax with three tildes followed by an 
+> [inline attribute list](https://kramdown.gettalong.org/syntax.html#inline-attribute-lists)
+> is [a departure from the original markdown
+> syntax](https://kramdown.gettalong.org/syntax.html#fenced-code-blocks). You may be wondering why
+> Carpentries lessons used this syntax in the first place if it was so different from original
+> markdown.
+>
+> At the time this guide was originally written, Lessons in The Carpentries were
+> using Jekyll with [kramdown](https://kramdown.gettalong.org/) to render
+> Markdown to HTML and back then, kramdown did not recognise three backticks as
+> code blocks. 
+{: .callout}
+
 
 > ## Highlighting for other languages
 > You may use other `language-*` classes to activate syntax highlighting
@@ -439,56 +484,5 @@ You can add a drop shadow effect to images by applying the
 
 [jekyll-link-tag]: https://jekyllrb.com/docs/liquid/tags/#link
 
-## Adding Formatted Equations
-
-The template supports rendering of equations via [KaTeX](https://katex.org/).
-This option must be activated by adding `math: true` to the `_config.yml` file 
-or YAML front matter of the Markdown file where you wish to use it.
-
-Mathematical expressions can then be added to the page content using the LaTeX syntax.
-
-Expressions can be written inline:
-
-~~~
-{% raw %}Inline expressions can be added between `$` symbols, e.g. $E = Mc^2$.{% endraw %}
-~~~
-{: .source}
-
-with the result:
-
-Inline expressions can be added between `$` symbols, e.g. $E = mc^2$.
-
-Or as a block across multiple lines:
-
-~~~
-{% raw %}$$
-    \lim_{x \rightarrow 0}
-    \frac{
-        \sin x
-    } {
-        x
-    }
-    = 1
-$${% endraw %}
-~~~
-{: .source}
-
-with the result:
-
-$$
-    \lim_{x \rightarrow 0}
-    \frac{
-        \sin x
-    } {
-        x
-    }
-    = 1
-$$
-
-The example above was taken from the chapter _Typesetting Mathematical Formulae_,
-in [The Not So Short Introduction to LaTeX](https://tobi.oetiker.ch/lshort/lshort.pdf).
-[The Mathematics chapter of the LaTeX WikiBook](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
-is a good reference guide for those wishing to add equations
-and mathematical expressions to their lessons.
 
 {% include links.md %}
