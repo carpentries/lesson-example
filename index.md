@@ -10,9 +10,9 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 >
 > Our new lesson infrastructure, [The Carpentries Workbench](https://carpentries.github.io/workbench/)
 > is currently undergoing [beta testing](https://carpentries.github.io/workbench/beta-phase.html)
-> beta testing and will become default for official Carpentries lessons in May 2023.
+> and will become default for official Carpentries lessons in May 2023.
 >
-> This new infrastructure is designed to be more accessible and easier to use than the the styles
+> This new infrastructure is designed to be more accessible and easier to use than the styles
 > infrastructure by separating tools from the content.
 >
 > **If you would like to create a new lesson, we encourage you to use The Workbench.**
