@@ -6,6 +6,30 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 
 {% include gh_variables.html %}
 
+> ## New Lesson Infrastructure Coming May 2023
+>
+> Our new lesson infrastructure, [The Carpentries Workbench](https://carpentries.github.io/workbench/)
+> is currently undergoing [beta testing](https://carpentries.github.io/workbench/beta-phase.html)
+> and will become default for official Carpentries lessons in May 2023.
+>
+> This new infrastructure is designed to be more accessible and easier to use than the styles
+> infrastructure by separating tools from the content.
+>
+> **If you would like to create a new lesson, we encourage you to use The Workbench.**
+>
+> ### Resources
+> 
+> - Markdown Lesson Template Generator: <https://bit.ly/new-lesson-md/>
+> - R Markdown Lesson Template Generator: <https://bit.ly/new-lesson-rmd/>
+> - Lesson Maintainer/Author Documentation: <https://carpentries.github.io/sandpaper-docs/>
+> - Transition Guide: <https://carpentries.github.io/workbench/transition-guide.html>
+> - General Information: <https://carpentries.github.io/workbench/>
+> - Discussion: <https://github.com/carpentries/workbench/discussions>
+> - Bug Reports: <https://github.com/carpentries/workbench/issues>
+> - Contact: zkamvar at carpentries dot org
+{: .callout}
+
+
 For guidelines on how to develop curriculum content, please visit
 [The Carpentries Curriculum Development Handbook][curriculum-handbook].
 
