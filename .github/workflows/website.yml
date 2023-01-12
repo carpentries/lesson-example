@@ -40,7 +40,7 @@ jobs:
 
       - name: Setup R
         if: steps.check_files.outputs.files_exists == 'true'
-        uses: r-lib/actions/setup-r@v1
+        uses: r-lib/actions/setup-r@v2
         with:
           r-version: 'release'
 
