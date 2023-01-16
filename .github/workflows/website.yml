@@ -23,6 +23,11 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Install libicu66
+        run: |
+          sudo apt-get update
+          sudo apt-get install --reinstall libicu66
+
       - name: Install Python modules
         run: |
           python3 -m pip install --upgrade pip setuptools wheel pyyaml==5.3.1 requests
