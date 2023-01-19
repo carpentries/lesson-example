@@ -53,11 +53,3 @@ if site_kind == 'lesson':
             log.info(f"Copied {file} to {dest}")
         except:
             log.error(f"Cannot find or move submodules/{lesson_name}/{file}, but carrying on anyway")
-
-    if site_type == 'episode_r':
-        try:
-            for file in glob("_episodes_rmd/fig/*"):
-                copy(f"{file}", f"fig/")
-        except:
-            log.error("Unable to move figures")
-

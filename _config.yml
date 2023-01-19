@@ -6,7 +6,7 @@ kind: "lesson"
 # Is this a permanent page 'static' or a taught lesson 'dated'
 delivery: "static"
 
-type: "episode" # The other valid option is "episode_r"
+type: "episode" 
 
 # Overall title for pages.
 title: "Lesson Title"

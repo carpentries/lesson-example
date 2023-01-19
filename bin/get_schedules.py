@@ -1,4 +1,4 @@
-"""Create schedule for the workshop.
+"""Create schedule for the lesson.
 
 Determines which lesson schedules are required by reading _config.yml. The
 schedule for each lesson is modified by a delta time to account for different
@@ -20,13 +20,6 @@ from pathlib import Path
 import string
 from enum import Enum
 import dateutil
-
-
-class LessonType(Enum):
-    """Enum for the different types of lessons.
-    """
-    markdown = "episode"
-    r_markdown = "episode_r"
 
 
 def get_yaml_config():
@@ -127,12 +120,9 @@ def create_detailed_lesson_schedules(lesson_name, lesson_type, start_time, lesso
     """
     file_ext = "md"
     if website_kind != 'lesson':
-        containing_directory = f"collections/_episodes/{lesson_name}-lesson"
+        containing_directory = f"_episodes/{lesson_name}-lesson"
     else:
-        if lesson_type == LessonType.markdown:
-            containing_directory = "_episodes/"
-        elif lesson_type == LessonType.r_markdown:
-            containing_directory = "_episodes_rmd/"
+        containing_directory = "_episodes/"
 
     rename_files = False
 
@@ -289,7 +279,7 @@ def main():
 
 
     for lesson in lessons:
-        lesson_type = LessonType(lesson.get("type", None))  # have to differentiate between markdown and r-markdown lessons
+        lesson_type = lesson.get("type", None)
         lesson_title = lesson.get("title", None)
         lesson_name = lesson.get("gh-name", None)
         lesson_dates = lesson.get("date", None)             # can be a list
