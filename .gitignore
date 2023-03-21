@@ -20,4 +20,3 @@ Gemfile.lock
 venv/
 .venv/
 assets/favicons/temp/
-_includes/
