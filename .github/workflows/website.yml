@@ -29,7 +29,7 @@ jobs:
           python3 -m pip install -r requirements.txt
 
       - name: Install sys deps
-        run: sudo apt-get install -y libcurl4-openssl-dev
+        run: sudo apt-get update && sudo apt-get install -y libcurl4-openssl-dev
 
       - name: Run python build scripts
         run: |
