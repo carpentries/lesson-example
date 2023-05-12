@@ -21,21 +21,19 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: "3.8.16"
 
       - name: Install Python modules
         run: |
-          python3 -m pip install --upgrade pip setuptools wheel pyyaml==5.3.1 requests
+          python3 -m pip install --upgrade pip setuptools wheel
           python3 -m pip install -r requirements.txt
 
       - name: Install sys deps
         run: sudo apt-get update && sudo apt-get install -y libcurl4-openssl-dev
 
-      - name: Run python build scripts
+      - name: Run build scripts
         run: |
-          python bin/make_favicons.py
-          python bin/get_schedules.py
-          python bin/get_setup.py
+          bash bin/build_me.sh
 
       - name: Deploy the website to gh-pages
         uses: JamesIves/github-pages-deploy-action@4.1.7

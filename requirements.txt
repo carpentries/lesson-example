@@ -1,9 +1,5 @@
-PyYAML
-beautifulsoup4
-GitPython
-git_root
-pandas
-html5lib
-python-dateutil
-lxml
-favicons
+pyyaml==5.3.1
+beautifulsoup4==4.11.2
+GitPython==3.1.31
+python-dateutil==2.8.2
+requests==2.22.0

@@ -11,15 +11,13 @@ and creates a detailed 00-schedule.md file for each lesson.
 import datetime
 import yaml
 import math
-import pandas
 import git
 import glob
 import textwrap
 from bs4 import BeautifulSoup as bs
 from pathlib import Path
 import string
-from enum import Enum
-import dateutil
+from dateutil import parser
 
 
 def get_yaml_config():
@@ -61,8 +59,8 @@ def get_date_object(datestr):
         raise ValueError(f"datestr is not a string but {type(datestr)}")
 
     try:
-        date = dateutil.parser.parse(datestr).date()
-    except dateutil.parser.ParserError:
+        date = parser.parse(datestr).date()
+    except parser.ParserError:
         date = None
 
     return date
