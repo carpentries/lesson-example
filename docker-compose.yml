@@ -3,7 +3,7 @@ version: "3.8"
 services:
   website:
     build: .
-    container_name: dev-website
+    container_name: dev-lesson
     environment:
       - JEKYLL_ENV=development
     ports:

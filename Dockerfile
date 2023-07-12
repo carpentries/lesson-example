@@ -16,7 +16,5 @@ RUN pip install -r requirements.txt
 RUN bundle install
 RUN npm install livereload
 
-RUN python bin/get_schedules.py
-RUN python bin/get_setup.py
+CMD ["bash", "bin/docker_launch.sh"]
 
-CMD ["bundle", "exec", "jekyll", "serve", "--watch", "--incremental", "--livereload", "--host", "0.0.0.0"]
