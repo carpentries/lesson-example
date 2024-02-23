@@ -7,7 +7,13 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 # Synchronize with https://pages.github.com/versions
 ruby '>=2.7.1'
 
-gem 'github-pages', group: :jekyll_plugins
+gem 'faraday', '0.17.3'
+
+group :jekyll_plugins do
+  gem 'github-pages', '206'
+  gem 'jekyll-get-json', "~> 1.0.0"
+  gem 'jekyll', '3.8.7'
+end
 
 if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('3.0.0')
     gem 'webrick', '>= 1.6.1'
