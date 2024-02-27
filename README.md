@@ -100,4 +100,4 @@ In brief:
 [styles-issues]: https://github.com/carpentries/styles/issues/
 [styles]: https://github.com/carpentries/styles/
 [create_slack_svg]: https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg
-[slack_heroku_invite]: https://swc-slack-invite.herokuapp.com
+[slack_heroku_invite]: https://slack-invite.carpentries.org/
