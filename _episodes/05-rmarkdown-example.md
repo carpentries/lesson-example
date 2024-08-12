@@ -160,7 +160,10 @@ ggplot(diamonds, aes(x = carat,  y = price, color = cut)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-05-plot-example-1.png" alt="An example figure plotting carat of diamonds against their price, with the colour of the data points based on the cut of the diamond." width="612" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="../fig/rmd-05-plot-example-1.png" alt="An example figure plotting carat of diamonds against their price, with the colour of the data points based on the cut of the diamond." width="612" />
+<p class="caption">An example figure plotting carat of diamonds against their price, with the colour of the data points based on the cut of the diamond.</p>
+</div>
 
 The alternative text for these embedded images will be the same as
 the figure caption specified with the `fig.cap` parameter.

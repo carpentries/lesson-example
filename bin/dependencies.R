@@ -64,9 +64,9 @@ identify_dependencies <- function() {
 
   required_pkgs <- unique(c(
     ## Packages for episodes
-    renv::dependencies(eps, progress = FALSE, error = "ignored")$Package,
+    renv::dependencies(eps, progress = FALSE, errors = c("ignored"))$Package,
     ## Packages for tools
-    renv::dependencies(bin, progress = FALSE, error = "ignored")$Package
+    renv::dependencies(bin, progress = FALSE, errors = c("ignored"))$Package
   ))
 
   required_pkgs
