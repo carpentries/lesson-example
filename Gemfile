@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 # Synchronize with https://pages.github.com/versions
-ruby '>=3.2.3'
+ruby '>=3.0.0'
 
 gem 'faraday', '0.17.3'
 
