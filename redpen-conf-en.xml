@@ -1,0 +1,30 @@
+<redpen-conf lang="en" variant="us">
+    <validators>
+        <!--Rules on expressions-->
+        <validator name="SymbolWithSpace"/>
+        <validator name="SuccessiveWord" />
+        <validator name="FrequentSentenceStart"/>
+        <validator name="UnexpandedAcronym"/>
+
+        <!--Rules on sections and paragraphs-->
+        <validator name="SpaceBeginningOfSentence" />
+        <validator name="DuplicatedSection" />
+        <validator name="DoubleNegative" />
+        <validator name="SuccessiveSentence" />
+
+        <!--Rules on symbols and terminologies-->
+        <validator name="InvalidSymbol"/>
+	<validator name="Spelling">
+            <property name="dict" value="redpen-spelling"/>
+        </validator>
+        <validator name="Hyphenation"/>
+        <validator name="NumberFormat"/>
+
+        <!--Load JavaScript validators-->
+        <validator name="JavaScript" />
+    </validators>
+    <symbols>
+        <symbol name="LEFT_SINGLE_QUOTATION_MARK" value="'" invalid-chars="‘" before-space="false" after-space="false" />
+        <symbol name="RIGHT_SINGLE_QUOTATION_MARK" value="'" invalid-chars="’" before-space="false" after-space="false" />
+    </symbols>
+</redpen-conf>
