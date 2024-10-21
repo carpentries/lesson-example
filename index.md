@@ -12,8 +12,8 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 > became the default for official Carpentries lessons in May 2023.
 >
 > The Workbench is designed to be more accessible and easier to use than the styles
-> infrastructure by separating tools from the content. As such, using this repository for
-> lessons is no longer supported by The Carpentries Core Team.
+> infrastructure by separating tools from the content. As such, **using this repository for
+> lessons is no longer supported by The Carpentries Core Team**.
 >
 > **If you would like to create a new lesson, we encourage you to use The Workbench templates below.**
 >
