@@ -5,6 +5,8 @@ The Workbench is designed to be more accessible and easier to use than the style
 infrastructure by separating tools from the content. As such, **using this repository for
 lessons is no longer supported by The Carpentries Core Team**.
 
+As the previous lesson template is still being used by some community members, e.g. in [The Carpentries Incubator](https://carpentries-incubator.org), this repository and the website it builds are still maintained with minimal support from The Carpentries team.
+
 [![Website Check Status](https://github.com/carpentries/lesson-example/workflows/Website/badge.svg)](https://github.com/carpentries/lesson-example/actions/workflows/website.yml?query=workflow%3AWebsite)
 
 lesson-example
