@@ -168,7 +168,7 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/opt/hostedtoolcache/Ruby/3.0.7/x64/include/ruby-3.0.0/x86_64-linux -I/opt/hostedtoolcache/Ruby/3.0.7/x64/include/ruby-3.0.0/ruby/backward -I/opt/hostedtoolcache/Ruby/3.0.7/x64/include/ruby-3.0.0 -I.  -DENABLE_PATH_CHECK=0   -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC  conftest.c  -L. -L/opt/hostedtoolcache/Ruby/3.0.7/x64/lib -Wl,-rpath,/opt/hostedtoolcache/Ruby/3.0.7/x64/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed -L/usr/lib/x86_64-linux-gnu     -lssl -lcrypto -lcrypto -lssl -Wl,-rpath,/opt/hostedtoolcache/Ruby/3.0.7/x64/lib -L/opt/hostedtoolcache/Ruby/3.0.7/x64/lib -lruby  -lssl -lcrypto -lcrypto -lssl -lm   -lc"
-/usr/bin/ld: /tmp/cczI9ICK.o: in function `t':
+/usr/bin/ld: /tmp/ccr8QGGh.o: in function `t':
 /home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/eventmachine-1.2.7/ext/conftest.c:15: undefined reference to `rb_thread_blocking_region'
 collect2: error: ld returned 1 exit status
 checked program was:
@@ -340,7 +340,7 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/opt/hostedtoolcache/Ruby/3.0.7/x64/include/ruby-3.0.0/x86_64-linux -I/opt/hostedtoolcache/Ruby/3.0.7/x64/include/ruby-3.0.0/ruby/backward -I/opt/hostedtoolcache/Ruby/3.0.7/x64/include/ruby-3.0.0 -I.  -DENABLE_PATH_CHECK=0   -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC  conftest.c  -L. -L/opt/hostedtoolcache/Ruby/3.0.7/x64/lib -Wl,-rpath,/opt/hostedtoolcache/Ruby/3.0.7/x64/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed -L/usr/lib/x86_64-linux-gnu     -lssl -lcrypto -lcrypto -lssl -Wl,-rpath,/opt/hostedtoolcache/Ruby/3.0.7/x64/lib -L/opt/hostedtoolcache/Ruby/3.0.7/x64/lib -lruby  -lssl -lcrypto -lcrypto -lssl -lm   -lc"
-/usr/bin/ld: /tmp/cc4vkv2B.o: in function `t':
+/usr/bin/ld: /tmp/ccD57rK3.o: in function `t':
 /home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/eventmachine-1.2.7/ext/conftest.c:15: undefined reference to `rb_enable_interrupt'
 collect2: error: ld returned 1 exit status
 checked program was:

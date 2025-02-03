@@ -1,158 +1,0 @@
-current directory: /home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/ffi-1.17.0/ext/ffi_c
-/opt/hostedtoolcache/Ruby/3.0.7/x64/bin/ruby -I /opt/hostedtoolcache/Ruby/3.0.7/x64/lib/ruby/3.0.0 -r ./siteconf20240823-3567-vn4ujd.rb extconf.rb
-checking for ffi_prep_closure_loc() in -lffi... yes
-checking for ffi_prep_cif_var()... yes
-checking for ffi_raw_call()... yes
-checking for ffi_prep_raw_closure()... yes
-checking for rb_gc_mark_movable()... yes
-checking for whether -pthread is accepted as LDFLAGS... yes
-creating extconf.h
-creating Makefile
-
-current directory: /home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/ffi-1.17.0/ext/ffi_c
-make DESTDIR\= clean
-make[1]: Entering directory '/home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/ffi-1.17.0/ext/ffi_c'
-Makefile:176: warning: overriding recipe for target 'clean'
-\Q‘VU:176: warning: ignoring old recipe for target 'clean'
-Makefile:183: warning: overriding recipe for target 'distclean'
-\Q‘VU:183: warning: ignoring old recipe for target 'distclean'
-Makefile:191: warning: overriding recipe for target 'install-so'
-\Q‘VU:191: warning: ignoring old recipe for target 'install-so'
-Makefile:201: warning: overriding recipe for target 'pre-install-rb-default'
-\Q‘VU:201: warning: ignoring old recipe for target 'pre-install-rb-default'
-Makefile:203: warning: overriding recipe for target '.sitearchdir.time'
-\Q‘VU:203: warning: ignoring old recipe for target '.sitearchdir.time'
-Makefile:213: warning: overriding recipe for target '.cc.o'
-\Q‘VU:213: warning: ignoring old recipe for target '.cc.o'
-Makefile:217: warning: overriding recipe for target '.cc.S'
-\Q‘VU:217: warning: ignoring old recipe for target '.cc.S'
-Makefile:221: warning: overriding recipe for target '.mm.o'
-\Q‘VU:221: warning: ignoring old recipe for target '.mm.o'
-Makefile:225: warning: overriding recipe for target '.mm.S'
-\Q‘VU:225: warning: ignoring old recipe for target '.mm.S'
-Makefile:229: warning: overriding recipe for target '.cxx.o'
-\Q‘VU:229: warning: ignoring old recipe for target '.cxx.o'
-Makefile:233: warning: overriding recipe for target '.cxx.S'
-\Q‘VU:233: warning: ignoring old recipe for target '.cxx.S'
-Makefile:237: warning: overriding recipe for target '.cpp.o'
-\Q‘VU:237: warning: ignoring old recipe for target '.cpp.o'
-Makefile:241: warning: overriding recipe for target '.cpp.S'
-\Q‘VU:241: warning: ignoring old recipe for target '.cpp.S'
-Makefile:245: warning: overriding recipe for target '.c.o'
-\Q‘VU:245: warning: ignoring old recipe for target '.c.o'
-Makefile:249: warning: overriding recipe for target '.c.S'
-\Q‘VU:249: warning: ignoring old recipe for target '.c.S'
-Makefile:253: warning: overriding recipe for target '.m.o'
-\Q‘VU:253: warning: ignoring old recipe for target '.m.o'
-Makefile:257: warning: overriding recipe for target '.m.S'
-\Q‘VU:257: warning: ignoring old recipe for target '.m.S'
-Makefile:261: warning: overriding recipe for target 'ffi_c.so'
-\Q‘VU:261: warning: ignoring old recipe for target 'ffi_c.so'
-make[1]: Leaving directory '/home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/ffi-1.17.0/ext/ffi_c'
-
-current directory: /home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/ffi-1.17.0/ext/ffi_c
-make DESTDIR\=
-make[1]: Entering directory '/home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/ffi-1.17.0/ext/ffi_c'
-Makefile:176: warning: overriding recipe for target 'clean'
-Îs_U:176: warning: ignoring old recipe for target 'clean'
-Makefile:183: warning: overriding recipe for target 'distclean'
-Îs_U:183: warning: ignoring old recipe for target 'distclean'
-Makefile:191: warning: overriding recipe for target 'install-so'
-Îs_U:191: warning: ignoring old recipe for target 'install-so'
-Makefile:201: warning: overriding recipe for target 'pre-install-rb-default'
-Îs_U:201: warning: ignoring old recipe for target 'pre-install-rb-default'
-Makefile:203: warning: overriding recipe for target '.sitearchdir.time'
-Îs_U:203: warning: ignoring old recipe for target '.sitearchdir.time'
-Makefile:213: warning: overriding recipe for target '.cc.o'
-Îs_U:213: warning: ignoring old recipe for target '.cc.o'
-Makefile:217: warning: overriding recipe for target '.cc.S'
-Îs_U:217: warning: ignoring old recipe for target '.cc.S'
-Makefile:221: warning: overriding recipe for target '.mm.o'
-Îs_U:221: warning: ignoring old recipe for target '.mm.o'
-Makefile:225: warning: overriding recipe for target '.mm.S'
-Îs_U:225: warning: ignoring old recipe for target '.mm.S'
-Makefile:229: warning: overriding recipe for target '.cxx.o'
-Îs_U:229: warning: ignoring old recipe for target '.cxx.o'
-Makefile:233: warning: overriding recipe for target '.cxx.S'
-Îs_U:233: warning: ignoring old recipe for target '.cxx.S'
-Makefile:237: warning: overriding recipe for target '.cpp.o'
-Îs_U:237: warning: ignoring old recipe for target '.cpp.o'
-Makefile:241: warning: overriding recipe for target '.cpp.S'
-Îs_U:241: warning: ignoring old recipe for target '.cpp.S'
-Makefile:245: warning: overriding recipe for target '.c.o'
-Îs_U:245: warning: ignoring old recipe for target '.c.o'
-Makefile:249: warning: overriding recipe for target '.c.S'
-Îs_U:249: warning: ignoring old recipe for target '.c.S'
-Makefile:253: warning: overriding recipe for target '.m.o'
-Îs_U:253: warning: ignoring old recipe for target '.m.o'
-Makefile:257: warning: overriding recipe for target '.m.S'
-Îs_U:257: warning: ignoring old recipe for target '.m.S'
-Makefile:261: warning: overriding recipe for target 'ffi_c.so'
-Îs_U:261: warning: ignoring old recipe for target 'ffi_c.so'
-compiling AbstractMemory.c
-compiling ArrayType.c
-compiling Buffer.c
-compiling Call.c
-compiling ClosurePool.c
-compiling DynamicLibrary.c
-compiling Function.c
-compiling FunctionInfo.c
-compiling LastError.c
-compiling LongDouble.c
-compiling MappedType.c
-compiling MemoryPointer.c
-compiling MethodHandle.c
-compiling Platform.c
-compiling Pointer.c
-compiling Struct.c
-compiling StructByValue.c
-compiling StructLayout.c
-compiling Thread.c
-compiling Type.c
-compiling Types.c
-compiling Variadic.c
-compiling ffi.c
-linking shared-object ffi_c.so
-make[1]: Leaving directory '/home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/ffi-1.17.0/ext/ffi_c'
-
-current directory: /home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/ffi-1.17.0/ext/ffi_c
-make DESTDIR\= install
-make[1]: Entering directory '/home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/ffi-1.17.0/ext/ffi_c'
-Makefile:176: warning: overriding recipe for target 'clean'
-,„o¾U:176: warning: ignoring old recipe for target 'clean'
-Makefile:183: warning: overriding recipe for target 'distclean'
-,„o¾U:183: warning: ignoring old recipe for target 'distclean'
-Makefile:191: warning: overriding recipe for target 'install-so'
-,„o¾U:191: warning: ignoring old recipe for target 'install-so'
-Makefile:201: warning: overriding recipe for target 'pre-install-rb-default'
-,„o¾U:201: warning: ignoring old recipe for target 'pre-install-rb-default'
-Makefile:203: warning: overriding recipe for target '.sitearchdir.time'
-,„o¾U:203: warning: ignoring old recipe for target '.sitearchdir.time'
-Makefile:213: warning: overriding recipe for target '.cc.o'
-,„o¾U:213: warning: ignoring old recipe for target '.cc.o'
-Makefile:217: warning: overriding recipe for target '.cc.S'
-,„o¾U:217: warning: ignoring old recipe for target '.cc.S'
-Makefile:221: warning: overriding recipe for target '.mm.o'
-,„o¾U:221: warning: ignoring old recipe for target '.mm.o'
-Makefile:225: warning: overriding recipe for target '.mm.S'
-,„o¾U:225: warning: ignoring old recipe for target '.mm.S'
-Makefile:229: warning: overriding recipe for target '.cxx.o'
-,„o¾U:229: warning: ignoring old recipe for target '.cxx.o'
-Makefile:233: warning: overriding recipe for target '.cxx.S'
-,„o¾U:233: warning: ignoring old recipe for target '.cxx.S'
-Makefile:237: warning: overriding recipe for target '.cpp.o'
-,„o¾U:237: warning: ignoring old recipe for target '.cpp.o'
-Makefile:241: warning: overriding recipe for target '.cpp.S'
-,„o¾U:241: warning: ignoring old recipe for target '.cpp.S'
-Makefile:245: warning: overriding recipe for target '.c.o'
-,„o¾U:245: warning: ignoring old recipe for target '.c.o'
-Makefile:249: warning: overriding recipe for target '.c.S'
-,„o¾U:249: warning: ignoring old recipe for target '.c.S'
-Makefile:253: warning: overriding recipe for target '.m.o'
-,„o¾U:253: warning: ignoring old recipe for target '.m.o'
-Makefile:257: warning: overriding recipe for target '.m.S'
-,„o¾U:257: warning: ignoring old recipe for target '.m.S'
-Makefile:261: warning: overriding recipe for target 'ffi_c.so'
-,„o¾U:261: warning: ignoring old recipe for target 'ffi_c.so'
-/usr/bin/install -c -m 0755 ffi_c.so ./.gem.20240823-3567-b612iw
-make[1]: Leaving directory '/home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/ffi-1.17.0/ext/ffi_c'

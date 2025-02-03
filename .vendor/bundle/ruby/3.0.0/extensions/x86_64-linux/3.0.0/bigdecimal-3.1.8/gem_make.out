@@ -1,159 +1,0 @@
-current directory: /home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/bigdecimal-3.1.8/ext/bigdecimal
-/opt/hostedtoolcache/Ruby/3.0.7/x64/bin/ruby -I /opt/hostedtoolcache/Ruby/3.0.7/x64/lib/ruby/3.0.0 -r ./siteconf20240823-3567-4s2ozc.rb extconf.rb
-checking for __builtin_clz()... yes
-checking for __builtin_clzl()... yes
-checking for __builtin_clzll()... yes
-checking for float.h... yes
-checking for math.h... yes
-checking for stdbool.h... yes
-checking for stdlib.h... yes
-checking for x86intrin.h... yes
-checking for _lzcnt_u32() in x86intrin.h... no
-checking for _lzcnt_u64() in x86intrin.h... no
-checking for intrin.h... no
-checking for __lzcnt() in intrin.h... no
-checking for __lzcnt64() in intrin.h... no
-checking for _BitScanReverse() in intrin.h... no
-checking for _BitScanReverse64() in intrin.h... no
-checking for labs() in stdlib.h... yes
-checking for llabs() in stdlib.h... yes
-checking for finite() in math.h... yes
-checking for isfinite() in math.h... no
-checking for ruby/atomic.h... yes
-checking for ruby/internal/has/builtin.h... yes
-checking for ruby/internal/static_assert.h... yes
-checking for rb_rational_num() in ruby.h... yes
-checking for rb_rational_den() in ruby.h... yes
-checking for rb_complex_real() in ruby.h... yes
-checking for rb_complex_imag() in ruby.h... yes
-checking for rb_opts_exception_p() in ruby.h... yes
-checking for rb_category_warn() in ruby.h... yes
-checking for RB_WARN_CATEGORY_DEPRECATED in ruby.h... yes
-creating Makefile
-
-current directory: /home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/bigdecimal-3.1.8/ext/bigdecimal
-make DESTDIR\= clean
-make[1]: Entering directory '/home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/bigdecimal-3.1.8/ext/bigdecimal'
-Makefile:177: warning: overriding recipe for target 'clean'
- Å¯8V:177: warning: ignoring old recipe for target 'clean'
-Makefile:184: warning: overriding recipe for target 'distclean'
- Å¯8V:184: warning: ignoring old recipe for target 'distclean'
-Makefile:192: warning: overriding recipe for target 'install-so'
- Å¯8V:192: warning: ignoring old recipe for target 'install-so'
-Makefile:202: warning: overriding recipe for target 'pre-install-rb-default'
- Å¯8V:202: warning: ignoring old recipe for target 'pre-install-rb-default'
-Makefile:204: warning: overriding recipe for target '.sitearchdir.time'
- Å¯8V:204: warning: ignoring old recipe for target '.sitearchdir.time'
-Makefile:214: warning: overriding recipe for target '.cc.o'
- Å¯8V:214: warning: ignoring old recipe for target '.cc.o'
-Makefile:218: warning: overriding recipe for target '.cc.S'
- Å¯8V:218: warning: ignoring old recipe for target '.cc.S'
-Makefile:222: warning: overriding recipe for target '.mm.o'
- Å¯8V:222: warning: ignoring old recipe for target '.mm.o'
-Makefile:226: warning: overriding recipe for target '.mm.S'
- Å¯8V:226: warning: ignoring old recipe for target '.mm.S'
-Makefile:230: warning: overriding recipe for target '.cxx.o'
- Å¯8V:230: warning: ignoring old recipe for target '.cxx.o'
-Makefile:234: warning: overriding recipe for target '.cxx.S'
- Å¯8V:234: warning: ignoring old recipe for target '.cxx.S'
-Makefile:238: warning: overriding recipe for target '.cpp.o'
- Å¯8V:238: warning: ignoring old recipe for target '.cpp.o'
-Makefile:242: warning: overriding recipe for target '.cpp.S'
- Å¯8V:242: warning: ignoring old recipe for target '.cpp.S'
-Makefile:246: warning: overriding recipe for target '.c.o'
- Å¯8V:246: warning: ignoring old recipe for target '.c.o'
-Makefile:250: warning: overriding recipe for target '.c.S'
- Å¯8V:250: warning: ignoring old recipe for target '.c.S'
-Makefile:254: warning: overriding recipe for target '.m.o'
- Å¯8V:254: warning: ignoring old recipe for target '.m.o'
-Makefile:258: warning: overriding recipe for target '.m.S'
- Å¯8V:258: warning: ignoring old recipe for target '.m.S'
-Makefile:262: warning: overriding recipe for target 'bigdecimal.so'
- Å¯8V:262: warning: ignoring old recipe for target 'bigdecimal.so'
-make[1]: Leaving directory '/home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/bigdecimal-3.1.8/ext/bigdecimal'
-
-current directory: /home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/bigdecimal-3.1.8/ext/bigdecimal
-make DESTDIR\=
-make[1]: Entering directory '/home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/bigdecimal-3.1.8/ext/bigdecimal'
-Makefile:177: warning: overriding recipe for target 'clean'
- \LKV:177: warning: ignoring old recipe for target 'clean'
-Makefile:184: warning: overriding recipe for target 'distclean'
- \LKV:184: warning: ignoring old recipe for target 'distclean'
-Makefile:192: warning: overriding recipe for target 'install-so'
- \LKV:192: warning: ignoring old recipe for target 'install-so'
-Makefile:202: warning: overriding recipe for target 'pre-install-rb-default'
- \LKV:202: warning: ignoring old recipe for target 'pre-install-rb-default'
-Makefile:204: warning: overriding recipe for target '.sitearchdir.time'
- \LKV:204: warning: ignoring old recipe for target '.sitearchdir.time'
-Makefile:214: warning: overriding recipe for target '.cc.o'
- \LKV:214: warning: ignoring old recipe for target '.cc.o'
-Makefile:218: warning: overriding recipe for target '.cc.S'
- \LKV:218: warning: ignoring old recipe for target '.cc.S'
-Makefile:222: warning: overriding recipe for target '.mm.o'
- \LKV:222: warning: ignoring old recipe for target '.mm.o'
-Makefile:226: warning: overriding recipe for target '.mm.S'
- \LKV:226: warning: ignoring old recipe for target '.mm.S'
-Makefile:230: warning: overriding recipe for target '.cxx.o'
- \LKV:230: warning: ignoring old recipe for target '.cxx.o'
-Makefile:234: warning: overriding recipe for target '.cxx.S'
- \LKV:234: warning: ignoring old recipe for target '.cxx.S'
-Makefile:238: warning: overriding recipe for target '.cpp.o'
- \LKV:238: warning: ignoring old recipe for target '.cpp.o'
-Makefile:242: warning: overriding recipe for target '.cpp.S'
- \LKV:242: warning: ignoring old recipe for target '.cpp.S'
-Makefile:246: warning: overriding recipe for target '.c.o'
- \LKV:246: warning: ignoring old recipe for target '.c.o'
-Makefile:250: warning: overriding recipe for target '.c.S'
- \LKV:250: warning: ignoring old recipe for target '.c.S'
-Makefile:254: warning: overriding recipe for target '.m.o'
- \LKV:254: warning: ignoring old recipe for target '.m.o'
-Makefile:258: warning: overriding recipe for target '.m.S'
- \LKV:258: warning: ignoring old recipe for target '.m.S'
-Makefile:262: warning: overriding recipe for target 'bigdecimal.so'
- \LKV:262: warning: ignoring old recipe for target 'bigdecimal.so'
-compiling bigdecimal.c
-compiling missing.c
-linking shared-object bigdecimal.so
-make[1]: Leaving directory '/home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/bigdecimal-3.1.8/ext/bigdecimal'
-
-current directory: /home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/bigdecimal-3.1.8/ext/bigdecimal
-make DESTDIR\= install
-make[1]: Entering directory '/home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/bigdecimal-3.1.8/ext/bigdecimal'
-Makefile:177: warning: overriding recipe for target 'clean'
- ì¿WdU:177: warning: ignoring old recipe for target 'clean'
-Makefile:184: warning: overriding recipe for target 'distclean'
- ì¿WdU:184: warning: ignoring old recipe for target 'distclean'
-Makefile:192: warning: overriding recipe for target 'install-so'
- ì¿WdU:192: warning: ignoring old recipe for target 'install-so'
-Makefile:202: warning: overriding recipe for target 'pre-install-rb-default'
- ì¿WdU:202: warning: ignoring old recipe for target 'pre-install-rb-default'
-Makefile:204: warning: overriding recipe for target '.sitearchdir.time'
- ì¿WdU:204: warning: ignoring old recipe for target '.sitearchdir.time'
-Makefile:214: warning: overriding recipe for target '.cc.o'
- ì¿WdU:214: warning: ignoring old recipe for target '.cc.o'
-Makefile:218: warning: overriding recipe for target '.cc.S'
- ì¿WdU:218: warning: ignoring old recipe for target '.cc.S'
-Makefile:222: warning: overriding recipe for target '.mm.o'
- ì¿WdU:222: warning: ignoring old recipe for target '.mm.o'
-Makefile:226: warning: overriding recipe for target '.mm.S'
- ì¿WdU:226: warning: ignoring old recipe for target '.mm.S'
-Makefile:230: warning: overriding recipe for target '.cxx.o'
- ì¿WdU:230: warning: ignoring old recipe for target '.cxx.o'
-Makefile:234: warning: overriding recipe for target '.cxx.S'
- ì¿WdU:234: warning: ignoring old recipe for target '.cxx.S'
-Makefile:238: warning: overriding recipe for target '.cpp.o'
- ì¿WdU:238: warning: ignoring old recipe for target '.cpp.o'
-Makefile:242: warning: overriding recipe for target '.cpp.S'
- ì¿WdU:242: warning: ignoring old recipe for target '.cpp.S'
-Makefile:246: warning: overriding recipe for target '.c.o'
- ì¿WdU:246: warning: ignoring old recipe for target '.c.o'
-Makefile:250: warning: overriding recipe for target '.c.S'
- ì¿WdU:250: warning: ignoring old recipe for target '.c.S'
-Makefile:254: warning: overriding recipe for target '.m.o'
- ì¿WdU:254: warning: ignoring old recipe for target '.m.o'
-Makefile:258: warning: overriding recipe for target '.m.S'
- ì¿WdU:258: warning: ignoring old recipe for target '.m.S'
-Makefile:262: warning: overriding recipe for target 'bigdecimal.so'
- ì¿WdU:262: warning: ignoring old recipe for target 'bigdecimal.so'
-/usr/bin/install -c -m 0755 bigdecimal.so ./.gem.20240823-3567-t110lz
-make[1]: Leaving directory '/home/runner/work/lesson-example/lesson-example/.vendor/bundle/ruby/3.0.0/gems/bigdecimal-3.1.8/ext/bigdecimal'

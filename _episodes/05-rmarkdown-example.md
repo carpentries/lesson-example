@@ -135,7 +135,7 @@ x[10]
 
 
 ~~~
-Error in eval(expr, envir, enclos): object 'x' not found
+Error: object 'x' not found
 ~~~
 {: .error}
 
